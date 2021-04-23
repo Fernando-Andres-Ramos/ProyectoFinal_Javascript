@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Estetica y Masajes</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/Styles.css">
+  </head>
+
+  <body>
+    <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
+    <header>
+      <img src="Galeria/_Logo.PNG" alt=Logo_sitio width=150>
+      <h1>Estetica y Masajes</h1>
+      <nav>
+        <ul>
+          <li><a href="./index.html">Principal</a></li> 
+          <li><a href="./Quienes_Somos.html">Quienes somos</a></li> 
+          <li><div>Nuestros servicios</div></li>
+          <li><a href="./Galeria.html">Galeria</a></li> 
+          <li><a href="./Contacto.html">Contacto</a></li> 
+        </ul>
+      </nav>
+    </header>
+    <hr>
+    
+    <!-- Formulario creado para el desafio de la clase 2. No es contenido final. Se editaran algunas secciones del formulario -->
+    <section>
+      <h4>¿Tenes alguna consulta? ¡CONTACTANOS!</h4>
+
+      <article><br>
+        <form>
+          <!-- Boton Radio para seleccionar 2 opciones (cliente o no cliente) -->
+          <p>¿Te atendiste alguna vez con nosotros?</p>
+          <label for="cliente">SI</label>
+          <input type="radio" name="cliente" value="Si">
+
+          <label for="cliente">NO</label>
+          <input type="radio" name="cliente" value="No">
+          <br><br><br>
+          
+          <!-- Casilla desplegable para seleccion el area a la cual se dirige la consulta -->
+          <div>¿Sobre que servicio es tu consulta?</div><br>
+          <select name="Area">
+            <option value="Depilación">Depilación</option>
+            <option value="Esmaltado">Esmaltado</option>
+            <option value="Perfilado">Perfilado</option>
+            <option value="Masajes">Masajes</option>
+            <option value="Otros">Otros</option>
+          </select>
+          <br><br><br>
+          
+          <!-- Input text para escribir datos personales -->
+          <fieldset>
+            <legend>Tus datos</legend>
+              <div>
+                <label for="nombre_apellido">Nombre completo</label>
+                <input type="text" name="nombre_apellido"><br><br>
+              </div>
+              <div>
+                <label for="email">Correo electrónico</label>
+                <input type="email" name="email"><br><br>
+              </div>
+              <div>
+                <label for="phone">Telefono</label>
+                <input type="text" name="phone"><br><br>
+              </div>
+          </fieldset><br>
+
+          <!-- Cuadro para escribir la consulta con un text-area -->
+          <fieldset>
+            <legend>Escribi tu consulta</legend>
+              <div>
+                <label for="Consulta"></label><br>
+                <textarea name="Consulta" rows=10 cols=30 resize:> </textarea><br>
+              </div>
+          </fieldset>  
+          <br><br>
+
+          <!-- Checkbox para suscribirse a las noticias -->
+          <label for="acepta">¿Queres recibir noticias de nuestras promos?</label>
+          <input type="checkbox" name="acepta" value=1><br><br>
+          <input type="submit" name="Enviar" value="Enviar consulta"><br><br>
+          <input type="reset" name="Reset" value="Reset"><br><br>
+        </form>
+      </article><hr>
+      
+
+      <!-- Informacion de la PyME con links a las redes sociales de la misma (por ahora links genericos) -->
+      <article>
+        <ul>
+          <li><p>Email: estetica_y_masajes@########.com</p></li>
+          <li><p>Direccion: Calle Falsa 123</p></li>
+          <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
+        </ul>
+        <div>
+          <a href="https://www.facebook.com/"><img src="./Galeria/Facelogo.png" alt="logo_facebook" width=40></a>   
+          <a href="https://www.instagram.com/"><img src="./Galeria/Instalogo.png" alt="logo_instagram" width=40></a>
+          <!-- Preguntar si esta bien usar logos, privosorio -->  
+        </div>
+      </article>
+    </section>
+  </body>
+</html>

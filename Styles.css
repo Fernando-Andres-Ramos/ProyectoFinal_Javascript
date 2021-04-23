@@ -1,0 +1,72 @@
+/* CANBIOS GENERALES */
+/* Fuente y color para toda la pagina */
+body{
+  font-family: garamond;
+  color: #f25287;
+  background-color: #f9f3f3;
+}
+
+
+
+
+/* CAMBIOS PARA EL HEADER EN TODAS LAS PAGINAS*/
+
+/* Cambios para el titulo h1 */
+h1{font-style:italic; font-size: 11mm;}
+
+/* Para la barra de navegacion (color, fuente, tamaño) */
+nav{
+  background-color: #f7d9d9;
+  list-style-type: none;
+  font-size: x-large;
+  border:solid;
+}
+
+/* Quitar los items de listas */
+nav ul {list-style-type: none;}
+
+/* Reglas para los links del menu navegable */
+nav ul li a{
+  text-decoration: none; color: #f25287;}
+
+/* Agregar un efeco cuando el mouse este sobre el link */
+nav ul li a:hover {background-color: #dddddd;}
+
+/* Cambios para la barra de buscador */
+nav form input{
+  font-family: garamond;
+  border: none;
+  background-color: #f9f3f3;
+  padding: 1mm;
+  margin-left: 11mm;
+  margin-bottom: 5mm;
+}
+
+/* Estilo para las imagenes del index.html */
+.fotoservicio{
+  border-radius: 5px;
+  max-width:30%;
+}
+
+/* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
+section{margin-top:15mm;}
+.seccion_a{margin-bottom:20mm;font-size: 18px;}
+.seccion_b{margin-bottom:20mm;font-size: 18px;}
+
+
+
+
+
+/* ESTILO PARA EL FOOTER EN TODAS LAS PAGINAS*/
+
+/* Estilo general del Footer */
+footer{
+  border-style:double;
+  padding-left: 5mm;
+}
+
+/* Quitar el resize del textarea en Contacto.html */
+textarea {
+  resize: none;
+}
+
