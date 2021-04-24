@@ -1,5 +1,11 @@
 /* CANBIOS GENERALES */
 /* Fuente y color para toda la pagina */
+
+*{
+  margin: 0%;
+  padding: 0%;
+}
+
 body{
   font-family: garamond;
   color: #f25287;
