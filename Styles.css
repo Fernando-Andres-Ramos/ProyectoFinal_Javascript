@@ -1,11 +1,15 @@
 /* CANBIOS GENERALES */
-/* Fuente y color para toda la pagina */
 
+/* Reset todos los estilos predefinidos */
 *{
   margin: 0%;
   padding: 0%;
 }
 
+/* Limpiar siguiente elemento */
+.clearfix{clear:both;}
+
+/* Fuente y color para toda la pagina */
 body{
   font-family: garamond;
   color: #f25287;
@@ -13,13 +17,15 @@ body{
 }
 
 
-
-
 /* CAMBIOS PARA EL HEADER EN TODAS LAS PAGINAS*/
 
+.logo{
+float: left;
+}
 /* Cambios para el titulo h1 */
-h1{font-style:italic; font-size: 11mm;}
+h1{font-style:italic; font-size: 16mm;margin-left:400px;margin-top:35px;}
 
+header ul li{float:left; list-style-type:none;}
 /* Para la barra de navegacion (color, fuente, tamaño) */
 nav{
   background-color: #f7d9d9;
@@ -32,8 +38,10 @@ nav{
 nav ul {list-style-type: none;}
 
 /* Reglas para los links del menu navegable */
-nav ul li a{
-  text-decoration: none; color: #f25287;}
+nav ul li{; float:left;margin:10px;}
+
+/* Reglas para los links del menu navegable */
+nav ul li a{text-decoration: none;color: #f25287}
 
 /* Agregar un efeco cuando el mouse este sobre el link */
 nav ul li a:hover {background-color: #dddddd;}
@@ -56,8 +64,8 @@ nav form input{
 
 /* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
 section{margin-top:15mm;}
-.seccion_a{margin-bottom:20mm;font-size: 18px;}
-.seccion_b{margin-bottom:20mm;font-size: 18px;}
+.seccion_a{margin-bottom:50px;font-size: 18px;}
+.seccion_b{margin-bottom:50px;font-size: 18px;}
 
 
 
