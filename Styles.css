@@ -18,6 +18,7 @@ body{
   font-family: garamond;
   color: #f25287;
   background-color: #f9f3f3;
+  font-size: 15px;
 }
 
 
@@ -71,17 +72,35 @@ nav ul li a:hover {background-color: #dddddd;}
 }
 
 
-/* Estilo para las imagenes del index.html */
-.fotoservicio{
-  border-radius: 5px;
-  max-width:30%;
-}
+/* CAMBIOS PARA EL MAIN EN INDEX.HTML*/
 
 /* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
-section{margin-top:15mm;}
-.seccion_a{margin-bottom:50px;font-size: 18px;}
-.seccion_b{margin-bottom:50px;font-size: 18px;}
+section{margin-top:2%;}
+.seccion_a{
+  width: 100%;
+  margin-bottom:50px;
+  font-size: 18px;
+}
 
+.seccion_b{
+  width: 100%;
+  margin-bottom:50px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Estilo para las imagenes del index.html */
+.fotoservicioA{
+  margin-left: 1%;
+  border-radius: 5px;
+  max-width:50%;
+}
+
+.fotoservicioB{
+  margin-right: 1%;
+  border-radius: 5px;
+  max-width:50%;
+}
 
 
 
@@ -90,8 +109,28 @@ section{margin-top:15mm;}
 
 /* Estilo general del Footer */
 footer{
+  padding: 1%;
   border-style:double;
   padding-left: 5mm;
+  font-size: 20px;
+}
+
+footer div p{
+  display:inline-block;
+  margin-top: 1%;
+  margin-bottom: 5%;
+  text-align: right;
+
+}
+
+footer h5{
+  display:inline;
+  margin-left:60%;
+  text-align: right;
+}
+
+.footerLogo{
+  margin-top: 15%;
 }
 
 /* Quitar el resize del textarea en Contacto.html */
