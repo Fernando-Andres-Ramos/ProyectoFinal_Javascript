@@ -6,6 +6,10 @@
   padding: 0%;
 }
 
+html { /* etiqueta raíz */
+  font-size: 62.5%;
+}
+
 /* Limpiar siguiente elemento */
 .clearfix{clear:both;}
 
@@ -17,44 +21,55 @@ body{
 }
 
 
+
 /* CAMBIOS PARA EL HEADER EN TODAS LAS PAGINAS*/
 
-.logo{
-float: left;
-}
 /* Cambios para el titulo h1 */
-h1{font-style:italic; font-size: 16mm;margin-left:400px;margin-top:35px;}
+h1{
+  font-style:italic; 
+  font-size: 75px;
+  width:250%;
+  padding-top:36px;
+  text-align: center;
+}
 
+/* Mover a la derecha los items de la barra */
 header ul li{float:left; list-style-type:none;}
+
 /* Para la barra de navegacion (color, fuente, tamaño) */
 nav{
   background-color: #f7d9d9;
   list-style-type: none;
   font-size: x-large;
   border:solid;
+  padding:1%;
 }
 
-/* Quitar los items de listas */
+/* Quitar los items "*" de listas */
 nav ul {list-style-type: none;}
 
-/* Reglas para los links del menu navegable */
-nav ul li{; float:left;margin:10px;}
+/* Mover lista a la derecha, separacion*/
+nav ul li{; float:left; margin-left:5%;}
 
 /* Reglas para los links del menu navegable */
-nav ul li a{text-decoration: none;color: #f25287}
+nav ul li a{text-decoration: none;color: #f25287;}
 
 /* Agregar un efeco cuando el mouse este sobre el link */
 nav ul li a:hover {background-color: #dddddd;}
 
 /* Cambios para la barra de buscador */
-nav form input{
+.buscador1 {
   font-family: garamond;
   border: none;
-  background-color: #f9f3f3;
-  padding: 1mm;
-  margin-left: 11mm;
-  margin-bottom: 5mm;
+  margin-left: 25%;
 }
+
+/* Cambios para el boton buscador */
+.buscador2 {
+  font-family: garamond;
+  border: none;
+}
+
 
 /* Estilo para las imagenes del index.html */
 .fotoservicio{
