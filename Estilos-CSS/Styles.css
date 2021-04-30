@@ -17,7 +17,7 @@ html {
 body{
   width: 100vw;
   height: 100vh;
-  font-size: 100%;
+  font-size: 2rem;
   font-family: garamond;
   color: #f25287;
   background-color: #f9f3f3;
@@ -113,38 +113,6 @@ nav ul li:hover ul{
   left:220%;
 }
 
-/* CAMBIOS PARA EL MAIN EN INDEX.HTML*/
-
-/* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
-section{margin-top:2%;}
-.seccion_a{
-  width: 100%;
-  margin-bottom:50px;
-  font-size: 18px;
-}
-
-.seccion_b{
-  width: 100%;
-  margin-bottom:50px;
-  font-size: 18px;
-  text-align: right;
-}
-
-/* Estilo para las imagenes del index.html */
-.fotoservicioA{
-  margin-left: 1%;
-  border-radius: 5px;
-  max-width:50%;
-}
-
-.fotoservicioB{
-  margin-right: 1%;
-  border-radius: 5px;
-  max-width:50%;
-}
-
-
-
 
 /* ESTILO PARA EL FOOTER EN TODAS LAS PAGINAS*/
 
@@ -172,10 +140,5 @@ footer h5{
 
 .footerLogo{
   margin-top: 15%;
-}
-
-/* Quitar el resize del textarea en Contacto.html */
-textarea {
-  resize: none;
 }
 

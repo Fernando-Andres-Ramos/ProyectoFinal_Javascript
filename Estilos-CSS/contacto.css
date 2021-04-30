@@ -1,0 +1,4 @@
+/* Quitar el resize del textarea en Contacto.html */
+textarea {
+  resize: none;
+}

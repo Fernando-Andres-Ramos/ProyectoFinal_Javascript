@@ -4,31 +4,41 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Styles.css">
+    <link rel="stylesheet" href="../Estilos-CSS/Styles.css">
+    <link rel="stylesheet" href="../Estilos-CSS/servicios.css">
     <title>Document</title>
   </head>
   <body>
     <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
-    <header>
-      <ul>
-        <li><img class="logo" src="../Galeria/_Logo.PNG" alt=Logo_sitio width=150></li>
-        <li><h1>Estetica y Masajes</h1></li>
-      </ul>
-      <div class="clearfix"></div>
+    <header class="encabezado">
+      <div class="tituloyLogo"> 
+        <img class="logo" src="../Galeria/_Logo.PNG" alt=Logo_sitio>
+        <h1>Estetica y Masajes</h1>
+      </div> 
+    <!-- Barra de navegación -->
       <nav>
         <ul>
           <li><a href="../index.html">Principal</a></li> 
           <li><a href="../Quienes_Somos.html">Quienes somos</a></li> 
-          <li><div>Nuestros servicios</div>     
+          <li>
+            <p>Nuestros servicios</p>
+            <ul class="sublista">
+              <li><a href="../Servicios/Depilacion.html">Depilacion</a></li>
+              <li><a href="../Servicios/Esmaltado.html">Esmaltado</a></li>
+              <li><a href="../Servicios/Perfilado.html">Perfilado de cejas</a></li>
+              <li><a href="../Servicios/Masajes.html">Masajes</a></li>
+            </ul>
+          </li>     
           <li><a href="../Galeria.html">Galeria</a></li> 
           <li><a href="../Contacto.html">Contacto</a></li> 
+          <li>
+            <form action="search.php">
+              <input class="buscador1" type="text">
+              <input class="buscador1" type="submit" value="Buscar">
+            </form>
+        </li>
         </ul>
-
-        <div class="clearfix"></div>
-        <form action="search.php">
-          <input type="text">
-          <input type="submit" value="Buscar">
-        </form>
+        <div class="clearfix"></div>  
       </nav>
     </header><hr><br>
 

@@ -1,0 +1,29 @@
+/* CAMBIOS PARA EL MAIN EN INDEX.HTML*/
+
+/* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
+section{margin-top:2%;}
+.seccion_a{
+  width: 100%;
+  margin-bottom:50px;
+  font-size: 18px;
+}
+
+.seccion_b{
+  width: 100%;
+  margin-bottom:50px;
+  font-size: 18px;
+  text-align: right;
+}
+
+/* Estilo para las imagenes del index.html */
+.fotoservicioA{
+  margin-left: 1%;
+  border-radius: 5px;
+  max-width:50%;
+}
+
+.fotoservicioB{
+  margin-right: 1%;
+  border-radius: 5px;
+  max-width:50%;
+}
