@@ -8,19 +8,18 @@
 
   <body>
     <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
-    <!-- Falta agregar una lista desplegable en el area "Nuestros Servicios", alli entraran los htmls que faltan de la carpeta servicios-->
-    <header>
-      <div class="tituloLogo"> 
+    <header class="encabezado">
+      <div class="tituloyLogo"> 
         <img class="logo" src="./Galeria/_Logo.PNG" alt=Logo_sitio>
         <h1>Estetica y Masajes</h1>
-      </div>
-      <div class="clearfix"></div>
+      </div> 
+
       <nav>
         <ul>
           <li><a href="./index.html">Principal</a></li> 
           <li><a href="./Quienes_Somos.html">Quienes somos</a></li> 
           <li>
-            Nuestros servicios
+            <p>Nuestros servicios</p>
             <ul class="sublista">
               <li><a href="./Servicios/Depilacion.html">Depilacion</a></li>
               <li><a href="./Servicios/Esmaltado.html">Esmaltado</a></li>
@@ -30,17 +29,17 @@
           </li>     
           <li><a href="./Galeria.html">Galeria</a></li> 
           <li><a href="./Contacto.html">Contacto</a></li> 
+          <li>
+            <form action="search.php">
+              <input class="buscador1" type="text">
+              <input class="buscador1" type="submit" value="Buscar">
+            </form>
+        </li>
         </ul>
-        <div>
-          <form action="search.php">
-            <input class="buscador1" type="text">
-            <input class="buscador2" type="submit" value="Buscar">
-          </form>
-        </div>
-        <div class="clearfix"></div>
-        
+        <div class="clearfix"></div>  
       </nav>
     </header>
+
    <main>
      <!-- Seccion informativa con imagenes/links de los servicios-->
      <section> 
