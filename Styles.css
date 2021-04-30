@@ -18,29 +18,36 @@ body{
   font-family: garamond;
   color: #f25287;
   background-color: #f9f3f3;
-  font-size: 15px;
+  font-size: 2rem;
 }
 
 
 
 /* CAMBIOS PARA EL HEADER EN TODAS LAS PAGINAS*/
 
-/* Cambios para el titulo h1 */
-h1{
-  font-style:italic; 
-  font-size: 75px;
-  width:250%;
-  padding-top:36px;
-  text-align: center;
+.tituloLogo{
+  width: 100%;
+  background-color: royalblue;
+  text-align: justify;
 }
 
-/* Mover a la derecha los items de la barra */
-header ul li{float:left; list-style-type:none;}
+.logo{
+  display:inline-block;
+  max-width: 10%;
+}
+
+/* Cambios para el titulo h1 */
+header div h1{
+  font-style:italic; 
+  font-size: 5rem;
+  display:inline-block;
+  background-color: silver;
+  text-align: center;
+}
 
 /* Para la barra de navegacion (color, fuente, tamaño) */
 nav{
   background-color: #f7d9d9;
-  list-style-type: none;
   font-size: x-large;
   border:solid;
   padding:1%;
@@ -50,16 +57,40 @@ nav{
 nav ul {list-style-type: none;}
 
 /* Mover lista a la derecha, separacion*/
-nav ul li{; float:left; margin-left:5%;}
-
+nav ul li{
+  display:inline-block;
+  margin-left: 1.7%;
+  position:relative;
+}
+  
 /* Reglas para los links del menu navegable */
 nav ul li a{text-decoration: none;color: #f25287;}
 
 /* Agregar un efeco cuando el mouse este sobre el link */
 nav ul li a:hover {background-color: #dddddd;}
 
+.sublista{
+  position:absolute;
+  background-color: #f7d9d9;
+  display:none;
+}
+
+.sublista li{
+  display:block; 
+  width: 24rem;
+  margin-top: 5%; 
+  font-size: 2.1rem;
+}
+
+nav ul li:hover ul{
+  display:block;
+}
+
+
+
 /* Cambios para la barra de buscador */
 .buscador1 {
+  display: inline;
   font-family: garamond;
   border: none;
   margin-left: 25%;

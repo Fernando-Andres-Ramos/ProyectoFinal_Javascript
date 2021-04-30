@@ -11,17 +11,17 @@
     <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
     <header>
       <ul>
-        <li><img class="logo" src="./Galeria/_Logo.PNG" alt=Logo_sitio width=150></li>
+        <li><img class="logo" src="../Galeria/_Logo.PNG" alt=Logo_sitio width=150></li>
         <li><h1>Estetica y Masajes</h1></li>
       </ul>
       <div class="clearfix"></div>
       <nav>
         <ul>
-          <li><a href="./index.html">Principal</a></li> 
-          <li><a href="./Quienes_Somos.html">Quienes somos</a></li> 
+          <li><a href="../index.html">Principal</a></li> 
+          <li><a href="../Quienes_Somos.html">Quienes somos</a></li> 
           <li><div>Nuestros servicios</div>     
-          <li><a href="./Galeria.html">Galeria</a></li> 
-          <li><a href="./Contacto.html">Contacto</a></li> 
+          <li><a href="../Galeria.html">Galeria</a></li> 
+          <li><a href="../Contacto.html">Contacto</a></li> 
         </ul>
 
         <div class="clearfix"></div>
@@ -32,62 +32,48 @@
       </nav>
     </header><hr><br>
 
-    <!-- TABLA de tipos de esmalte (Solo para desafio de clase 2. No es contenido final)-->
-    <section>
-      <div>Esmaltados</div>
-    <table cellpadding=15 border>
-      <tr>
-        <td>Nombre</td>
-        <td>Detalles</td> 
-        <td>Materiales usados</td> 
-      </tr>
-      <tr>
-        <td>Craquelados</td>
-        <td>Es un esmalte de uñas que se rompe en pequeños trozos, dejando ver el esmalte que tenemos debajo.</td> 
-        <td>
-          <ol>
-            <li>Pincel</li>
-            <li>Pintura</li>
-            <li>Barniz de craquelado</li>
-            <li>Barniz</li>
-            <li>Agua</li>
-            <li>Pieza a craquelar</li>
-          </ol>
-        </td> 
-      </tr>
-      <tr>
-        <td>Semipermanentes</td>
-        <td>Se aplica de manera similar al esmalte tradicional, pero con resultados mucho más duraderos. 
-        <br> Es un tipo de gel mucho menos denso que nos aporta color en la uña natural, sin necesidad de un alargamiento. 
-        <br> Suele durar entre 15/20 días, aunque todo depende del crecimiento de la uña.
-        </td> 
-        <td>
-          <ol>
-            <li>Kit de manicura permanente (un gel primer, un esmalte permanente y una base top coat).</li>
-            <li>Un palito de naranja</li>
-            <li>Una lima.</li>
-            <li>Quitacutículas.</li>
-            <li>Una lámpara de luz UV.</li>
-            <li>Gel desinfectante para manos.</li>
-          </ol>
-        </td> 
-      </tr>
-      <tr>
-        <td>Acrilicos</td>
-        <td>Uñas artificiales a base de un líquido especial (monómero) y un polvo de porcelana.
-          <br>Con un seguimiento correcto suelen ser más resistentes que las de gel.</td> 
-        <td>
-          <ol>
-            <li>Material 1.</li>
-            <li>Material 2</li>
-            <li>Material 3</li>
-            <li>Material 4</li>
-            <li>Material 5</li>  
-          </ol>
-        </td>
-      </tr>
-    </table>
-    </section>
+    <main>
+     <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
+      <aside>
+        <h3>Categorias</h3>
+        <ol>
+          <li><a href="#semiper">Semipermanente</a></li>
+          <li><a href="#croque">Croquelado</a></li>
+          <li><a href="#otros">Otros</a></li>
+        </ol>
+      </aside>
+
+      <section>
+          <article>
+            <h3>Esmaltado de uñas y belleza de manos</h3>
+            <p>Esta es la explicacion del servicio que realiza la empresa</p>
+          </article>
+          
+          <!-- Se detallan las subcategorias del servicio, varia en cantidad entre estos ultimos-->
+          <div id="semiper">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
+          <h4>Semipermanente</h4>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
+            Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
+            Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
+            <img src="../Galeria/Esmaltado.png" alt="imagenNoDecidida">
+          </div>
+          
+          <div id="croque">
+            <h4>Croquelado</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
+            Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
+            Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
+           <img src="../Galeria/Esmaltado.png" alt="imagenNoDecidida">
+           </div>
+
+           <div id="otros">
+            <h4>Otros</h4>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
+            Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
+            Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
+           <img src="../Galeria/Esmaltado.png" alt="imagenNoDecidida">
+           </div>
+      </section>    
     
      <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
      <hr><br>
