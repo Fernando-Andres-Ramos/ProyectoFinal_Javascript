@@ -17,7 +17,7 @@ html {
 body{
   width: 100vw;
   height: 100vh;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-family: garamond;
   color: #f25287;
   background-color: #f9f3f3;
@@ -51,18 +51,18 @@ body{
 h1{
   font-style:italic; 
   display:inline-block;
-  font-size: 7.5rem;
+  font-size: 9.8rem;
   position:relative;
   bottom:10%;
-  left:17%;
+  left:18%;
 }
 
 /* Para la barra de navegacion (color, fuente, tamaño) */
 nav{
   background-color: #f7d9d9;
-  font-size: x-large;
+  font-size: xx-large;
   border:solid;
-  padding-left:2%;
+  width: 100%;
 }
 
 /* Quitar los items "*" de listas */
@@ -73,7 +73,7 @@ nav ul li{
   display:inline-block;
   margin-left: 4%;
   position:relative;
-  right:4%;
+  left:1%;
 }
   
 /* Estilo links del menu navegable */
@@ -95,7 +95,7 @@ nav ul li a{text-decoration: none;color: #f25287;}
 .sublista li{ 
   width: 20rem;
   margin-top: 5%; 
-  font-size: 2.1rem;
+  font-size: 2.5rem;
 }
 
 /* Despliega la sub-lista cuando el cursor la seleccion.  Se despliega en vertical  */
@@ -108,9 +108,10 @@ nav ul li:hover ul{
 .buscador1 {
   display: inline;
   font-family: garamond;
+  font-size: large;
   border: none;
   position: relative;
-  left:220%;
+  left:170% ;
 }
 
 
@@ -118,10 +119,9 @@ nav ul li:hover ul{
 
 /* Estilo general del Footer */
 footer{
-  padding: 1%;
+  width: 100%;
+  padding:1%;
   border-style:double;
-  padding-left: 5mm;
-  font-size: 20px;
 }
 
 footer div p{
