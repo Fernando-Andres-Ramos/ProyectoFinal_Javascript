@@ -1,0 +1,27 @@
+/* Centralizar el contenido */
+main{padding:2%}
+
+/* Estilo del subtitlo */
+h3{font-size: 5rem; margin-bottom: 1rem}
+
+/* Tamaño para el bloque section */
+.nosotros{width: 95rem;}
+
+/* Estilo para el parrafo */
+section article p{font-size: 3.5rem;text-align: justify;}
+
+/* Estilo para la imagen del establecimiento */
+section article img{
+  max-width: 100%; 
+  margin-top: 3%;
+  width: 100%;
+  align-content: center;
+}
+
+.foto{max-width: 15rem;border-style: groove;border-radius: 100px;}
+
+.redes{max-width:4rem;}
+
+aside{
+  width:75rem;
+}
