@@ -2,46 +2,54 @@
 
 /* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
 
-main{
-  padding:2%;
-}
+/* Centralizar el main */
+main{padding:2%;}
 
-h3{
-  font-size: 5rem;
-  margin-bottom: 3%;
-}
+/* Tamaño del subtitlo */
+h3{font-size: 5rem; margin-bottom: 3%;}
 
-.presentacion{
-  font-size: 3.6rem;
-  text-align: justify;
-}
+/* Estilo del primer parrafo */
+.presentacion{font-size: 3.6rem; text-align: justify;}
 
-
+/* Acomodar los tamaños de la seccion */
 .seccion_a{
   width: 100%;
+  height: 52rem;
   margin-top: 10%;
   font-size: 2.5rem;
-  display: inline-block;
 }
 
+/* Estilo para las imagene izquierda del index.html */
+.fotoservicioA{border-radius: 5px;max-width:50%;
+}
+
+/* Dimensionar texto */
+.textRight {
+  width: 45%;
+  font-size: 4rem;
+  height: 100%;
+  float:right;
+}
+
+/* Acomodar los tamaños de la seccion */
 .seccion_b{
   width: 100%;
-  margin-bottom:3%;
-  font-size: 2.5rem;
+  height: 52rem;
+  margin-top: 10%;
   margin-right: 2%;
+  font-size: 2.5rem;
   text-align: right;
-  
 }
 
-/* Estilo para las imagenes del index.html */
-.fotoservicioA{
-  border-radius: 5px;
-  max-width:50%;
-  display: inline;
+/* Estilo para las imagene derecha del index.html */
+.fotoservicioB{border-radius: 5px;max-width:50%;}
+
+/* Dimensionar texto */
+.textLeft {
+  width: 45%;
+  font-size: 4rem;
+  height: 100%;
+  float:left;
 }
 
-.fotoservicioB{
-  border-radius: 5px;
-  max-width:50%;
-  display: inline;
-}
+
