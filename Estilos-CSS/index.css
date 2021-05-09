@@ -1,6 +1,6 @@
 /* CAMBIOS PARA EL MAIN EN INDEX.HTML*/
 
-/* Intentar cambiar el alineamiento de los articles en el index.html(tipo zig-zag) */
+/* UTILIZACION DE FLEXBOX PARA ACOMODAR IMAGENES Y TEXTO DEL MAIN. SE UTILIZA A MODO DE PRACTICA DE FLEXBOX, PROBABLEMENTE LUEGO LO CAMBIE A UN GRID*/
 
 /* Centralizar el main */
 main{padding:2%;}
@@ -8,47 +8,48 @@ main{padding:2%;}
 /* Tamaño del subtitlo */
 h3{font-size: 5rem; margin-bottom: 3%;}
 
-/* Estilo del primer parrafo */
-.presentacion{font-size: 3.6rem; text-align: justify;}
+/* Declaracion del mainSection como contenedor flexible en columna */
+.mainSection{
+  max-width: 1850px;
+  height:3400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
 
-/* Acomodar los tamaños de la seccion */
-.seccion_a{
-  width: 100%;
-  height: 52rem;
-  margin-top: 10%;
+/* Estilo del primer parrafo */
+.presentacion{font-size: 3.6rem; text-align: justify;margin-bottom: 5rem;}
+
+/* Los articles-a se vuelven a declarar como otro contendor flexible interno pero en filas */
+.mainSection__article-a{
+  height:23%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /* Cuando se achica la pantalla, el texto pasa a estar abajo de la imagen correspondiente*/
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* Los articles-b se vuelven a declarar como otro contendor flexible interno pero en filas */
+.mainSection__article-b{
+  height:23%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap-reverse; /* Cuando se achica la pantalla, la imagen pasa a estar por encima de su texto correspondiente*/
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 /* Estilo para las imagene izquierda del index.html */
-.fotoservicioA{border-radius: 5px;max-width:50%;
-}
+.mainSection__article-a--fotoA{border-radius: 5px; max-width: 100%; border: solid #f25287;}
 
-/* Dimensionar texto */
-.textRight {
-  width: 45%;
-  font-size: 4rem;
-  height: 100%;
-  float:right;
-}
-
-/* Acomodar los tamaños de la seccion */
-.seccion_b{
-  width: 100%;
-  height: 52rem;
-  margin-top: 10%;
-  margin-right: 2%;
-  font-size: 2.5rem;
-  text-align: right;
-}
+/* Dimensionar texto derecho */
+.mainSection__article-a--textoA{flex-basis:40%; font-size:4rem;}
 
 /* Estilo para las imagene derecha del index.html */
-.fotoservicioB{border-radius: 5px;max-width:50%;}
+.mainSection__article-b--fotoB{border-radius: 5px;max-width:100%; border: solid #f25287;}
 
-/* Dimensionar texto */
-.textLeft {
-  width: 45%;
-  font-size: 4rem;
-  height: 100%;
-  float:left;
-}
+/* Dimensionar texto izquierdo */
+.mainSection__article-b--textoB {flex-basis:40%;font-size:4rem; order:-1;} /* Se usa "order:-1" para cambiar de posicion textoe imagen */
 
 
