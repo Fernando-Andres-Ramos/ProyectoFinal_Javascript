@@ -1,27 +1,53 @@
-/* Centralizar el contenido */
-main{padding:2%}
+/* UTILIZACION DE FLEXBOX PARA ACOMODAR IMAGENES Y TEXTO DEL MAIN*/
 
-/* Estilo del subtitlo */
-h3{font-size: 5rem; margin-bottom: 1rem}
-
-/* Tamaño para el bloque section */
-.nosotros{width: 95rem;}
-
-/* Estilo para el parrafo */
-section article p{font-size: 3.5rem;text-align: justify;}
-
-/* Estilo para la imagen del establecimiento */
-section article img{
-  max-width: 100%; 
-  margin-top: 3%;
-  width: 100%;
-  align-content: center;
+/* Declarar el main principal como un flexbox, sus hijos son section y aside */
+.main{
+  max-width: 1850px;
+  padding:2%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
 }
 
-.foto{max-width: 15rem;border-style: groove;border-radius: 100px;}
+/* Estilo general de subtitulos del article y aside*/
+h3{width:100%; margin-bottom:5rem; font-size:5rem;}
 
-.redes{max-width:4rem;}
-
-aside{
-  width:75rem;
+/* Estilo para el article */
+.mainSection--article{ 
+  width: 95rem;
+  font-size: 3.5rem;
+  margin-bottom: 20rem;
+  text-align: justify;
+  
 }
+
+/* Estilo para la imagen del article */
+section article img{max-width: 100%;  margin-top: 3%;}
+
+/* Se declara el Aside como otro flexbox, sus hijos son las cartas de presentacion div */
+.mainAside{
+  border: solid #f25287;
+  max-width: 80rem;
+  max-height: 60rem;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-content: stretch;
+}
+
+/* Estilo del subtitlo aside */
+aside h3{text-align:center; margin-bottom: 0rem;}
+
+/* Tamaño maximo de los div en el aside */
+.mainAside__div--tamaño{width: 25%;}
+
+/* Estilo de las imagenes en el aside */
+.mainAside__div--foto{max-width: 15rem;border-style: groove;border-radius: 100px;}
+
+.mainAside__div--redes{max-width:4rem;}
+
+/* Quitar puntos de las listas */
+.mainAside__div--tarjeta{list-style-type: none;}
+
+/* Espaciado entre items de lista */
+.mainAside__div--tarjeta li{ margin-bottom: 1rem;}
