@@ -16,7 +16,7 @@ h3{width:100%; margin-bottom:5rem; font-size:5rem;}
 .mainSection--article{ 
   width: 95rem;
   font-size: 3.5rem;
-  margin-bottom: 20rem;
+  margin-bottom: 10rem;
   text-align: justify;
   
 }
@@ -26,13 +26,14 @@ section article img{max-width: 100%;  margin-top: 3%;}
 
 /* Se declara el Aside como otro flexbox, sus hijos son las cartas de presentacion div */
 .mainAside{
-  border: solid #f25287;
+  border: double;
   max-width: 80rem;
   max-height: 60rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   align-content: stretch;
+  margin-bottom: 10rem;
 }
 
 /* Estilo del subtitlo aside */
@@ -42,7 +43,7 @@ aside h3{text-align:center; margin-bottom: 0rem;}
 .mainAside__div--tamaño{width: 25%;}
 
 /* Estilo de las imagenes en el aside */
-.mainAside__div--foto{max-width: 15rem;border-style: groove;border-radius: 100px;}
+.mainAside__div--foto{max-width: 19.5rem;border-style: groove;border-radius: 100px;}
 
 .mainAside__div--redes{max-width:4rem;}
 
