@@ -40,55 +40,49 @@
         <div class="clearfix"></div>  
       </nav>
     </header>
-    <hr>
-    
     <main>
-      <section>
-        <h4>¿Tenes alguna consulta? ¡CONTACTANOS!</h4>
+      <section class="grilla">
+        <h4>¿Queres hacer una consulta? ¡CONTACTANOS!</h4>
   
-        <article><br>
+        <article id="formulario">
           <form> 
             <!-- Input text para escribir datos personales -->
-            <fieldset>
+            <fieldset  class="form__fieldset">
               <legend>Completa los campos para tu consulta</legend>
-                <div>
-                  <label for="nombre_apellido">Nombre completo</label>
-                  <input type="text" name="nombre_apellido"><br><br>
+                <div class="mainSection__formulario--item">
+                  <label for="nombre_apellido"></label>
+                  <input type="text" name="nombre_apellido" placeholder="Nombre y Apellido" class=mainSection__articleForm--div>
                 </div>
-                <div>
-                  <label for="email">Correo electrónico</label>
-                  <input type="email" name="email"><br><br>
+                <div class="mainSection__formulario--item">
+                  <label for="email"></label>
+                  <input type="text" name="email" placeholder="E-mail" class=mainSection__articleForm--div>
                 </div>
-                <div>
-                  <label for="phone">Telefono</label>
-                  <input type="text" name="phone"><br><br>
+                <div class="mainSection__formulario--item">
+                  <label for="phone"></label>
+                  <input type="text" name="phone" placeholder="Telefono" class=mainSection__articleForm--div>
                 </div>
-            <!-- Cuadro para escribir la consulta con un text-area -->
-                <div>
-                  <label for="Consulta">Tu consulta</label><br>
-                  <textarea name="Consulta" rows=10 cols=30 resize:> </textarea><br>
+                <!-- Cuadro para escribir la consulta con un text-area -->
+                <div class="mainSection__formulario--item">
+                  <label for="Consulta"></label>
+                  <textarea name="Consulta" placeholder="Tu consulta"></textarea>
                 </div>
-                <label for="acepta">¿Queres recibir noticias de nuestras promos?</label>
-                <input type="checkbox" name="acepta" value=1><br><br>
+                <input type="submit" name="Enviar" value="Enviar consulta" class="mainSection__articleForm--boton">
             </fieldset>  
-            <br><br>
-            <!-- Checkbox para suscribirse a las noticias -->
-            <input type="submit" name="Enviar" value="Enviar consulta"><br><br>
+            
           </form>
-        </article><hr>
+        </article>
         
         <!-- Informacion de la PyME con links a las redes sociales de la misma (por ahora links genericos) -->
-        <article>
-          <ul>
+        <article id=infoContacto>
+          <ul class="mainSection__article--info">
+            <li>
+              <a href="https://www.instagram.com/"><img class="mainSection__article--foto" src="./Galeria/Instalogo.png" alt="logo_instagram"></a>
+              <a href="https://www.facebook.com/"><img class="mainSection__article--foto" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
+            </li>
             <li><p>Email: estetica_y_masajes@########.com</p></li>
             <li><p>Direccion: Calle Falsa 123</p></li>
             <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
           </ul>
-          <div>
-            <a href="https://www.facebook.com/"><img src="./Galeria/Facelogo.png" alt="logo_facebook" width=40></a>   
-            <a href="https://www.instagram.com/"><img src="./Galeria/Instalogo.png" alt="logo_instagram" width=40></a>
-            <!-- Preguntar si esta bien usar logos, privosorio -->  
-          </div>
         </article>
       </section>
     </main>
