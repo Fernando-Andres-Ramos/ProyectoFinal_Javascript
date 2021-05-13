@@ -1,0 +1,99 @@
+/* UTILIZACION DE GRID y FLEXBOX PARA EL MAIN*/
+/* ESTA PAGINA DEL SITIO AUN NO ESTA TERMINADA, SOLO ACOMODADO COMO INDICA EL WIREFRAME */
+
+/* Grid dentro del section, contiene el titulo y descripcion del servicio, submenu y categorias */
+.main__section{
+  padding: 3rem;
+  max-width:1850px;
+  height: 3600px;
+  display: grid;
+  grid-template-areas: 
+  "servicio submenu"
+  "subcateg1 subcateg1"
+  "subcateg2 subcateg2"
+  "subcateg3 subcateg3";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows:40rem;
+  align-items:center;
+  align-content: space-between;
+}
+
+/* Nombre general del servicio y descripcion */
+.main__section--categoria{
+  grid-area:servicio;
+  max-width:75%;
+  height: 100%;
+  padding: 2rem;
+  justify-self: center;
+}
+
+h3{font-size: 5rem;margin-bottom: 7rem;text-align: center;}
+
+h4{font-size: 4rem}
+
+/* Estilo del submenu para ir a las distintas categorias del servicio */
+.main__section--submenu{
+  grid-area: submenu;
+  max-width: 60%;
+  height: 100%;
+  text-align: center;
+  padding: 2rem;
+  border: 2px solid;
+}
+
+p {font-size: 3.5rem;}
+
+.main__section--submenu ol{ list-style-type: none;}
+
+.main__section--submenu ol li{
+  margin-bottom: 3rem;
+}
+
+.main__section--submenu ol li a {text-decoration: none; color: #f25287;  font-size: 3rem;}
+
+/* Estilo de esta categoria del servicio */
+ #depilacionCera{
+  grid-area:subcateg1;
+  border-top:1px solid;
+  border-bottom:1px solid;
+  height: 1000px;
+  padding: 1rem;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-evenly;
+ }
+
+ /* Estilo de esta categoria del servicio */
+ #depilacionDefi{
+  grid-area:subcateg2;
+  border-top:1px solid;
+  border-bottom:1px solid;
+  height: 1000px;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+ }
+
+ /* Estilo de esta categoria del servicio */
+ #otros{
+  grid-area:subcateg3;
+  height: 1000px;
+  border-top:1px solid;
+  border-bottom:1px solid;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+ }
+
+ /* Estilo de los subtitulos de categorias */
+.section__div--tituloSubcategoria{
+  width: 80%;margin-top: 10rem;
+}
+
+/* Estilo de parrafos en las subcategorias */
+section div p{width:40%;height:100;}
+
+/* Cambiar el tamaño de las imagenes */
+section div img{max-height:40%;justify-self: center;}
