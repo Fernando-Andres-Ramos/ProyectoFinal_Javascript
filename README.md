@@ -15,6 +15,6 @@ Este proyecto consiste en un sitio web en desarrollo:
   * En la carpeta "Servicios" se encuentran mas html de los servicios que ofrece el sitio web (desarrollando)
   * La carpeta galeria tiene imagenes que se usaran en el sitio.
   
-  **_Este proyecto sera entregado en lo 2 desafios semanales y la 1° Pre-entrega de proyecto final, correspondientes a la clase 4 y 5 del curso de desarrollo web_**
+  **_Se aplicaron conceptos de Flexbox en para "index" y "Quienes_somos" Luego se utilizaron conceptos de Grids para "galeria" y "contacto" Estoy trabajando en la parte de los "servicio" utilizando Grids._**
   
-_Actualizado 01/05/2021_
+_Actualizado 13/05/2021_
