@@ -15,13 +15,11 @@ html {
 
 /* Fuente y color para toda la pagina */
 body{
-  width: 100vw;
-  height: 100vh;
+  max-width: 1900px;
   font-size: 2.5rem;
   font-family: garamond;
   color: #f25287;
   background-color: #f9f3f3;
-  
 }
 
 
@@ -30,9 +28,8 @@ body{
 
 /* Tamaño del encabezado */
 .encabezado{
-  width: 100%;
-  height: 24%;
-  margin-bottom: 4.2rem;
+  max-width: 100%;
+  height: 2%;
 }
 
 /* Tamaños de contenedor para titulo y logo (Poner alguna imagen de fondo a futuro */
@@ -121,28 +118,53 @@ nav ul li:hover ul{
 
 /* ESTILO PARA EL FOOTER EN TODAS LAS PAGINAS*/
 
-/* Estilo general del Footer */
+/* Grid del footer */
 footer{
-  width: 100%;
-  padding:1%;
-  border-style:double;
+  max-width: 100%;
+  height: 25rem;
+  background-color: #f7d9d9;
+  padding: 3rem;
+  border: 1px solid;
+  display:grid;
+  grid-template-areas:
+    "contacto . redes"
+    "contacto . redes"
+    "autor . redes";
+  grid-template-columns:2fr 2fr 1fr;
+  grid-template-rows:1fr 4fr 1fr;
+  justify-content:center;
+  justify-items:center;
+  align-items: start;
+  }
+
+/* Area de la info de contacto */
+.footer__div-info{ grid-area:contacto;font-size: 2.2rem;}
+
+/* Espaciado de lista en la info de contacto */
+.footer__div--ul{margin-top: 1rem; margin-left: 3rem ;}
+
+
+/* Area de redes sociales */
+.footer__div-redes{
+  grid-area: redes;
+  max-width: 100%;
+  display:flex;
+  flex-flow: row wrap;
+  justify-content: center;
 }
 
-footer div p{
-  display:inline-block;
-  margin-top: 1%;
-  margin-bottom: 5%;
-  text-align: right;
-
+/* Titulo del area de redes sociales */
+.footer__h5{
+  margin-bottom: 3rem ;
+  max-width: 100%;
 }
 
-footer h5{
-  display:inline;
-  margin-left:60%;
-  text-align: right;
-}
-
+/* Logos en redes sociales */
 .footerLogo{
-  margin-top: 15%;
+  max-width: 20%;
 }
 
+/* Area de autor de la pagina */
+.footer__div-autor{
+  grid-area: autor;
+}
