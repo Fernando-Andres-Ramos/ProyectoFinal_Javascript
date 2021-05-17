@@ -1,0 +1,66 @@
+/* UTILIZACION DE GRID y FLEXBOX PARA EL MAIN*/
+/* ESTA PAGINA DEL SITIO AUN NO ESTA TERMINADA, SOLO ACOMODADO COMO INDICA EL WIREFRAME */
+
+/* Grid dentro del section, contiene el titulo y descripcion del servicio, submenu y categorias */
+.main__section{
+  padding: 5%;
+  max-width:1900px;
+  height: 2000px;
+  display: grid;
+  grid-template-areas: 
+  "servicio submenu"
+  "subcateg1 subcateg1"
+  "subcateg2 subcateg2"
+  "subcateg3 subcateg3";
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows:40rem;
+  align-items:center;
+}
+
+/* Nombre general del servicio y descripcion */
+.main__section--categoria{
+  grid-area:servicio;
+  max-width:40%;
+}
+
+/* Estilo del submenu para ir a las distintas categorias del servicio */
+.main__section--submenu{
+  grid-area: submenu;
+}
+
+/* Estilo de esta categoria del servicio */
+ #depilacionCera{
+  grid-area:subcateg1;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: space-between;
+ }
+
+ /* Estilo de esta categoria del servicio */
+ #depilacionDefi{
+  grid-area:subcateg2;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  justify-content: space-between;
+ }
+
+ /* Estilo de esta categoria del servicio */
+ #otros{
+  grid-area:subcateg3;
+  display:flex;
+  flex-flow:row wrap;
+  justify-content: center;
+  justify-content: space-between;
+ }
+
+ /* Estilo de los subtitulos de categorias */
+.section__div--tituloSubcategoria{
+  width: 80%;
+}
+
+/* Estilo de parrafos en las subcategorias */
+section div p{width:40%;height:100;}
+
+/* Cambiar el tamaño de las imagenes */
+section div img{max-width:35%;justify-self: center;}
