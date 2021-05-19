@@ -26,7 +26,7 @@ section article img{max-width: 100%;  margin-top: 3%;}
 
 /* Se declara el Aside como otro flexbox, sus hijos son las cartas de presentacion div */
 .mainAside{
-  border: double;
+  border: 1.5px solid;
   max-width: 80rem;
   max-height: 60rem;
   display: flex;

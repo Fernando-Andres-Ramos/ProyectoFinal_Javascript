@@ -1,5 +1,4 @@
 /* UTILIZACION DE GRID y FLEXBOX PARA EL MAIN*/
-/* ESTA PAGINA DEL SITIO AUN NO ESTA TERMINADA, SOLO ACOMODADO COMO INDICA EL WIREFRAME */
 
 
 /* Color del fondo "rosado" para el main y hacer contraste con la grilla. Ademas de agrandar fuente */
@@ -105,4 +104,4 @@ h4{font-size: 4rem}
 section div p{width:40%;height:100;}
 
 /* Cambiar el tamaño de las imagenes */
-section div img{max-height:35%;justify-self: center;}
+section div img{max-height:35%;justify-self: center;border: 1px solid}
