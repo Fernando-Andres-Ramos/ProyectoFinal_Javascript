@@ -15,6 +15,6 @@ Este proyecto consiste en un sitio web en desarrollo:
   * En la carpeta "Servicios" se encuentran mas html de los servicios que ofrece el sitio web (desarrollando)
   * La carpeta galeria tiene imagenes que se usaran en el sitio.
   
-  **_Se aplicaron conceptos de Flexbox en para "index" y "Quienes_somos" Luego se utilizaron conceptos de Grids para "galeria" y "contacto" Estoy trabajando en la parte de los "servicio" utilizando Grids._**
+  **_Se aplicaron conceptos de Flexbox y Grids en todas las paginas del sitio web de forma separada. Tambien se aplicaron estos conceptos en el Header y Footer _**
   
-_Actualizado 13/05/2021_
+_Actualizado 18/05/2021_
