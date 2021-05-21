@@ -23,49 +23,46 @@ body{
 }
 
 
-
 /* CAMBIOS PARA EL HEADER EN TODAS LAS PAGINAS*/
 
 /* Encabezado hecho con grids */
 .body__header{
   max-width: 100%;
-  /* height: 250px; */
   background-color: white;
   display:grid;
   grid-template-areas: 
   "logo titulo"
   "navegador navegador";
   grid-template-rows: 6fr 1fr;
-  grid-template-columns: 2fr 12fr;
+  grid-template-columns: auto 15fr;
   justify-items: stretch;
   align-items:stretch;
 }
 
 /* Tamaño del contenedor del logo logo */
-.body__header--cubologo{grid-area:logo; max-width: 100%;}
+.body__header--cubologo{grid-area:logo; max-width:100%;}
 
 /* Tamaño de la imagen del logo (maximo la de su contenedor) */
-.body__header--logo{max-width: 100%;}
+.body__header--logo{max-width: 30rem;}
 
 /* Area del contenedor del titulo de la pagina con imagen de fondo (se usa flexbox)*/
 .body__header--cubotitulo{
   grid-area:titulo;
-  max-width: 100%;
   align-self: stretch;
   background-image: url(../Galeria/Cabecera.jpg);
-  background-size: 100%;
+  background-size: 175rem;
   background-repeat: no-repeat;
   background-position: right;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
+  justify-content: start;
+  align-items: center;
 }
 
 /* Titulo del sitio web */
 h1{
   font-style:italic;
-  font-size: 9.8rem;
+  font-size: 10rem;
   max-width: 100%;
 }
 
@@ -73,7 +70,8 @@ h1{
 nav{
   grid-area: navegador;
   background-color: #f7d9d9;
-  font-size: 3rem;
+  font-weight: bold ;
+  font-size: 3.5rem;
   border:solid;
 }
 
@@ -91,22 +89,25 @@ nav{
 /* Oculta la sub-lista en el header, en la parte de "Nuestros servicios" */
 .header__nav--subLista{
   position:absolute;
+  height: 250px;
   list-style-type: none;
   background-color: #f7d9d9;
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
   opacity: 0;
   border-left:solid ;
   border-bottom:solid;
   border-right:solid;
-  text-align: justify;
+
+  /* text-align: space-evenly; */
   padding-left: 1%;
 }
 
 /* Estilo de items en la sub-lista.*/
 .header__nav--subLista li{ 
-  width: 20rem;
-  margin-top: 5%; 
-  font-size: 2.5rem;
+  width: 26rem; 
+  font-size: 3rem;
 }
 
 /* Despliega la sub-lista cuando el cursor la seleccion.  Se despliega en vertical  */
@@ -176,4 +177,107 @@ footer{
 /* Area de autor de la pagina */
 .footer__div-autor{
   grid-area: autor;
+}
+
+/* MEDIA QUIRE PARA CUANDO LA PANTALLA TIENE MENOS DE 1200px */
+@media (max-width:1200px){
+  .body__header{
+    max-width: 100%;
+    background-color: white;
+    display:grid;
+    grid-template-areas:
+    "navegador titulo"
+    "navegador titulo"
+    "navegador titulo ";
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 2fr  7fr;
+    justify-items: stretch;
+    align-items:stretch;
+  }
+
+  /* Tamaño del contenedor del logo logo */
+  .body__header--cubologo{grid-area:logo; max-width:75%; justify-self: center;}
+
+  /* Tamaño de la imagen del logo (maximo la de su contenedor) */
+  .body__header--logo{max-width: 100%;display: none;}
+
+  /* Estilos de los items de la barra de navegacion*/
+  .header__nav--listaGeneral {
+    list-style-type: none;   /* Quitar los "*" */
+    display: flex;            /* Separar los items */
+    flex-direction: column;
+    justify-content: start;
+    }
+
+    /* Area del contenedor del titulo de la pagina con imagen de fondo (se usa flexbox)*/
+  .body__header--cubotitulo{
+    grid-area:titulo;
+    align-self: stretch;
+    background-color: #f9f3f3;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-size: 130rem;
+    border-bottom:2px solid ;
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+
+    /* Titulo del sitio web */
+  h1{
+    font-style:italic;
+    font-size: 7.5rem;
+    max-width: 100%;
+  }
+
+  /* Para la barra de navegacion (color, fuente, tamaño) */
+  nav{
+    grid-area: navegador;
+    background-color: #f7d9d9;
+    font-size: 2.5rem;
+    border:2px solid;
+  }
+
+  /* Estilos de los items de la barra de navegacion*/
+  .header__nav--listaGeneral {
+    list-style-type: none;   /* Quitar los "*" */
+    display: flex;            /* Separar los items */
+    flex-direction:column;
+    align-items: flex-start;
+  }
+
+  /* Estilo de items/links del menu navegable */
+  .header__nav--listaGeneral li a{text-decoration:none; color: #f25287;}
+
+  /* Oculta la sub-lista en el header, en la parte de "Nuestros servicios" */
+  .header__nav--subLista{
+    position:absolute;
+    list-style-type: none;
+    background-color: #f7d9d9;
+    opacity: 0;
+    text-align: justify;
+    padding-left: 1%;
+  }
+
+  /* Estilo de items en la sub-lista.*/
+  .header__nav--subLista li{ 
+    font-size: 2.5rem;
+  }
+
+  /* Despliega la sub-lista cuando el cursor la seleccion.  Se despliega en vertical  */
+  .header__nav--subLista:hover ul{
+    transition: 0.5s opacity;   /* Pequeño tiempo de transicion en el submenu desplegable.*/
+    opacity: 1;
+  }
+
+
+  /* Cambios para la barra de buscador */
+  .buscador1 {
+    display: inline;
+    font-family: garamond;
+    font-size: large;
+    border: none;
+  }
 }
