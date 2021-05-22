@@ -7,8 +7,8 @@
   height: 1000px;
   display: grid;
   grid-template-areas: 
-    ". subtitulo subtitulo ."
-    ". info formulario ."
+    "anuncio subtitulo subtitulo ."
+    "anuncio info formulario ."
     ".  .  .  ."
     ;
   grid-template-rows:3fr 5fr 1fr;
@@ -82,4 +82,29 @@ textarea {
   width: 20%;
   height: 3rem;
   margin-bottom: 1.5rem;
+}
+
+.publicidadMolesta{
+  grid-area:anuncio;
+  justify-self: start;
+  background-color:#f7d9d9;
+  border:2px solid;
+  text-align: center;
+  animation-name: animaPublicidad;
+  animation-iteration-count: 1;
+  animation-timing-function:linear;
+  animation-fill-mode: forwards;
+  /* animation-direction: alternate; */
+  animation-duration:5s;
+  animation-delay:0s;
+  
+}
+
+
+@keyframes animaPublicidad{
+  0%{transform:translateX(-100%);}
+  20%{transform:translateX(0%); transform: rotateZ(50deg);}
+  40%{transform:translateY(-300%);}
+  70%{transform:translateY(0%);transform:rotateZ(-50deg);}
+  100%{transform:translateY(-300%);}
 }
