@@ -12,9 +12,9 @@ Este proyecto consiste en un sitio web en desarrollo:
     * Perfilado 
     * Masajes
   * Los htmls anteriores contienen un correspondiente archivo css, y ademas existe un css general llamado Styles. Todos estan en la carpeta de estilos
-  * En la carpeta "Servicios" se encuentran mas html de los servicios que ofrece el sitio web (desarrollando)
+  * En la carpeta "Servicios" se encuentran mas html de los servicios que ofrece el sitio web (desarrollando).
   * La carpeta galeria tiene imagenes que se usaran en el sitio.
   
-  **_Se aplicaron conceptos de Flexbox y Grids en todas las paginas del sitio web de forma separada. Tambien se aplicaron estos conceptos en el Header y Footer _**
+  **_ Cambios para el desafio de la clase 8 y 9: En el navegador se aplican transiciones para el submenu y para cambiar el color de fondo. Las imagenes grandes en Index y Galeria tiene una transformación de escala. Se agrego un gradiante al footer a modo de prueba. En la seccion de "contacto" hay un pequeño cuadro animado a modo de publicidad. Se agrego una prueba de responsive para el encabezado y el nav, estos se modifican cuando la pantalla es de 1200px o menos. Aun no se agrego responsive a todo el proyecto_**
   
-_Actualizado 18/05/2021_
+_Actualizado 22/05/2021_
