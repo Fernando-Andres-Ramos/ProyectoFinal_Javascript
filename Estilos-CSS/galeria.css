@@ -31,4 +31,7 @@ h3{font-size: 5rem; margin-bottom: 5rem;text-align: center;}
 .grilla__carpeta--texto{ text-align: center;}
 
 /* Tamaño de imagenes maximo al espacio de su DIV */
-.main__section--cuadro{max-width: 100%; border:1px solid}
+.main__section--cuadro{max-width: 100%; border:1px solid;transition: transform 1s;}
+
+/* Transformacion para cambiar escala de imagen */
+.main__section--cuadro:hover{max-width: 100%; border:1px solid; transform: scale(1.03,1.03);}

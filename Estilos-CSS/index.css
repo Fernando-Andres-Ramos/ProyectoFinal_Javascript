@@ -41,13 +41,17 @@ h3{font-size: 5rem; margin-bottom: 3%;}
 }
 
 /* Estilo para las imagene izquierda del index.html */
-.mainSection__article-a--fotoA{border-radius: 5px; max-width: 100%; border: solid #f25287;}
+.mainSection__article-a--fotoA{border-radius: 5px; max-width: 100%; border: solid #f25287;transition: transform 0.5s;}
+
+.mainSection__article-a--fotoA:hover{transform: scale(1.03,1.03);}
 
 /* Dimensionar texto derecho */
 .mainSection__article-a--textoA{flex-basis:30%; font-size:4rem;}
 
 /* Estilo para las imagene derecha del index.html */
-.mainSection__article-b--fotoB{border-radius: 5px;max-width:100%; border: solid #f25287;}
+.mainSection__article-b--fotoB{border-radius: 5px;max-width:100%; border: solid #f25287;transition: transform 0.5s;}
+
+.mainSection__article-b--fotoB:hover{transform: scale(1.03,1.03);}
 
 /* Dimensionar texto izquierdo */
 .mainSection__article-b--textoB {flex-basis:30%;font-size:4rem; order:-1;} /* Se usa "order:-1" para cambiar de posicion textoe imagen */
