@@ -82,6 +82,22 @@ nav{
   justify-content: space-around;
 }
 
+/* Crear un efecto de cambio de color de fondo en los items del menu */
+.header__nav--listaGeneral li{
+  text-decoration:none; 
+  color: #f25287;
+  background-image: linear-gradient(#f9f3f3, #f9f3f3);
+  background-position: 0% 50%;
+  background-repeat: no-repeat;
+  background-size: 0% 100%;
+  transition: background-size .3s;
+}
+
+.header__nav--listaGeneral li:hover{
+  background-size: 100% 100%;
+}
+
+
 /* Estilo de items/links del menu navegable */
 .header__nav--listaGeneral li a{text-decoration:none; color: #f25287;}
 
@@ -101,18 +117,20 @@ nav{
   padding: 10px;
 }
 
-/* Estilo de items en la sub-lista.*/
-.header__nav--subLista li{ 
-  width: 25rem; 
-  font-size: 3rem;
-}
-
 /* Despliega la sub-lista cuando el cursor la seleccion.  Se despliega en vertical  */
 nav ul li:hover .header__nav--subLista{
   transition: 0.5s opacity, height 0.1s;   /* Pequeño tiempo de transicion en el submenu desplegable.*/
   opacity: 1;
   height: 200px;
 }
+
+/* Estilo de items en la sub-lista.*/
+.header__nav--subLista li{ 
+  width: 25rem; 
+  font-size: 3rem;
+}
+
+
 
 
 /* Cambios para la barra de buscador */
@@ -130,7 +148,7 @@ nav ul li:hover .header__nav--subLista{
 footer{
   max-width: 100%;
   height: 25rem;
-  background: linear-gradient(90deg, #f7d9d9 15%, #f9f3f3 50%, #dddddd 85%);
+  background: linear-gradient(90deg, #f7d9d9 15%, #f9f3f3 50%, #dddddd 85%); 
   padding: 3rem;
   border: 1px solid;
   display:grid;
@@ -177,7 +195,7 @@ footer{
   grid-area: autor;
 }
 
-
+/* MEDIA QUIRE PARA CUANDO LA PANTALLA TIENE MENOS DE 1400px */
 @media (max-width:1400px){
   nav{
     grid-area: navegador;
@@ -276,6 +294,8 @@ footer{
     flex-direction: column;
     justify-content: space-evenly;
     opacity: 0;
+    border: 2px solid;
+    margin-left: 125px;
   }
 
   /* Estilo de items en la sub-lista.*/
@@ -293,7 +313,7 @@ footer{
 
   /* Cambios para la barra de buscador */
   .buscador1 {
-    display: inline;
+    display: none;
     font-family: garamond;
     font-size: large;
     border: none;
