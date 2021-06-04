@@ -4,17 +4,32 @@
     <title>Estetica y Masajes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <link rel="stylesheet" href="./Estilos-CSS/Styles.css">
-   <link rel="stylesheet" href="./Estilos-CSS/index.css">
+   <!-- <link rel="stylesheet" href="./Estilos-CSS/Styles.css"> -->
+   <link rel="stylesheet" href="./indexPruebaBoots.css">
+
+   <!-- Aplicando BOOTSTRAP -->
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
   </head>
 
   <body>
     <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
-    <header class="body__header">
-      <div class="body__header--cubologo"><img class="body__header--logo" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
-      <div class="body__header--cubotitulo">
-        <div><h1>Estetica y Masajes</h1></div>
-      </div> 
+
+
+    <header class="container">
+      <div class="row">
+        <div class="col-3 border-black"><img class="img-fluid" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
+        <div class="col-8 border-black">
+          <div class="container">
+            <div class="row">
+              <div class="col-12 align-self-center"><h1>Estetica y Masajes</h1></div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+        
+
+
     <!-- Barra de navegación -->
       <nav>
         <ul class="header__nav--listaGeneral">
