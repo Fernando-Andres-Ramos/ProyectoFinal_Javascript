@@ -6,8 +6,11 @@
   background-size: 100rem;
 }
 
-.border-black{
-  border: 1px solid black;
+.navbar{
+  border: 2px solid  #f25287;
+  background-color: #f7d9d9;
+  color: #f25287;
+  text-decoration: none;
 }
 
 /* Titulo del sitio web */

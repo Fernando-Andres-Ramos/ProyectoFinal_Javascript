@@ -4,17 +4,19 @@
     <title>Estetica y Masajes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-   <!-- <link rel="stylesheet" href="./Estilos-CSS/Styles.css"> -->
-   <link rel="stylesheet" href="./indexPruebaBoots.css">
+    <link rel="stylesheet" href="./indexPruebaBoots.css">
 
    <!-- Aplicando BOOTSTRAP -->
-   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
   </head>
 
-  <body>
 
+  <body>
     <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
-    <header class="container-lg">
+    <header class="container-fluid">
       <div class="row">
         <div class="col-xl-2 col-lg-3 d-none d-lg-block border-black"><img class="img-fluid" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
         <div class="col-xl-10 col-lg-9 col-md-12 border-black d-flex align-items-center cuboTitulo">
@@ -23,70 +25,94 @@
       </div>
 
     <!-- Barra de navegación -->
-      <nav>
-        <ul class="header__nav--listaGeneral">
-          <li><a href="./index.html">Principal</a></li> 
-          <li><a href="./Quienes_Somos.html">Quienes somos</a></li> 
-          <li>
-            <p>Nuestros servicios</p>
-            <ul class="header__nav--subLista">
-              <li><a  href="./Servicios/Depilacion.html">Depilacion</a></li>
-              <li><a  href="./Servicios/Esmaltado.html">Esmaltado</a></li>
-              <li><a  href="./Servicios/Perfilado.html">Perfilado de cejas</a></li>
-              <li><a  href="./Servicios/Masajes.html">Masajes</a></li>
+      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Principal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./Quienes_Somos.html">Quienes Somos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nuestros servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./Servicios/Depilacion.html">Depilacion</a></li>
+                  <li><a class="dropdown-item" href="./Servicios/Esmaltado.html">Esmaltado</a></li>
+                  <li><a class="dropdown-item" href="./Servicios/Perfilado.html">Perfilado de cejas</a></li>
+                  <li><a class="dropdown-item" href="./Servicios/Masajes.html">Masajes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Contacto.html">Contacto</a>
+              </li>
             </ul>
-          </li>     
-          <li><a href="./Galeria.html">Galeria</a></li> 
-          <li><a href="./Contacto.html">Contacto</a></li> 
-          <li>
-            <form action="search.php">
-              <input class="buscador1" type="text">
-              <input class="buscador1" type="submit" value="Buscar">
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
             </form>
-        </li>
-        </ul>
-        <div class="clearfix"></div>  
+          </div>
+        </div>
       </nav>
     </header>
 
    <main>
-      <section>
-        <h3>¡Bienvenid@ a nuestro sitio!</h3>
-        <p class="presentacion">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem porro a sit quibusdam aut sequi laudantium officia consectetur, excepturi nam. Aliquam, dicta porro. Repudiandae corrupti cum officiis necessitatibus quod!
-        Quas, odio earum, pariatur ad perferendis fugiat esse facilis nesciunt quasi a aliquid sint beatae quos laborum repudiandae officia aut! Voluptatum nihil dolorum sit error aliquid dolor, porro nobis. Nam.</p>
+      <section class="container-fluid">
+        <div class="row">
+          <h3 class="col-12">¡Bienvenid@ a nuestro sitio!</h3>
+        </div>
+        <div>
+          <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem porro a sit quibusdam aut sequi laudantium officia consectetur, excepturi nam. Aliquam, dicta porro. Repudiandae corrupti cum officiis necessitatibus quod!
+          Quas, odio earum, pariatur ad perferendis fugiat esse facilis nesciunt quasi a aliquid sint beatae quos laborum repudiandae officia aut! Voluptatum nihil dolorum sit error aliquid dolor, porro nobis. Nam.</p>
+        </div>
       </section>
 
      <!-- Seccion informativa con imagenes/links de los servicios-->
-     <section class="mainSection"> 
-       <article class="mainSection__article-a">
-        <a href="./Servicios/Esmaltado.html"><img class="mainSection__article-a--fotoA" src="./Galeria/Esmaltado.png" atl="Esmaltado_imagen" ></a>
-        <div class="mainSection__article-a--textoA">
-          <h4>Esmaltado</h4>
-          <p>Brindamos un servicio completo para la belleza de manos y pies</p>
-        </div>
+     <section class="container-fluid justify-content-around"> 
+       <article class="row mb-5">
+          <div class="col-8">
+            <a href="./Servicios/Esmaltado.html"><img class="img-fluid" src="./Galeria/Esmaltado.png" atl="Esmaltado_imagen" ></a>
+          </div>
+          <div class="col-4 align-self-center">
+            <h4>Esmaltado</h4>
+            <p>Brindamos un servicio completo para la belleza de manos y pies</p>
+          </div>
        </article>
  
-       <article class="mainSection__article-b">
-         <a href="./Servicios/Perfilado.html"><img class="mainSection__article-b--fotoB" src="./Galeria/PerfiladoC.jpg" atl="Periflado_imagen"></a>
-         <div class="mainSection__article-b--textoB">
-            <h4>Perfilado</h4>
-            <p>Brindamos un servicio completo de perfilado de cejas y belleza de pestañas</p>
-         </div>
+       <article class="row mb-5">
+         <div class="col-4 align-self-center">
+           <h4>Perfilado</h4>
+           <p>Brindamos un servicio completo de perfilado de cejas y belleza de pestañas</p>
+          </div>
+          <div class="col-8">
+            <a href="./Servicios/Perfilado.html"><img class="img-fluid" src="./Galeria/PerfiladoC.jpg" atl="Periflado_imagen"></a>
+          </div>
         </article>
  
-       <article class="mainSection__article-a">
-          <a href="./Servicios/Depilacion.html"><img class="mainSection__article-a--fotoA" src="./Galeria/Depilacion.png" atl="Depilación_imagen"></a>
-          <div class="mainSection__article-a--textoA">
+       <article class="row mb-5">
+          <div class="col-8">
+            <a href="./Servicios/Depilacion.html"><img class="img-fluid" src="./Galeria/Depilacion.png" atl="Depilación_imagen"></a>
+          </div>
+          <div class="col-4 align-self-center">
             <h4>Depilacion</h4>
             <p>Realizamos depilacion general del cuerpo con las tecnicas española y definitiva</p>
           </div>
         </article>
  
-       <article class="mainSection__article-b">
-          <a href="./Servicios/Masajes.html"><img class="mainSection__article-b--fotoB" src="./Galeria/Masajes.jpg" atl="Masaje_imagen"></a>
-          <div class="mainSection__article-b--textoB">
-            <h4>Masajes</h4>
-            <p>Realizamos distintos tipos de masajes: Relajantes, Descontracturantes, Deportivos, Etc </p>
+       <article class="row">
+         <div class="col-4 align-self-center">
+           <h4>Masajes</h4>
+           <p>Realizamos distintos tipos de masajes: Relajantes, Descontracturantes, Deportivos, Etc </p>
+          </div>
+          <div class="col-8">
+            <a href="./Servicios/Masajes.html"><img class="img-fluid" src="./Galeria/Masajes.jpg" atl="Masaje_imagen"></a>
           </div>
         </article>
       </section>
