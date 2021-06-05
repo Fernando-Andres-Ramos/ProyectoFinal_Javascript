@@ -1,7 +1,19 @@
 .cuboTitulo{
-  height: 500px;
+  height: 15rem;
+  background-image: url(./Galeria/Cabecera.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100rem;
 }
 
 .border-black{
   border: 1px solid black;
+}
+
+/* Titulo del sitio web */
+.titulo{
+  font-family: garamond;
+  color: #f25287;
+  font-style:italic;
+  font-size: 6.5rem;
 }
