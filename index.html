@@ -1,3 +1,4 @@
+<!-- SE UTILIZAN PROPIEDADES DE BOOTSTRAP PRINCIPALMENTE PARA REALIZAR RESPONSIVE -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -18,14 +19,14 @@
     <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
     <header class="container-fluid">
       <div class="row">
-        <div class="col-xl-2 col-lg-3 d-none d-lg-block border-black"><img class="img-fluid" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
-        <div class="col-xl-10 col-lg-9 col-md-12 border-black d-flex align-items-center cuboTitulo">
+        <div class="col-xl-2 col-lg-2 d-none d-lg-block border-black"><img class="img-fluid" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
+        <div class="col-xl-10 col-lg-10 col-md-12 border-black d-flex align-items-center cuboTitulo">
           <h1 class="titulo">Estetica y Masajes</h1>
         </div>  
       </div>
 
     <!-- Barra de navegación -->
-      <nav class="navbar navbar-expand-lg navbar-light bg-light mb-5">
+      <nav class="navbar navbar-expand-lg navbar-light mb-5">
         <div class="container-fluid">
           <a class="navbar-brand" href="./index.html">Principal</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -55,21 +56,24 @@
               </li>
             </ul>
             <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
+              <input class="form-control me-2" type="search" placeholder="¿Qué estas buscando?" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
             </form>
           </div>
         </div>
       </nav>
     </header>
 
+
+
+    <!-- Parte principal -->
    <main>
-      <section class="container-fluid">
+      <section class="container-xxl mb-5">
         <div class="row">
-          <h3 class="col-12">¡Bienvenid@ a nuestro sitio!</h3>
+          <h3 class="col-12 fs-1 colorFuente">¡Bienvenid@ a nuestro sitio!</h3>
         </div>
         <div>
-          <p class="col-12">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem porro a sit quibusdam aut sequi laudantium officia consectetur, excepturi nam. Aliquam, dicta porro. Repudiandae corrupti cum officiis necessitatibus quod!
+          <p class="col-12 fs-3 colorFuente">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate voluptatem porro a sit quibusdam aut sequi laudantium officia consectetur, excepturi nam. Aliquam, dicta porro. Repudiandae corrupti cum officiis necessitatibus quod!
           Quas, odio earum, pariatur ad perferendis fugiat esse facilis nesciunt quasi a aliquid sint beatae quos laborum repudiandae officia aut! Voluptatum nihil dolorum sit error aliquid dolor, porro nobis. Nam.</p>
         </div>
       </section>
@@ -77,64 +81,72 @@
      <!-- Seccion informativa con imagenes/links de los servicios-->
      <section class="container-fluid justify-content-around"> 
        <article class="row mb-5">
-          <div class="col-8">
-            <a href="./Servicios/Esmaltado.html"><img class="img-fluid" src="./Galeria/Esmaltado.png" atl="Esmaltado_imagen" ></a>
+          <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+            <a href="./Servicios/Esmaltado.html"><img class="img-fluid bordeImagen" src="./Galeria/Esmaltado.png" atl="Esmaltado_imagen" ></a>
           </div>
-          <div class="col-4 align-self-center">
-            <h4>Esmaltado</h4>
-            <p>Brindamos un servicio completo para la belleza de manos y pies</p>
+          <div class="col-lg-4 col-md-6 com-sm-12 col-12 align-self-center colorFuente">
+            <h4 class="fs-1">Esmaltado</h4>
+            <p class="fs-3">Brindamos un servicio completo para la belleza de manos y pies</p>
           </div>
        </article>
  
-       <article class="row mb-5">
-         <div class="col-4 align-self-center">
-           <h4>Perfilado</h4>
-           <p>Brindamos un servicio completo de perfilado de cejas y belleza de pestañas</p>
+       <article class="row mb-5 d-flex flex-wrap-reverse">
+         <div class="col-lg-4 col-md-6 com-sm-12 col-12 align-self-center colorFuente">
+           <h4 class="fs-1">Perfilado</h4>
+           <p class="fs-3">Brindamos un servicio completo de perfilado de cejas y belleza de pestañas</p>
           </div>
-          <div class="col-8">
-            <a href="./Servicios/Perfilado.html"><img class="img-fluid" src="./Galeria/PerfiladoC.jpg" atl="Periflado_imagen"></a>
-          </div>
-        </article>
- 
-       <article class="row mb-5">
-          <div class="col-8">
-            <a href="./Servicios/Depilacion.html"><img class="img-fluid" src="./Galeria/Depilacion.png" atl="Depilación_imagen"></a>
-          </div>
-          <div class="col-4 align-self-center">
-            <h4>Depilacion</h4>
-            <p>Realizamos depilacion general del cuerpo con las tecnicas española y definitiva</p>
+          <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+            <a href="./Servicios/Perfilado.html"><img class="img-fluid bordeImagen" src="./Galeria/PerfiladoC.jpg" atl="Periflado_imagen"></a>
           </div>
         </article>
  
-       <article class="row">
-         <div class="col-4 align-self-center">
-           <h4>Masajes</h4>
-           <p>Realizamos distintos tipos de masajes: Relajantes, Descontracturantes, Deportivos, Etc </p>
+       <article class="row mb-5">
+          <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+            <a href="./Servicios/Depilacion.html"><img class="img-fluid bordeImagen" src="./Galeria/Depilacion.png" atl="Depilación_imagen"></a>
           </div>
-          <div class="col-8">
-            <a href="./Servicios/Masajes.html"><img class="img-fluid" src="./Galeria/Masajes.jpg" atl="Masaje_imagen"></a>
+          <div class="col-lg-4 col-md-6 com-sm-12 col-12 align-self-center colorFuente">
+            <h4 class="fs-1">Depilacion</h4>
+            <p class="fs-3">Realizamos depilacion general del cuerpo con las tecnicas española y definitiva</p>
+          </div>
+        </article>
+ 
+       <article class="row d-flex flex-wrap-reverse">
+         <div class="col-lg-4 col-md-6 com-sm-12 col-12 align-self-center colorFuente">
+           <h4 class="fs-1">Masajes</h4>
+           <p class="fs-3">Realizamos distintos tipos de masajes: Relajantes, Descontracturantes, Deportivos, Etc </p>
+          </div>
+          <div class="col-lg-7 col-md-6 col-sm-12 col-12">
+            <a href="./Servicios/Masajes.html"><img class="img-fluid bordeImagen" src="./Galeria/Masajes.jpg" atl="Masaje_imagen"></a>
           </div>
         </article>
       </section>
    </main> 
 
+   <br><br><br><hr><hr>
+
      
     <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
-    <footer>
-      <div class="footer__div-info">
-        <p>Informacion de contacto:</p>
-        <ul class="footer__div--ul">
-          <li><p>Email: estetica_y_masajes@########.com</p></li>
-          <li><p>Direccion: Calle Falsa 123</p></li>
-          <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
-        </ul>
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-6 container">
+          <div class="row">
+            <p class="col-4">Informacion de contacto:</p>
+            <ul class="col-8">
+              <li><p>Email: estetica_y_masajes@########.com</p></li>
+              <li><p>Direccion: Calle Falsa 123</p></li>
+              <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-6 container d-flex justify-content-start">
+          <div class="row"> 
+            <h5 class="col-2">Redes sociales</h5>
+            <a class="col-1" href="https://www.facebook.com/"><img class="img-fluid" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
+            <a class="col-1" href="https://www.instagram.com/"><img class="img-fluid" src="./Galeria/Instalogo.png" alt="logo_instagram"></a> 
+          </div>
+        </div>
       </div>
       
-      <div class="footer__div-redes"> 
-        <h5 class="footer__h5">Redes sociales</h5>
-        <a href="https://www.facebook.com/"><img class="footerLogo" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
-        <a href="https://www.instagram.com/"><img class="footerLogo" src="./Galeria/Instalogo.png" alt="logo_instagram"></a> 
-      </div>
       
       <div class="footer__div-autor"><p><em>Pagina web creada por Fernando Ramos</em></p></div>
     </footer>

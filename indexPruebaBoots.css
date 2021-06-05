@@ -10,7 +10,6 @@
   border: 2px solid  #f25287;
   background-color: #f7d9d9;
   color: #f25287;
-  text-decoration: none;
 }
 
 /* Titulo del sitio web */
@@ -20,3 +19,26 @@
   font-style:italic;
   font-size: 6.5rem;
 }
+
+@media (max-width:768px){
+  .titulo{
+    font-family: garamond;
+    color: #f25287;
+    font-style:italic;
+    font-size: 4.5rem;
+  }
+}
+
+.nav-link:hover{
+  background-color:#f9f3f3;
+}
+
+.colorFuente{
+  color: #f25287;
+  font-family: garamond;
+}
+
+/* Estilo para las imagenes del index.html */
+.bordeImagen{border-radius: 5px; max-width: 100%; border: solid #f25287;transition: transform 0.5s;}
+
+.bordeImagen:hover{transform: scale(1.03,1.03);}  /* Transformacion de escala*/
