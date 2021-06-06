@@ -15,6 +15,6 @@ Este proyecto consiste en un sitio web en desarrollo:
   * En la carpeta "Servicios" se encuentran mas html de los servicios que ofrece el sitio web (desarrollando).
   * La carpeta galeria tiene imagenes que se usaran en el sitio.
   
-  **_ Cambios para el desafio de la clase 8 y 9: En el navegador se aplican transiciones para el submenu y para cambiar el color de fondo. Las imagenes grandes en Index y Galeria tiene una transformación de escala. Se agrego un gradiante al footer a modo de prueba. En la seccion de "contacto" hay un pequeño cuadro animado a modo de publicidad. Se agrego una prueba de responsive para el encabezado y el nav, estos se modifican cuando la pantalla es de 1200px o menos. Aun no se agrego responsive a todo el proyecto_**
+  **_ Cambios para el desafio de la clase 12 y 13: Se aplican conceptos de BOOTSTRAP en el index.html y en galeria.html. Ambas paginas del sitio web tienen una funcion responsive tanto en su header como en el body, aun no esta completo el footer. En el header se utilizan "botons" y "dropdowns" para la navegacion. En galeria.html se utilizo un MODAL que se activa cuando se selecciona alguna de las imagenes. Ademas se creo un archivo llamado "indexPruebaBoots.css" para modificar algunos estilos predefinidos por bootstrap a modo de prueba para este desafio._**
   
-_Actualizado 22/05/2021_
+_Actualizado 05/06/2021_
