@@ -36,9 +36,19 @@
 .colorFuente{
   color: #f25287;
   font-family: garamond;
+  text-align:center;
 }
 
 /* Estilo para las imagenes del index.html */
-.bordeImagen{border-radius: 5px; max-width: 100%; border: solid #f25287;transition: transform 0.5s;}
+.bordeImagen{border-radius: 5px; max-width: 100%; border: 2px solid #f25287;transition: transform 0.5s;}
 
 .bordeImagen:hover{transform: scale(1.03,1.03);}  /* Transformacion de escala*/
+
+
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+

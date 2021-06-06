@@ -1,97 +1,180 @@
+<!-- SE UTILIZAN PROPIEDADES DE BOOTSTRAP PRINCIPALMENTE PARA REALIZAR RESPONSIVE -->
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Estilos-CSS/Styles.css">
-  <link rel="stylesheet" href="./Estilos-CSS/galeria.css">
-  <title>Quienes somos</title>
-</head>
+  <head>
+    <title>Estetica y Masajes</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="./indexPruebaBoots.css">
+
+   <!-- Aplicando BOOTSTRAP -->
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+  </head>
+
 <body>
+
   <!-- Encabezado con menu de las diferentes secciones del sitio web (links) -->
-  <header class="body__header">
-    <div class="body__header--cubologo"><img class="body__header--logo" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
-    <div class="body__header--cubotitulo">
-      <div><h1>Estetica y Masajes</h1></div>
-    </div> 
-  <!-- Barra de navegación -->
-    <nav>
-      <ul class="header__nav--listaGeneral">
-        <li><a href="./index.html">Principal</a></li> 
-        <li><a href="./Quienes_Somos.html">Quienes somos</a></li> 
-        <li>
-          <p>Nuestros servicios</p>
-          <ul class="header__nav--subLista">
-            <li><a href="./Servicios/Depilacion.html">Depilacion</a></li>
-            <li><a href="./Servicios/Esmaltado.html">Esmaltado</a></li>
-            <li><a href="./Servicios/Perfilado.html">Perfilado de cejas</a></li>
-            <li><a href="./Servicios/Masajes.html">Masajes</a></li>
-          </ul>
-        </li>     
-        <li><a href="./Galeria.html">Galeria</a></li> 
-        <li><a href="./Contacto.html">Contacto</a></li> 
-        <li>
-          <form action="search.php">
-            <input class="buscador1" type="text">
-            <input class="buscador1" type="submit" value="Buscar">
-          </form>
-      </li>
-      </ul>
-      <div class="clearfix"></div>  
-    </nav>
-  </header>
+     <header class="container-fluid">
+      <div class="row">
+        <div class="col-xl-2 col-lg-2 d-none d-lg-block border-black"><img class="img-fluid" src="./Galeria/nombreLogo.jpg" alt=Logo_sitio></div>
+        <div class="col-xl-10 col-lg-10 col-md-12 border-black d-flex align-items-center cuboTitulo">
+          <h1 class="titulo">Estetica y Masajes</h1>
+        </div>  
+      </div>
+
+    <!-- Barra de navegación -->
+      <nav class="navbar navbar-expand-lg navbar-light mb-5">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="./index.html">Principal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="./Quienes_Somos.html">Quienes Somos</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Nuestros servicios
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="./Servicios/Depilacion.html">Depilacion</a></li>
+                  <li><a class="dropdown-item" href="./Servicios/Esmaltado.html">Esmaltado</a></li>
+                  <li><a class="dropdown-item" href="./Servicios/Perfilado.html">Perfilado de cejas</a></li>
+                  <li><a class="dropdown-item" href="./Servicios/Masajes.html">Masajes</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Galeria.html">Galeria</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./Contacto.html">Contacto</a>
+              </li>
+            </ul>
+            <form class="d-flex">
+              <input class="form-control me-2" type="search" placeholder="¿Qué estas buscando?" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+    </header>
 
   <!--Sección de imagenes con carpetas de las distintas areas y del lugar en general -->
   <!-- Aun no decidí si crear links a otros htmls o hacer imagenes desplegables u otra opcion -->
   <main>
-    <h3>¡Aca podes ver lo que hacemos!</h3>
-   <section class="grilla">
-       <div class="grilla__carpetaIzquierda">
-        <img class="main__section--cuadro" src="./Galeria/Depilacion.png" alt="otraImgDepi">
-        <h4 class="grilla__carpeta--texto">Depilación general</h4>
-        <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
+    <section>
+      <!-- Vertically centered modal -->
+    
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Launch demo modal
+      </button>
+
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-body">
+
+              <!-- Carrusel de imagenes de galeria -->
+              <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="./Galeria/Depilacion.png" class="d-block w-100" alt="imagen_depilacion">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./Galeria/Esmaltado.png" class="d-block w-100" alt="imagen_esmaltado">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./Galeria/PerfiladoC.jpg" class="d-block w-100" alt="imagen_perfilado">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./Galeria/Masajes.jpg" class="d-block w-100" alt="imagen_perfilado">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
-       <div class="grilla__carpetaDerecha">
-         <img class="main__section--cuadro" src="./Galeria/Esmaltado.png" alt="otraImgEsmal">
-         <h4 class="grilla__carpeta--texto">Esmaltado de uñas.</h4>
-         <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
-       </div>
+      
+      <div class="container">
+        <div class="row colorFuente"><h2 class="mb-5 text-center">¡Aca podes ver lo que hacemos!</h2></div>
+        
+        <div class="row">
+          <div class="col-6 colorFuente">
+            <img class="img-fluid bordeImagen" src="./Galeria/Esmaltado.png" alt="otraImgEsmal">
+            <h4 class="grilla__carpeta--texto">Esmaltado de uñas.</h4>
+            <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
+          </div>
 
-       <div class="grilla__carpetaIzquierda">
-         <img class="main__section--cuadro" src="./Galeria/PerfiladoC.jpg" alt="otraImgPerfi">
-         <h4 class="grilla__carpeta--texto">Perfilado de cejas y pestañas</h4>
-         <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
-       </div>
+          <div class="col-6 colorFuente">
+            <img class="img-fluid bordeImagen" src="./Galeria/PerfiladoC.jpg" alt="otraImgPerfi">
+            <h4 class="grilla__carpeta--texto">Perfilado de cejas y pestañas</h4>
+            <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6 colorFuente">
+            <img class="img-fluid bordeImagen" src="./Galeria/Depilacion.png" alt="otraImgDepi">
+            <h4 class="grilla__carpeta--texto">Depilación general</h4>
+            <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
+          </div>
 
-       <div class="grilla__carpetaDerecha">
-         <img class="main__section--cuadro" src="./Galeria/Masajes.jpg" alt="otraImgMasajes">
-         <h4 class="grilla__carpeta--texto">Varios estilos de masaje corporal</h4>
-         <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
-       </div>
-   </section>
+          <div class="col-6 colorFuente">
+            <img class="img-fluid bordeImagen" src="./Galeria/Masajes.jpg" alt="otraImgMasajes">
+            <h4 class="grilla__carpeta--texto">Varios estilos de masaje corporal</h4>
+            <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
       <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
 
-      <footer>
-        <div class="footer__div-info">
-          <p>Informacion de contacto:</p>
-          <ul class="footer__div--ul">
-            <li><p>Email: estetica_y_masajes@########.com</p></li>
-            <li><p>Direccion: Calle Falsa 123</p></li>
-            <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
-          </ul>
+      <br><br><br><hr><hr>
+
+     
+    <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
+    <footer class="container-fluid">
+      <div class="row">
+        <div class="col-6 container">
+          <div class="row">
+            <p class="col-4">Informacion de contacto:</p>
+            <ul class="col-8">
+              <li><p>Email: estetica_y_masajes@########.com</p></li>
+              <li><p>Direccion: Calle Falsa 123</p></li>
+              <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
+            </ul>
+          </div>
         </div>
-        
-        <div class="footer__div-redes"> 
-          <h5 class="footer__h5">Redes sociales</h5>
-          <a href="https://www.facebook.com/"><img class="footerLogo" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
-          <a href="https://www.instagram.com/"><img class="footerLogo" src="./Galeria/Instalogo.png" alt="logo_instagram"></a> 
+        <div class="col-6 container d-flex justify-content-start">
+          <div class="row"> 
+            <h5 class="col-2">Redes sociales</h5>
+            <a class="col-1" href="https://www.facebook.com/"><img class="img-fluid" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
+            <a class="col-1" href="https://www.instagram.com/"><img class="img-fluid" src="./Galeria/Instalogo.png" alt="logo_instagram"></a> 
+          </div>
         </div>
-        
-        <div class="footer__div-autor"><p><em>Pagina web creada por Fernando Ramos</em></p></div>
-      </footer>
+      </div>
+      
+      
+      <div class="footer__div-autor"><p><em>Pagina web creada por Fernando Ramos</em></p></div>
+    </footer>
 </body>
 </html>
