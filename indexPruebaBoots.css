@@ -1,3 +1,4 @@
+/* Estilos para la imagen de fondo en el titulo */
 .cuboTitulo{
   height: 15rem;
   background-image: url(./Galeria/Cabecera.jpg);
@@ -6,11 +7,17 @@
   background-size: 100rem;
 }
 
+/* Estilos para el nav hecho con BOOSTRAP */
 .navbar{
   border: 2px solid  #f25287;
   background-color: #f7d9d9;
   color: #f25287;
 }
+
+.nav-link:hover{
+  background-color:#f9f3f3;
+}
+
 
 /* Titulo del sitio web */
 .titulo{
@@ -19,7 +26,6 @@
   font-style:italic;
   font-size: 6.5rem;
 }
-
 @media (max-width:768px){
   .titulo{
     font-family: garamond;
@@ -29,22 +35,20 @@
   }
 }
 
-.nav-link:hover{
-  background-color:#f9f3f3;
-}
+/* Fuente de la pagina */
 
 .colorFuente{
   color: #f25287;
   font-family: garamond;
-  text-align:center;
 }
 
-/* Estilo para las imagenes del index.html */
+/* Estilo para las imagenes del index y la galeria */
 .bordeImagen{border-radius: 5px; max-width: 100%; border: 2px solid #f25287;transition: transform 0.5s;}
 
-.bordeImagen:hover{transform: scale(1.03,1.03);}  /* Transformacion de escala*/
+.bordeImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/
 
 
+/* Centralizar el MODAL en galeria.html */
 .modal-dialog {
   display: flex;
   justify-content: center;

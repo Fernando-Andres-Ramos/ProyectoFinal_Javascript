@@ -69,12 +69,7 @@
   <!-- Aun no decidí si crear links a otros htmls o hacer imagenes desplegables u otra opcion -->
   <main>
     <section>
-      <!-- Vertically centered modal -->
-    
-      <!-- Button trigger modal -->
-      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        Launch demo modal
-      </button>
+  
 
       <!-- Modal -->
       <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -111,33 +106,33 @@
           </div>
         </div>
       </div>
-
-      
+ 
+      <!-- Galeria de imagenes que activan el MODAL de boostrap -->
       <div class="container">
         <div class="row colorFuente"><h2 class="mb-5 text-center">¡Aca podes ver lo que hacemos!</h2></div>
         
         <div class="row">
-          <div class="col-6 colorFuente">
-            <img class="img-fluid bordeImagen" src="./Galeria/Esmaltado.png" alt="otraImgEsmal">
-            <h4 class="grilla__carpeta--texto">Esmaltado de uñas.</h4>
+          <div class="col-lg-6 col-12 colorFuente text-center"">
+            <img type="button" class="img-fluid bordeImagen" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./Galeria/Esmaltado.png" alt="otraImgEsmal">
+            <h4 class="grilla__carpeta--texto">Esmaltado de uñas</h4>
             <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
           </div>
 
-          <div class="col-6 colorFuente">
-            <img class="img-fluid bordeImagen" src="./Galeria/PerfiladoC.jpg" alt="otraImgPerfi">
+          <div class="col-lg-6 col-12 colorFuente text-center">
+            <img type="button" class="img-fluid bordeImagen" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./Galeria/PerfiladoC.jpg" alt="otraImgPerfi">
             <h4 class="grilla__carpeta--texto">Perfilado de cejas y pestañas</h4>
             <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
           </div>
         </div>
         <div class="row">
-          <div class="col-6 colorFuente">
-            <img class="img-fluid bordeImagen" src="./Galeria/Depilacion.png" alt="otraImgDepi">
+          <div class="col-lg-6 col-12 colorFuente text-center">
+            <img type="button" class="img-fluid bordeImagen" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./Galeria/Depilacion.png" alt="otraImgDepi">
             <h4 class="grilla__carpeta--texto">Depilación general</h4>
             <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
           </div>
 
-          <div class="col-6 colorFuente">
-            <img class="img-fluid bordeImagen" src="./Galeria/Masajes.jpg" alt="otraImgMasajes">
+          <div class="col-lg-6 col-12 colorFuente text-center">
+            <img type="button" class="img-fluid bordeImagen" data-bs-toggle="modal" data-bs-target="#exampleModal" src="./Galeria/Masajes.jpg" alt="otraImgMasajes">
             <h4 class="grilla__carpeta--texto">Varios estilos de masaje corporal</h4>
             <p class="grilla__carpeta--texto">Una vista mas de cerca al equipamiento y lugar</p>
           </div>
@@ -145,8 +140,6 @@
       </div>
     </section>
   </main>
-
-      <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
 
       <br><br><br><hr><hr>
 
