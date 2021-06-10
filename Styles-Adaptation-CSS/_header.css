@@ -1,0 +1,37 @@
+/* Titulo del sitio web */
+.titulo{
+  font-family: garamond;
+  color: #f25287;
+  font-style:italic;
+  font-size: 6.5rem;
+}
+@media (max-width:768px){
+  .titulo{
+    font-family: garamond;
+    color: #f25287;
+    font-style:italic;
+    font-size: 4.5rem;
+  }
+}
+
+/* Estilos para la imagen de fondo en el titulo */
+.cuboTitulo{
+  height: 15rem;
+  background-image: url(../Galeria/Cabecera.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100rem;
+}
+
+/* Estilos para el nav hecho con BOOSTRAP */
+.header__navbar--estilo{
+  border: 2px solid  #f25287;
+  background-color: #f7d9d9;
+  color: #f25287;
+}
+
+.nav-link:hover{
+  background-color:#f9f3f3;
+}
+
+
