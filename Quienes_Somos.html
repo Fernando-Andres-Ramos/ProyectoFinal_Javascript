@@ -4,10 +4,9 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- <link rel="stylesheet" href="./Estilos-CSS/Styles.css"> -->
-  <!-- <link rel="stylesheet" href="./Estilos-CSS/quienesSomos.css"> -->
   <link rel="stylesheet" href="./Styles-Adaptation-CSS/_body.css">
   <link rel="stylesheet" href="./Styles-Adaptation-CSS/_header.css">
+  <link rel="stylesheet" href="./Styles-Adaptation-CSS/_quienesSomos.css">
   <title>Quienes somos</title>
 
   <!-- Aplicando BOOTSTRAP -->
@@ -68,69 +67,84 @@
 
   <!-- Se agregara la historia de la PyME, resumen de servicios, etc. -->
   
-  <main class="main">
-    <!-- Seccion destinada a la presentacion de la empresa-->
-    <section> 
-      <h3>Quienes somos</h3>
-      <article class="mainSection--article">
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia odit error consequuntur, omnis libero beatae maxime repellendus blanditiis voluptatibus atque doloremque voluptatum vel eaque cum ea quod perferendis unde labore.
-        Accusantium rerum incidunt officia voluptatibus ipsum, sit adipisci. Delectus quas quisquam illum beatae culpa alias ratione, expedita, omnis cum quae officiis laudantium nulla! Ea consequatur eveniet adipisci nihil? Ut, possimus!
-        Rem, quia non? Doloribus culpa placeat reiciendis commodi error animi, hic saepe deleniti id totam illum incidunt repellendus amet cupiditate, quia recusandae aliquid iste ea neque odio rerum possimus? Consequatur.</p>
-        <img src="./Galeria/fotoLugar.jpg" alt="fotoLugar">
+  <main class="container colorFuente">
+    <section class="row">
+      <!-- Seccion destinada a la presentacion de la empresa-->
+      <article class="col-xl-6 col-12 mb-5">
+        <h3 class="fs-1">Quienes somos</h3>
+         <p class="fs-3 mb-1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quia odit error consequuntur, omnis libero beatae maxime repellendus blanditiis voluptatibus atque doloremque voluptatum vel eaque cum ea quod perferendis unde labore.
+          Accusantium rerum incidunt officia voluptatibus ipsum, sit adipisci. Delectus quas quisquam illum beatae culpa alias ratione, expedita, omnis cum quae officiis laudantium nulla! Ea consequatur eveniet adipisci nihil? Ut, possimus!
+          Rem, quia non? Doloribus culpa placeat reiciendis commodi error animi, hic saepe deleniti id totam illum incidunt repellendus amet cupiditate, quia recusandae aliquid iste ea neque odio rerum possimus? Consequatur.</p>
       </article>
+
+      <!-- Seccion lateral con fotos de los fundadores/especialistas + info -->
+      <aside class="col-xl-6 col-12 container-fluid fs-5 px-5 mb-5">
+        <div class="row"><h3 class="col-12 fs-1 mb-5" >Nuestro equipo</h3></div>
+
+        <div class="row">
+          <div class="col-4">
+            <img class="img-fluid aside--img__cara" src="./Galeria/fotoPersonaM.jpg" alt="fotoPersona">
+            <ul class="mainAside__div--tarjeta">
+              <li class="mb-4"><strong>Nombre y apellido</strong></em></li>
+              <li class="mb-4"><p>Manicurista</p></li>
+              <li class="mb-4"><img class="mainAside__div--redes" src="./Galeria/Facelogo.png" alt="redSocial"></li>
+            </ul>
+          </div>
+          
+          <div class="col-4">
+            <img class="img-fluid img-fluid aside--img__cara" src="./Galeria/fotoPersonaM.jpg" alt="fotoPersona">
+            <ul class="mainAside__div--tarjeta">
+              <li class="mb-4"><strong>Nombre y apellido</strong></em></li>
+              <li class="mb-4"><p>Depiladora y cosmetologa</p></li>
+              <li class="mb-4"><img class="mainAside__div--redes" src="./Galeria/Facelogo.png" alt="redSocial"></li>
+            </ul>
+          </div>
+          
+          <div class="col-4">
+            <img class="img-fluid img-fluid aside--img__cara" src="./Galeria/fotoPersonaH.jpg" alt="fotoPersona">
+            <ul class="mainAside__div--tarjeta">
+              <li class="mb-4"><strong>Nombre y apellido</strong></em></li>
+              <li class="mb-4"><p>Masajista</p></li>
+              <li class="mb-4"><img class="mainAside__div--redes" src="./Galeria/Facelogo.png" alt="redSocial"></li>
+            </ul>
+          </div>
+        </div>
+      </aside>
     </section>
 
-    <!-- Seccion lateral con fotos de los fundadores/especialistas + info -->
-    <aside class="mainAside">
-      <h3>Nuestro equipo</h3>
-      <div class="mainAside__div--tamaño">
-        <img class="mainAside__div--foto" src="./Galeria/fotoPersonaM.jpg" alt="fotoPersona">
-        <ul class="mainAside__div--tarjeta">
-          <li><strong>Nombre y apellido</strong></em></li>
-          <li><p>Manicurista</p></li>
-          <li><img class="mainAside__div--redes" src="./Galeria/Facelogo.png" alt="redSocial"></li>
-        </ul>
-      </div>
-      
-      <div class="mainAside__div--tamaño">
-        <img class="mainAside__div--foto" src="./Galeria/fotoPersonaM.jpg" alt="fotoPersona">
-        <ul class="mainAside__div--tarjeta">
-          <li><strong>Nombre y apellido</strong></em></li>
-          <li><p>Depiladora y cosmetologa</p></li>
-          <li><img class="mainAside__div--redes" src="./Galeria/Facelogo.png" alt="redSocial"></li>
-        </ul>
-      </div>
-      
-      <div class="mainAside__div--tamaño">
-        <img class="mainAside__div--foto" src="./Galeria/fotoPersonaH.jpg" alt="fotoPersona">
-        <ul class="mainAside__div--tarjeta">
-          <li><strong>Nombre y apellido</strong></em></li>
-          <li><p>Masajista</p></li>
-          <li><img class="mainAside__div--redes" src="./Galeria/Facelogo.png" alt="redSocial"></li>
-        </ul>
-      </div>
-    </aside>
+    <article class="row">
+       <div class="col-12">
+         <img class="img-fluid bordeImagen" src="./Galeria/fotoLugar.jpg" alt="fotoLugar">
+       </div> 
+    </article>
+    
   </main>
 
-      <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
-
-    <footer>
-        <div class="footer__div-info">
-          <p>Informacion de contacto:</p>
-          <ul class="footer__div--ul">
-            <li><p>Email: estetica_y_masajes@########.com</p></li>
-            <li><p>Direccion: Calle Falsa 123</p></li>
-            <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
-          </ul>
+  <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
+  <br><br><br><hr><hr>
+  <footer class="container-fluid">
+        <div class="row">
+          <div class="col-6 container">
+            <div class="row">
+              <p class="col-4">Informacion de contacto:</p>
+              <ul class="col-8">
+                <li><p>Email: estetica_y_masajes@########.com</p></li>
+                <li><p>Direccion: Calle Falsa 123</p></li>
+                <li><p>Telefono= <strong>(011)-XXXX-XXXX</strong></p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-6 container d-flex justify-content-start">
+            <div class="row"> 
+              <h5 class="col-2">Redes sociales</h5>
+              <a class="col-1" href="https://www.facebook.com/"><img class="img-fluid" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
+              <a class="col-1" href="https://www.instagram.com/"><img class="img-fluid" src="./Galeria/Instalogo.png" alt="logo_instagram"></a> 
+            </div>
+          </div>
         </div>
         
-        <div class="footer__div-redes"> 
-          <h5 class="footer__h5">Redes sociales</h5>
-          <a href="https://www.facebook.com/"><img class="footerLogo" src="./Galeria/Facelogo.png" alt="logo_facebook"></a>   
-          <a href="https://www.instagram.com/"><img class="footerLogo" src="./Galeria/Instalogo.png" alt="logo_instagram"></a> 
-        </div>
         
         <div class="footer__div-autor"><p><em>Pagina web creada por Fernando Ramos</em></p></div>
-    </footer>
+  </footer>
 </body>
 </html>

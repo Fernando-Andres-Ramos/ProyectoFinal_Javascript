@@ -1,0 +1,12 @@
+/* Se declara el Aside como otro flexbox, sus hijos son las cartas de presentacion div */
+
+/* Estilo de las imagenes en el aside */
+.aside--img__cara{border-style: groove; border-radius: 200px;}
+
+.mainAside__div--redes{max-width:30%;}
+
+/* Quitar puntos de las listas */
+.mainAside__div--tarjeta{list-style-type: none;}
+
+/* Espaciado entre items de lista */
+.mainAside__div--tarjeta li{ margin-bottom: 1rem;}
