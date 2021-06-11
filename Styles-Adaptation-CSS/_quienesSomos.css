@@ -10,3 +10,7 @@
 
 /* Espaciado entre items de lista */
 .mainAside__div--tarjeta li{ margin-bottom: 1rem;}
+
+.article__imagenLugar--tamaño{
+  max-width: 70%;
+}
