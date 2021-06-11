@@ -9,12 +9,3 @@
 .bordeImagen{border-radius: 5px; max-width: 100%; border: 2px solid #f25287;transition: transform 0.5s;}
 
 .bordeImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/
-
-/* Centralizar el MODAL en galeria.html */
-.modal-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%;
-}
-
