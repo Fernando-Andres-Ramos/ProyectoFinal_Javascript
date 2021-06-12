@@ -34,4 +34,28 @@
   background-color:#f9f3f3;
 }
 
+footer{
+  font-family: garamond;
+  color: #f25287;
+  background-color: #f9f3f3;
+  padding:1.5rem;
+}
+
+.footer__lista--info{list-style-type:square;}
+
+
+.footer__logo--size{width: 10%;}
+
+@media (max-width:1400px){
+  .footer__logo--size{width: 15%;}
+}
+
+@media (max-width:992px){
+  .footer__logo--size{width: 7.5%;}
+}
+
+@media (max-width:576px){
+  .footer__logo--size{width: 10%;}
+}
+
 

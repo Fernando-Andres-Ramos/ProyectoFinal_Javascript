@@ -1,5 +1,9 @@
 /* Fuente de la pagina */
 
+main{
+  margin-bottom: 2rem;
+}
+
 .colorFuente{
   color: #f25287;
   font-family: garamond;
