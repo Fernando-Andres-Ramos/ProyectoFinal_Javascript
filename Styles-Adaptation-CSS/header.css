@@ -41,7 +41,7 @@ footer{
   padding:1.5rem;
 }
 
-.footer__lista--info{list-style-type:square;}
+.footer__lista--info{list-style-type:none; margin-bottom: 5rem;}
 
 
 .footer__logo--size{width: 10%;}
