@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="../Estilos-CSS/Styles.css"> -->
-    <!-- <link rel="stylesheet" href="../Estilos-CSS/depilación.css"> -->
     <link rel="stylesheet" href="../Styles-Adaptation-CSS/_header.css">
     <link rel="stylesheet" href="../Styles-Adaptation-CSS/_body.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../Styles-Adaptation-CSS/_depilacion.css">
+    <title>Depilación</title>
     <!-- Aplicando BOOTSTRAP -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
@@ -68,17 +67,17 @@
     <main>
       <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
 
-      <section class="container">
-        <div class="row">
-          <article class="col-lg-9">
-            <h3>Depilación</h3>
+      <section class="container colorFuente fs-3">
+        <div class="row mb-5 gx-5">
+          <article class="col-lg-8">
+            <h2 class="fw-bold fs-1">Depilación</h2>
             <p>Esta es la explicacion del servicio que realiza la empresa.<br>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum labore nobis, doloremque incidunt ipsa odit excepturi iure deserunt quod assumenda eligendi accusamus laudantium, consequatur blanditiis asperiores tenetur ex, repellendus sunt necessitatibus quas! Repellat laborum totam repellendus, aliquid debitis nesciunt. A, autem! Eligendi animi molestias iste temporibus voluptatem, molestiae dicta assumenda? </p>
           </article>
 
-          <div class="col-lg-3">
-            <h3>Categorias</h3>
-            <ol>
+          <div class="col-lg-4">
+            <h3 class="fw-bold fs-1">Categorias</h3>
+            <ol class="submenu__estilo">
               <li><a href="#depilacionCera">Depilacion con Cera</a></li>
               <li><a href="#depilacionDefi">Depilacion Definitiva</a></li>
               <li><a href="#otros">Mas servicios</a></li>
@@ -86,33 +85,51 @@
           </div>
         </div>
           
+        <br><br><hr><br><br>
           <!-- Se detallan las subcategorias del servicio, varia en cantidad entre estos ultimos-->
-          <div class="row" id="depilacionCera">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
-            <h4 class="section__div--tituloSubcategoria">Depilacion con cera / metodo español</h4>
+        <div class="row mb-5 gx-5 d-flex align-items-center" id="depilacionCera">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
+          <h4 class="fw-bold fs-2 mb-5">Depilacion con cera / metodo español</h4>
+          <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
             Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
-            <img src="../Galeria/depilaciónCera.jpg" alt="imagenNoDecidida">
+          </div>
+          <div class="col-lg-6">
+            <img class="bordeImagen" src="../Galeria/depilaciónCera.jpg" alt="imagenNoDecidida">
+          </div>
+        </div>
+
+        <br><br><hr><br><br>
+
+        <div class="row mb-5 gx-5 d-flex align-items-center" id="depilacionDefi">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
+          <h4 class="fw-bold fs-2 mb-5">Depilacion Definitiva (o laser)</h4>
+          <div class="col-lg-6">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
+            Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
+            Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
+          </div>
+          <div class="col-lg-6">
+            <img class="bordeImagen" src="../Galeria/depilaciónDefi.jpg" alt="imagenNoDecidida">
           </div>
           
-          <div class="row" id="depilacionDefi">
-            <h4 class="section__div--tituloSubcategoria">Depilacion Definitiva (o laser)</h4>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
-            Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
-            Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
-           <img src="../Galeria/depilaciónDefi.jpg" alt="imagenNoDecidida">
-           </div>
+        </div>
 
+        <br><br><hr><br><br>
            
-           <div class="row" id="otros">
-            <h4 class="section__div--tituloSubcategoria">Otros</h4>
+        <div class="row mb-5 gx-5 d-flex align-items-center" id="otros">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
+          <h4 class="fw-bold fs-2 mb-5">Otros</h4>
+          <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
             Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
-           <img src="../Galeria/Depilacion.png" alt="imagenNoDecidida">
-           </div>
+          </div>
+          <div class="col-lg-6">
+            <img class="bordeImagen" src="../Galeria/Depilacion.png" alt="imagenNoDecidida">
+          </div>
       </section>
     </main>
+
+
     <br><br><br><hr><hr>
     <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
     <footer class="container-fluid">
