@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../Estilos-CSS/Styles.css">
-    <link rel="stylesheet" href="../Estilos-CSS/depilación.css">
+    <!-- <link rel="stylesheet" href="../Estilos-CSS/Styles.css"> -->
+    <!-- <link rel="stylesheet" href="../Estilos-CSS/depilación.css"> -->
     <link rel="stylesheet" href="../Styles-Adaptation-CSS/_header.css">
     <link rel="stylesheet" href="../Styles-Adaptation-CSS/_body.css">
     <title>Document</title>
@@ -68,14 +68,15 @@
     <main>
       <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
 
-      <section class="main__section">
-          <article class="main__section--categoria">
+      <section class="container">
+        <div class="row">
+          <article class="col-lg-9">
             <h3>Depilación</h3>
             <p>Esta es la explicacion del servicio que realiza la empresa.<br>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum labore nobis, doloremque incidunt ipsa odit excepturi iure deserunt quod assumenda eligendi accusamus laudantium, consequatur blanditiis asperiores tenetur ex, repellendus sunt necessitatibus quas! Repellat laborum totam repellendus, aliquid debitis nesciunt. A, autem! Eligendi animi molestias iste temporibus voluptatem, molestiae dicta assumenda? </p>
           </article>
 
-          <div class="main__section--submenu">
+          <div class="col-lg-3">
             <h3>Categorias</h3>
             <ol>
               <li><a href="#depilacionCera">Depilacion con Cera</a></li>
@@ -83,9 +84,10 @@
               <li><a href="#otros">Mas servicios</a></li>
             </ol>
           </div>
+        </div>
           
           <!-- Se detallan las subcategorias del servicio, varia en cantidad entre estos ultimos-->
-          <div id="depilacionCera">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
+          <div class="row" id="depilacionCera">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
             <h4 class="section__div--tituloSubcategoria">Depilacion con cera / metodo español</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
@@ -93,7 +95,7 @@
             <img src="../Galeria/depilaciónCera.jpg" alt="imagenNoDecidida">
           </div>
           
-          <div id="depilacionDefi">
+          <div class="row" id="depilacionDefi">
             <h4 class="section__div--tituloSubcategoria">Depilacion Definitiva (o laser)</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
@@ -102,7 +104,7 @@
            </div>
 
            
-           <div id="otros">
+           <div class="row" id="otros">
             <h4 class="section__div--tituloSubcategoria">Otros</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?

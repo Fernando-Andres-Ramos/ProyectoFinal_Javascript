@@ -1,0 +1,8 @@
+/* Centralizar el MODAL en galeria.html */
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
