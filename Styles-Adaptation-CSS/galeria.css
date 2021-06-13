@@ -1,3 +1,5 @@
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+
 /* Centralizar el MODAL en galeria.html */
 .modal-dialog {
   display: flex;

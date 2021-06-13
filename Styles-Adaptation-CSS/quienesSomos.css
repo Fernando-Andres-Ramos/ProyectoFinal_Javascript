@@ -1,4 +1,5 @@
-/* Se declara el Aside como otro flexbox, sus hijos son las cartas de presentacion div */
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+
 
 /* Estilo de las imagenes en el aside */
 .aside--img__cara{border-style: groove; border-radius: 200px;}

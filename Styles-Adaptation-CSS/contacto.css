@@ -1,53 +1,34 @@
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+
+/* Tamaño de la pagina */
 body{
   height: 1250px;
 }
 
+/* Tamaño de letra */
 .form__item--size{
   max-width: 100%;
   height: 50px;
   
 }
 
+/* Anular resize del textarea */
 textarea {
   resize: none;
 }
 
+/* Color de letra textarea */
 .article__form--textarea{
   color: grey;
 }
 
+/* Logos de redes sociales */
 .section__article--fotoRedS{
   max-width: 8%;
   font-size: 1rem;
 }
 
-
+/* Borde del formulario */
 .article__form--border{
   border: 1px solid grey;
-}
-
-
-/* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */
-.publicidadMolesta{
-  grid-area:anuncio;
-  justify-self: start;
-  background-color:#f7d9d9;
-  border:2px solid;
-  text-align: center;
-  animation-name: animaPublicidad;
-  animation-iteration-count: 1;
-  animation-timing-function:linear;
-  animation-fill-mode: forwards;
-  animation-duration:5s;
-  animation-delay:0s;
-  
-}
-
-/* Animacion a realizar */
-@keyframes animaPublicidad{
-  0%{transform:translateX(-100%);}
-  20%{transform:translateX(0%); transform: rotateZ(50deg);}
-  40%{transform:translateY(-300%);}
-  70%{transform:translateY(0%);transform:rotateZ(-50deg);}
-  100%{transform:translateY(-300%);}
 }
