@@ -1,3 +1,152 @@
-h1 {
-  background-color: aqua;
-  color: blue; }
+@charset "UTF-8";
+/* ESTILOS GENERALES PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* Fuente de la pagina */
+main {
+  margin-bottom: 2rem; }
+
+.colorFuente {
+  color: #f25287;
+  font-family: garamond; }
+
+/* Estilo para imagenes */
+.bordeImagen {
+  border-radius: 5px;
+  max-width: 100%;
+  border: 2px solid #f25287;
+  transition: transform 0.5s; }
+
+.bordeImagen:hover {
+  transform: scale(1.01, 1.01); }
+
+/* Transformacion de escala*/
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* Titulo del sitio web */
+.titulo {
+  font-family: garamond;
+  color: #f25287;
+  font-style: italic;
+  font-size: 6.5rem; }
+
+@media (max-width: 768px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 4.5rem; } }
+
+/* Estilos para la imagen de fondo en el titulo */
+.cuboTitulo {
+  height: 15rem;
+  background-image: url(../Galeria/Cabecera.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: 100rem; }
+
+/* Estilos para el nav hecho con BOOSTRAP */
+.header__navbar--estilo {
+  border: 2px solid  #f25287;
+  background-color: #f7d9d9;
+  color: #f25287; }
+
+.nav-link:hover {
+  background-color: #f9f3f3; }
+
+footer {
+  font-family: garamond;
+  color: #f25287;
+  background-color: #f9f3f3; }
+
+.footer__lista--info {
+  list-style-type: none;
+  margin-bottom: 5rem; }
+
+.footer__logo--size {
+  width: 10%; }
+
+@media (max-width: 1400px) {
+  .footer__logo--size {
+    width: 15%; } }
+
+@media (max-width: 992px) {
+  .footer__logo--size {
+    width: 7.5%; } }
+
+@media (max-width: 576px) {
+  .footer__logo--size {
+    width: 10%; } }
+
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+.indexImagen {
+  max-width: 100%; }
+
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* Estilo de las imagenes en el aside */
+.aside--img__cara {
+  border-style: groove;
+  border-radius: 200px; }
+
+.mainAside__div--redes {
+  max-width: 30%; }
+
+/* Quitar puntos de las listas */
+.mainAside__div--tarjeta {
+  list-style-type: none; }
+
+/* Espaciado entre items de lista */
+.mainAside__div--tarjeta li {
+  margin-bottom: 1rem; }
+
+.article__imagenLugar--tamaño {
+  max-width: 70%; }
+
+/* Estilo para la lista en el submenu */
+.submenu__estilo {
+  list-style: none;
+  text-align: center;
+  background-color: #f7d9d9;
+  border: 1px solid; }
+
+.submenu__estilo--indices {
+  text-decoration: none;
+  color: #f25287;
+  transition: 0.3s background-color; }
+
+.submenu__estilo--indices:hover {
+  text-decoration: none;
+  background-color: #f9f3f3;
+  color: #f25287; }
+
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* Centralizar el MODAL en galeria.html */
+.modal-dialog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%; }
+
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* Tamaño de la pagina */
+body {
+  height: 1250px; }
+
+/* Tamaño de letra */
+.form__item--size {
+  max-width: 100%;
+  height: 50px; }
+
+/* Anular resize del textarea */
+textarea {
+  resize: none; }
+
+/* Color de letra textarea */
+.article__form--textarea {
+  color: grey; }
+
+/* Logos de redes sociales */
+.section__article--fotoRedS {
+  max-width: 8%;
+  font-size: 1rem; }
+
+/* Borde del formulario */
+.article__form--border {
+  border: 1px solid grey; }

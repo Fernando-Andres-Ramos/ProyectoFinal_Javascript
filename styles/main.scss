@@ -1,4 +1,7 @@
-h1{
-    background-color: aqua;
-    color: blue;
-}
+@import './partials/body';
+@import './partials/header';
+@import './partials/index';
+@import './partials/quienesSomos';
+@import './partials/servicios';
+@import './partials/galeria';
+@import './partials/contacto';
