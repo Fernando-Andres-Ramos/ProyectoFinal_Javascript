@@ -3,15 +3,15 @@
 /* Fuente de la pagina */
 
 main{
-    margin-bottom: 2rem;
+    margin-bottom: $fuente-tama*2;
   }
   
   .colorFuente{
-    color: #f25287;
-    font-family: garamond;
+    color: $color-letras;
+    font-family: $fuente-tipo;
   }
   
   /* Estilo para imagenes */
-  .bordeImagen{border-radius: 5px; max-width: 100%; border: 2px solid #f25287;transition: transform 0.5s;}
+  .bordeImagen{border-radius: 5px; max-width: 100%; border: 2px solid $color-letras;transition: transform 0.5s;}
   
   .bordeImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/

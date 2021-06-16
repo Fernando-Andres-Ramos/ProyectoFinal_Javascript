@@ -2,22 +2,22 @@
 .submenu__estilo{ 
     list-style: none; 
     text-align: center;
-    background-color: #f7d9d9;
+    background-color: $color-nav;
     border: 1px solid;
   }
   
   .submenu__estilo--indices
   {
     text-decoration: none;
-    color: #f25287;
+    color: $color-letras;
     transition: 0.3s background-color;
   }
   
   .submenu__estilo--indices:hover
   {
     text-decoration: none;
-    background-color:#f9f3f3;
-    color: #f25287;
+    background-color:$color-fondo;
+    color: $color-letras;
   }
   
   

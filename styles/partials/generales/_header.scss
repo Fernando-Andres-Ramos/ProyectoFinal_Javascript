@@ -2,62 +2,40 @@
 
 /* Titulo del sitio web */
 .titulo{
-    font-family: garamond;
-    color: #f25287;
+    font-family: $fuente-tipo;
+    color: $color-letras;
     font-style:italic;
-    font-size: 6.5rem;
+    font-size: $fuente-tama*6.5;
   }
   @media (max-width:768px){
     .titulo{
-      font-family: garamond;
-      color: #f25287;
+      font-family: $fuente-tipo;
+      color: $color-letras;
       font-style:italic;
-      font-size: 4.5rem;
+      font-size: $fuente-tama*4.5;
     }
   }
   
   /* Estilos para la imagen de fondo en el titulo */
   .cuboTitulo{
-    height: 15rem;
+    height: $fuente-tama*15;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: 100rem;
+    background-size: $fuente-tama*100;
   }
   
   /* Estilos para el nav hecho con BOOSTRAP */
   .header__navbar--estilo{
-    border: 2px solid  #f25287;
-    background-color: #f7d9d9;
-    color: #f25287;
+    border: 2px solid  $color-letras;
+    background-color: $color-nav;
+    color: $color-letras;
   }
   
   .nav-link:hover{
-    background-color:#f9f3f3;
+    background-color:$color-fondo;
   }
   
-  footer{
-    font-family: garamond;
-    color: #f25287;
-    background-color: #f9f3f3;
-  }
-  
-  .footer__lista--info{list-style-type:none; margin-bottom: 5rem;}
-  
-  
-  .footer__logo--size{width: 10%;}
-  
-  @media (max-width:1400px){
-    .footer__logo--size{width: 15%;}
-  }
-  
-  @media (max-width:992px){
-    .footer__logo--size{width: 7.5%;}
-  }
-  
-  @media (max-width:576px){
-    .footer__logo--size{width: 10%;}
-  }
-  
+ 
   
   
