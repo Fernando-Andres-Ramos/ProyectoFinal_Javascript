@@ -1,7 +1,8 @@
-@import './partials/body';
-@import './partials/header';
-@import './partials/index';
-@import './partials/quienesSomos';
-@import './partials/servicios';
-@import './partials/galeria';
-@import './partials/contacto';
+@import './partials/generales/variables';
+@import './partials/generales/body';
+@import './partials/generales/header';
+@import './partials/paginas/index';
+@import './partials/paginas/quienesSomos';
+@import './partials/paginas/servicios';
+@import './partials/paginas/galeria';
+@import './partials/paginas/contacto';
