@@ -2,9 +2,7 @@
 /* ESTILOS GENERALES PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Fuente de la pagina */
 main {
-  margin-bottom: 2rem; }
-
-.colorFuente {
+  margin-bottom: 2rem;
   color: #f25287;
   font-family: garamond; }
 
@@ -76,6 +74,12 @@ footer {
     width: 10%; } }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+.index__main--bienvenida {
+  background-color: blue; }
+
+.main__tituloIndex--tamaño {
+  font-size: 4rem; }
+
 .indexImagen {
   max-width: 100%; }
 

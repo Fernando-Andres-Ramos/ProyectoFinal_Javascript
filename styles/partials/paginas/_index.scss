@@ -1,5 +1,13 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
+.index__main--bienvenida{
+  background-color: blue;
+}
+
+.main__tituloIndex--tamaño{
+  font-size: $fuente-tama*4;
+}
+
 .indexImagen{
     max-width: 100%;
   }
