@@ -14,13 +14,6 @@ main {
   font-style: italic;
   font-size: 6.5rem; }
 
-@media (max-width: 768px) {
-  .titulo {
-    font-family: garamond;
-    color: #f25287;
-    font-style: italic;
-    font-size: 4.5rem; } }
-
 /* Estilos para la imagen de fondo en el titulo */
 .cuboTitulo {
   height: 15rem;
@@ -37,6 +30,106 @@ main {
 
 .nav-link:hover {
   background-color: #f9f3f3; }
+
+@media (max-width: 1200px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 4.5rem; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 12rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 80rem; } }
+
+@media (max-width: 768px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 4.5rem; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 12rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 75rem; } }
+
+@media (max-width: 768px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 4.5rem; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 12rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 75rem; } }
+
+@media (max-width: 600px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 3.5rem; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 9.5rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 60rem; } }
+
+@media (max-width: 480px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 3.5rem; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 8rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 55rem; } }
+
+@media (max-width: 380px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 2.9rem;
+    align-self: flex-end; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 8rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 50rem; } }
+
+@media (max-width: 300px) {
+  .titulo {
+    font-family: garamond;
+    color: #f25287;
+    font-style: italic;
+    font-size: 2.5rem;
+    align-self: flex-end; }
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: 7.2rem;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 45rem; } }
 
 footer {
   font-family: garamond;

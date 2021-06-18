@@ -7,35 +7,161 @@
     font-style:italic;
     font-size: $fuente-tama*6.5;
   }
-  @media (max-width:768px){
-    .titulo{
-      font-family: $fuente-tipo;
-      color: $color-letras;
-      font-style:italic;
-      font-size: $fuente-tama*4.5;
-    }
-  }
   
-  /* Estilos para la imagen de fondo en el titulo */
+/* Estilos para la imagen de fondo en el titulo */
+ .cuboTitulo{
+  height: $fuente-tama*15;
+  background-image: url(../Galeria/Cabecera.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: $fuente-tama*100;
+}
+  
+/* Estilos para el nav hecho con BOOSTRAP */
+.header__navbar--estilo{
+  border: 2px solid  $color-letras;
+  background-color: $color-nav;
+  color: $color-letras;
+}
+  
+.nav-link:hover{
+  background-color:$color-fondo;
+}
+  
+
+@media (max-width:1200px){
+  .titulo{
+    font-family: $fuente-tipo;
+    color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*4.5;
+  }
+
+/* Estilos para la imagen de fondo en el titulo */
   .cuboTitulo{
-    height: $fuente-tama*15;
+    height: $fuente-tama*12;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*100;
+    background-size: $fuente-tama*80;
   }
-  
-  /* Estilos para el nav hecho con BOOSTRAP */
-  .header__navbar--estilo{
-    border: 2px solid  $color-letras;
-    background-color: $color-nav;
+
+}
+
+@media (max-width:768px){
+  .titulo{
+    font-family: $fuente-tipo;
     color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*4.5;
   }
-  
-  .nav-link:hover{
-    background-color:$color-fondo;
+
+/* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo{
+    height: $fuente-tama*12;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: $fuente-tama*75;
   }
-  
- 
+
+}
+
+@media (max-width:768px){
+  .titulo{
+    font-family: $fuente-tipo;
+    color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*4.5;
+  }
+
+/* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo{
+    height: $fuente-tama*12;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: $fuente-tama*75;
+  }
+
+}
+
+@media (max-width:600px){
+  .titulo{
+    font-family: $fuente-tipo;
+    color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*3.5;
+  }
+
+/* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo{
+    height: $fuente-tama*9.5;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: $fuente-tama*60;
+  }
+
+}
+
+@media (max-width:480px){
+  .titulo{
+    font-family: $fuente-tipo;
+    color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*3.5;
+  }
+
+/* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo{
+    height: $fuente-tama*8;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: $fuente-tama*55;
+  }
+
+}
+
+@media (max-width:380px){
+  .titulo{
+    font-family: $fuente-tipo;
+    color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*2.9;
+    align-self:flex-end;
+  }
+
+/* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo{
+    height: $fuente-tama*8;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: $fuente-tama*50;
+  }
+
+}
+
+@media (max-width:300px){
+  .titulo{
+    font-family: $fuente-tipo;
+    color: $color-letras;
+    font-style:italic;
+    font-size: $fuente-tama*2.5;
+    align-self:flex-end;
+  }
+
+/* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo{
+    height: $fuente-tama*7.2;
+    background-image: url(../Galeria/Cabecera.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: $fuente-tama*45;
+  }
+
+}
   
   
