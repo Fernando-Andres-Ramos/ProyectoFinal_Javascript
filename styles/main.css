@@ -6,17 +6,6 @@ main {
   color: #f25287;
   font-family: garamond; }
 
-/* Estilo para imagenes */
-.bordeImagen {
-  border-radius: 5px;
-  max-width: 100%;
-  border: 2px solid #f25287;
-  transition: transform 0.5s; }
-
-.bordeImagen:hover {
-  transform: scale(1.01, 1.01); }
-
-/* Transformacion de escala*/
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Titulo del sitio web */
 .titulo {
@@ -75,14 +64,32 @@ footer {
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 .index__main--bienvenida {
-  background-color: blue; }
+  margin-bottom: 5rem; }
 
 .main__tituloIndex--tamaño {
-  font-size: 4rem; }
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 3rem; }
 
-.indexImagen {
-  max-width: 100%; }
+@media (max-width: 992px) {
+  .main__tituloIndex--tamaño {
+    font-size: 3.5rem; } }
 
+@media (max-width: 768px) {
+  .main__tituloIndex--tamaño {
+    font-size: 2.5rem; } }
+
+/* Estilo para imagenes del index*/
+.indexImagen, .galeriaImagen {
+  border-radius: 5px;
+  max-width: 100%;
+  border: 2px solid #f25287;
+  transition: transform 0.5s; }
+
+.indexImagen:hover, .galeriaImagen:hover {
+  transform: scale(1.01, 1.01); }
+
+/* Transformacion de escala*/
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Estilo de las imagenes en el aside */
 .aside--img__cara {
@@ -128,6 +135,10 @@ footer {
   align-items: center;
   height: 100%; }
 
+/* Estilo para imagenes del index*/
+.galeriaImagen {
+  border: 1px solid #f25287; }
+
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Tamaño de la pagina */
 body {
@@ -154,3 +165,5 @@ textarea {
 /* Borde del formulario */
 .article__form--border {
   border: 1px solid grey; }
+
+/* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */

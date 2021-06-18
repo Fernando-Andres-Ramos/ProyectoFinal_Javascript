@@ -1,13 +1,28 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
 .index__main--bienvenida{
-  background-color: blue;
+  margin-bottom: $fuente-tama*5;
 }
 
 .main__tituloIndex--tamaño{
   font-size: $fuente-tama*4;
+  text-align: center;
+  margin-bottom: $fuente-tama*3;
 }
 
-.indexImagen{
-    max-width: 100%;
+@media (max-width:992px){
+  .main__tituloIndex--tamaño{
+    font-size: $fuente-tama*3.5;
   }
+}
+
+@media (max-width:768px){
+  .main__tituloIndex--tamaño{
+    font-size: $fuente-tama*2.5;
+  }
+}
+
+  /* Estilo para imagenes del index*/
+  .indexImagen{border-radius: 5px; max-width: 100%; border: 2px solid $color-letras;transition: transform 0.5s;}
+  
+  .indexImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/

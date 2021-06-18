@@ -7,5 +7,15 @@
     align-items: center;
     height: 100%;
   }
+
+  /* Estilo para imagenes del index*/
+  .galeriaImagen{
+    @extend .indexImagen;
+    border: 1px solid $color-letras;
+  }
+
+  .galeriaImagen:hover{
+    @extend .indexImagen:hover;
+  }
   
   
