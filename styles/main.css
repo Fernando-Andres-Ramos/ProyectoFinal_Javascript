@@ -131,6 +131,8 @@ main {
     background-position: right;
     background-size: 45rem; } }
 
+/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* Se utilizan @media para realizar el responsive en tamaños de celular mas chicos */
 footer {
   font-family: garamond;
   color: #f25287;
@@ -155,12 +157,33 @@ footer {
   .footer__logo--size {
     width: 10%; } }
 
+@media (max-width: 380px) {
+  h5 {
+    font-size: 1.1rem; }
+  .footer__lista--info {
+    margin-bottom: 3rem;
+    font-size: 1.1rem; } }
+
+@media (max-width: 320px) {
+  .footer__redes--titulo {
+    font-size: 0.9rem; }
+  .footer__lista--info {
+    margin-bottom: 3rem;
+    font-size: 0.9rem; } }
+
+@media (max-width: 280px) {
+  .footer__redes--titulo {
+    font-size: 0.8rem; }
+  .footer__lista--info {
+    margin-bottom: 3rem;
+    font-size: 0.8rem; } }
+
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 .index__main--bienvenida {
   margin-bottom: 5rem; }
 
 .main__tituloIndex--tamaño {
-  font-size: 4rem;
+  font-size: 3rem;
   text-align: center;
   margin-bottom: 3rem; }
 
@@ -171,6 +194,18 @@ footer {
 @media (max-width: 768px) {
   .main__tituloIndex--tamaño {
     font-size: 2.5rem; } }
+
+@media (max-width: 480px) {
+  .main__tituloIndex--tamaño {
+    font-size: 2.1rem; } }
+
+@media (max-width: 380px) {
+  .main__tituloIndex--tamaño {
+    font-size: 1.9rem; } }
+
+@media (max-width: 300px) {
+  .main__tituloIndex--tamaño {
+    font-size: 1.7rem; } }
 
 /* Estilo para imagenes del index*/
 .indexImagen, .galeriaImagen {

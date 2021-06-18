@@ -5,7 +5,7 @@
 }
 
 .main__tituloIndex--tamaño{
-  font-size: $fuente-tama*4;
+  font-size: $fuente-tama*3;
   text-align: center;
   margin-bottom: $fuente-tama*3;
 }
@@ -19,6 +19,24 @@
 @media (max-width:768px){
   .main__tituloIndex--tamaño{
     font-size: $fuente-tama*2.5;
+  }
+}
+
+@media (max-width:480px){
+  .main__tituloIndex--tamaño{
+    font-size: $fuente-tama*2.1;
+  }
+}
+
+@media (max-width:380px){
+  .main__tituloIndex--tamaño{
+    font-size: $fuente-tama*1.9;
+  }
+}
+
+@media (max-width:300px){
+  .main__tituloIndex--tamaño{
+    font-size: $fuente-tama*1.7;
   }
 }
 
