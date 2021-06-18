@@ -20,6 +20,10 @@
     color: $color-letras;
   }
   
+  .servicios__imagen--estilo{
+    @extend .indexImagen;
+    border: 1px solid $color-letras;
+  }
   
   
   

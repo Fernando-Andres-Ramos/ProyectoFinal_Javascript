@@ -188,13 +188,13 @@ footer {
   margin-bottom: 3rem; }
 
 /* Estilo para imagenes del index*/
-.indexImagen, .galeriaImagen {
+.indexImagen, .servicios__imagen--estilo, .galeriaImagen {
   border-radius: 5px;
   max-width: 100%;
   border: 2px solid #f25287;
   transition: transform 0.5s; }
 
-.indexImagen:hover, .galeriaImagen:hover {
+.indexImagen:hover, .servicios__imagen--estilo:hover, .galeriaImagen:hover {
   transform: scale(1.01, 1.01); }
 
 /* Transformacion de escala*/
@@ -258,6 +258,9 @@ footer {
   text-decoration: none;
   background-color: #f9f3f3;
   color: #f25287; }
+
+.servicios__imagen--estilo {
+  border: 1px solid #f25287; }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Centralizar el MODAL en galeria.html */
