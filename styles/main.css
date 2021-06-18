@@ -187,6 +187,17 @@ footer {
   text-align: center;
   margin-bottom: 3rem; }
 
+/* Estilo para imagenes del index*/
+.indexImagen, .galeriaImagen {
+  border-radius: 5px;
+  max-width: 100%;
+  border: 2px solid #f25287;
+  transition: transform 0.5s; }
+
+.indexImagen:hover, .galeriaImagen:hover {
+  transform: scale(1.01, 1.01); }
+
+/* Transformacion de escala*/
 @media (max-width: 992px) {
   .main__tituloIndex--tamaño {
     font-size: 3.5rem; } }
@@ -207,36 +218,29 @@ footer {
   .main__tituloIndex--tamaño {
     font-size: 1.7rem; } }
 
-/* Estilo para imagenes del index*/
-.indexImagen, .galeriaImagen {
-  border-radius: 5px;
-  max-width: 100%;
-  border: 2px solid #f25287;
-  transition: transform 0.5s; }
-
-.indexImagen:hover, .galeriaImagen:hover {
-  transform: scale(1.01, 1.01); }
-
-/* Transformacion de escala*/
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-/* Estilo de las imagenes en el aside */
+/* Estilo de las fotos del aside */
 .aside--img__cara {
-  border-style: groove;
+  border: 1px solid #dddddd;
   border-radius: 200px; }
 
 .mainAside__div--redes {
   max-width: 30%; }
 
 /* Quitar puntos de las listas */
-.mainAside__div--tarjeta {
+.mainAside__persona--lista {
   list-style-type: none; }
 
 /* Espaciado entre items de lista */
-.mainAside__div--tarjeta li {
+.mainAside__persona--lista li {
   margin-bottom: 1rem; }
 
 .article__imagenLugar--tamaño {
   max-width: 70%; }
+
+@media (max-width: 480px) {
+  .mainAside__div--redes {
+    max-width: 15%; } }
 
 /* Estilo para la lista en el submenu */
 .submenu__estilo {

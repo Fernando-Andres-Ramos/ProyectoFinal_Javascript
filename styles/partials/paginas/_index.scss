@@ -10,6 +10,11 @@
   margin-bottom: $fuente-tama*3;
 }
 
+  /* Estilo para imagenes del index*/
+  .indexImagen{border-radius: 5px; max-width: 100%; border: 2px solid $color-letras;transition: transform 0.5s;}
+  
+  .indexImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/
+
 @media (max-width:992px){
   .main__tituloIndex--tamaño{
     font-size: $fuente-tama*3.5;
@@ -40,7 +45,4 @@
   }
 }
 
-  /* Estilo para imagenes del index*/
-  .indexImagen{border-radius: 5px; max-width: 100%; border: 2px solid $color-letras;transition: transform 0.5s;}
-  
-  .indexImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/
+
