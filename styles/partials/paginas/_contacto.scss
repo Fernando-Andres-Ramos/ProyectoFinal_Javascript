@@ -1,55 +1,111 @@
-/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+/* UTILIZACION DE GRIDS AREAS PARA ACOMODAR EL FORMULARIO Y LA INFO DE CONTACTO*/
+/* FALTA AGREGAR IMAGENES A LOS LATERALES DEL MAIN (COMPLETAR LOS PUNTOS DE LA GRID) */
 
-/* Tamaño de la pagina */
-body{
-    height: 1250px;
-  }
-  
-  /* Tamaño de letra */
-  .form__item--size{
-    max-width: 100%;
-    height: 50px;
-    
-  }
-  
-  /* Anular resize del textarea */
-  textarea {
-    resize: none;
-  }
-  
-  /* Color de letra textarea */
-  .article__form--textarea{
-    color: grey;
-  }
-  
-  /* Logos de redes sociales */
-  .section__article--fotoRedS{
-    max-width: 8%;
-    font-size: $fuente-tama;
-  }
-  
-  /* Borde del formulario */
-  .article__form--border{
-    border: 1px solid grey;
-  }
-  
+/* Grid general utilizando grid-area */
+.grilla{
+  max-width: 1900px;
+  height: 1000px;
+  display: grid;
+  grid-template-areas: 
+    "anuncio subtitulo subtitulo ."
+    "anuncio info formulario ."
+    ".  .  .  ."
+    ;
+  grid-template-rows:3fr 5fr 1fr;
+  grid-template-columns:1fr 2fr 3fr 1fr;
+  justify-content: center;
+  justify-items: center;
+  align-items:center;
+  gap: $fuente-tama*2;
+}
 
-  /* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */
-// .publicidadMolesta{
-//   animation-name: animaPublicidad;
-//   animation-iteration-count: 1;
-//   animation-timing-function:linear;
-//   animation-fill-mode: forwards;
-//   animation-duration:5s;
-//   animation-delay:0s;
-  
-// }
+/* Estilos para el subtitulo principal */
+.contacto__titulo{
+  grid-area:subtitulo;
+  font-size: $fuente-tama*3;
+  max-width:100%;
+  text-align: center;
+}
 
-// /* Animacion a realizar */
-// @keyframes animaPublicidad{
-//   0%{transform:translateX(-100%);}
-//   20%{transform:translateX(0%); transform: rotateZ(50deg);}
-//   40%{transform:translateY(-300%);}
-//   70%{transform:translateY(0%);transform:rotateZ(-50deg);}
-//   100%{transform:translateY(-300%);}
-// }
+/* Informacion de contacto, en esta pagina reemplaza la info del footer */
+#infoContacto{
+  grid-area:info;
+  padding: 3%;
+  justify-self: center;
+  align-self: center;
+}
+
+/* Estilos de la lista de #infoContacto. Se utiliza flexbox interno al grid */
+.mainSection__article--info{
+  height: $fuente-tama*25;
+  list-style-type: circle;
+  display:flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+}
+
+/* Tamaño de los logos de red social*/
+.mainSection__article--logo{max-width:10%;}
+
+/* Estilo de tamaño y borde para el formulario a completar */
+#formulario{
+  grid-area: formulario;
+  width: 100%;
+}
+
+
+/* Espaciar el formulario completo dentro de su casilla del grid */
+.mainSection__formulario--item{margin: $fuente-tama*3;}
+
+/* Expandir las barras de completar informacion */
+.mainSection__articleForm--div{
+  width: 60%; 
+  height: $fuente-tama*3;
+  font-size: $fuente-tama*2.5;
+  font-family: garamond;
+}
+
+/* Centralizar la leyenda del form  */
+.form__fieldset{text-align: center; border: 1px solid $color-gris;}
+
+/* Quitar el resize del textarea y expandir */
+textarea {
+  width: 60%;
+  height: $fuente-tama*30;
+  font-size: $fuente-tama*2.5;
+  font-family: garamond;
+  resize: none;
+}
+
+/* Estilo de boton para enviar la consulta */
+.mainSection__articleForm--boton{
+  width: 20%;
+  height: $fuente-tama*3;
+  margin-bottom: $fuente-tama*1.5;
+}
+
+/* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */
+.publicidadMolesta{
+  grid-area:anuncio;
+  justify-self: start;
+  background-color:#f7d9d9;
+  border:2px solid;
+  text-align: center;
+  animation-name: animaPublicidad;
+  animation-iteration-count: 1;
+  animation-timing-function:linear;
+  animation-fill-mode: forwards;
+  animation-duration:5s;
+  animation-delay:0s;
+  
+}
+
+/* Animacion a realizar */
+@keyframes animaPublicidad{
+  0%{transform:translateX(-100%);}
+  20%{transform:translateX(0%); transform: rotateZ(50deg);}
+  40%{transform:translateY(-300%);}
+  70%{transform:translateY(0%);transform:rotateZ(-50deg);}
+  100%{transform:translateY(-300%);}
+}
+  
