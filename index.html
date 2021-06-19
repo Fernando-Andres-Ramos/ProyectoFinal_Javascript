@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <link rel="stylesheet" href="./styles/main.css">
     
-
    <!-- Aplicando BOOTSTRAP -->
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+
+    <!-- Aplicando AOS para animaciones -->
+     <!-- CSS only -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- JavaScript-->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
 
 
@@ -81,7 +86,7 @@
 
      <!-- Seccion informativa con imagenes/links de los servicios-->
      <section class="container"> 
-       <article class="row mb-5 slide-in-left">
+       <article class="row mb-5" data-aos="fade-right">
           <div class="col-lg-7 col-md-7 col-sm-12 col-12">
             <a href="./Servicios/Esmaltado.html"><img class="indexImagen" src="./Galeria/Esmaltado.png" atl="Esmaltado_imagen" ></a>
           </div>
@@ -91,7 +96,7 @@
           </div>
        </article>
  
-       <article class="row mb-5 d-flex flex-wrap-reverse">
+       <article class="row mb-5 d-flex flex-wrap-reverse" data-aos="fade-left">
          <div class="col-lg-5 col-md-5 com-sm-12 col-12 align-self-center text-end">
            <h4 class="fs-1 fw-bold">Perfilado</h4>
            <p class="fs-3">Brindamos un servicio completo de perfilado de cejas y belleza de pestañas</p>
@@ -101,7 +106,7 @@
           </div>
         </article>
  
-       <article class="row mb-5">
+       <article class="row mb-5" data-aos="fade-right">
           <div class="col-lg-7 col-md-7 col-sm-12 col-12">
             <a href="./Servicios/Depilacion.html"><img class="indexImagen" src="./Galeria/Depilacion.png" atl="Depilación_imagen"></a>
           </div>
@@ -111,7 +116,7 @@
           </div>
         </article>
  
-       <article class="row d-flex flex-wrap-reverse">
+       <article class="row d-flex flex-wrap-reverse" data-aos="fade-left">
          <div class="col-lg-5 col-md-5 com-sm-12 col-12 align-self-center text-end">
            <h4 class="fs-1 fw-bold">Masajes</h4>
            <p class="fs-3">Realizamos distintos tipos de masajes: Relajantes, Descontracturantes, Deportivos, Etc </p>
@@ -147,5 +152,10 @@
         <div class="col-lg-3 col-12"><p><em>Autor de pagina: Fernando Ramos</em></p></div>
       </div>    
     </footer>
+
+    <!-- script para usar AOS -->
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
