@@ -262,16 +262,14 @@ footer {
   text-align: center;
   background-color: #f7d9d9;
   border: 1px solid; }
-
-.submenu__estilo--indices {
-  text-decoration: none;
-  color: #f25287;
-  transition: 0.3s background-color; }
-
-.submenu__estilo--indices:hover {
-  text-decoration: none;
-  background-color: #f9f3f3;
-  color: #f25287; }
+  .submenu__estilo--indices {
+    text-decoration: none;
+    color: #f25287;
+    transition: 0.3s background-color; }
+    .submenu__estilo--indices:hover {
+      text-decoration: none;
+      background-color: #f9f3f3;
+      color: #f25287; }
 
 .servicios__imagen--estilo {
   border: 1px solid #f25287; }
