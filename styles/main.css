@@ -218,6 +218,30 @@ footer {
   .main__tituloIndex--tamaño {
     font-size: 1.7rem; } }
 
+.slide-in-left {
+  -webkit-animation: slide-in-left 1s both;
+  animation: slide-in-left 1s both; }
+
+@-webkit-keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
+@keyframes slide-in-left {
+  0% {
+    -webkit-transform: translateX(-500px);
+    transform: translateX(-500px);
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    opacity: 1; } }
+
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Estilo de las fotos del aside */
 .aside--img__cara {
@@ -332,5 +356,3 @@ footer {
     font-size: 1rem; }
   .mainSection__info--estilo {
     font-size: 0.8rem; } }
-
-/* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */
