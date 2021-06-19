@@ -275,30 +275,51 @@ footer {
   border: 1px solid #f25287; }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-/* Tamaño de la pagina */
-body {
-  height: 1250px; }
+.mainSection__info {
+  /* Logos de redes sociales */ }
+  .mainSection__info--estilo {
+    font-weight: bold;
+    list-style-type: circle; }
+  .mainSection__info--logo {
+    max-width: 7%; }
 
-/* Tamaño de letra */
-.form__item--size {
-  max-width: 100%;
-  height: 50px; }
-
-/* Anular resize del textarea */
-textarea {
-  resize: none; }
-
-/* Color de letra textarea */
-.article__form--textarea {
-  color: grey; }
-
-/* Logos de redes sociales */
-.section__article--fotoRedS {
-  max-width: 8%;
-  font-size: 1rem; }
+.form {
+  /* Tamaño de letra en los text input */
+  /* Color de letra textarea */ }
+  .form__textInput--size {
+    max-width: 100%;
+    height: 50px; }
+  .form__textArea--color {
+    color: grey; }
 
 /* Borde del formulario */
 .article__form--border {
   border: 1px solid grey; }
+
+@media (max-width: 992px) {
+  .main__tituloContacto--tamaño {
+    font-size: 3.5rem; } }
+
+@media (max-width: 768px) {
+  .main__tituloContacto--tamaño {
+    font-size: 2.5rem; } }
+
+@media (max-width: 480px) {
+  .main__tituloContacto--tamaño {
+    font-size: 2.1rem; } }
+
+@media (max-width: 380px) {
+  .mainSection__info--estilo {
+    font-size: 1rem; } }
+
+@media (max-width: 320px) {
+  .mainSection__info--estilo {
+    font-size: 1rem; } }
+
+@media (max-width: 280px) {
+  .main__tituloContacto--tamaño {
+    font-size: 1rem; }
+  .mainSection__info--estilo {
+    font-size: 0.8rem; } }
 
 /* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */

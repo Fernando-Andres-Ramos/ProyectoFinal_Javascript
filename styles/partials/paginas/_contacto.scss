@@ -1,32 +1,31 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-
-/* Tamaño de la pagina */
-body{
-    height: 1250px;
-  }
   
-  /* Tamaño de letra */
-  .form__item--size{
+
+.mainSection__info{
+  // Estilo en la lista de informacion de contacto
+  &--estilo{
+    font-weight: bold;
+    list-style-type: circle;
+  }
+
+   /* Logos de redes sociales */
+   &--logo{
+    max-width: 7%;
+  }
+}
+
+.form{
+  /* Tamaño de letra en los text input */
+  &__textInput--size{
     max-width: 100%;
     height: 50px;
+  }
     
-  }
-  
-  /* Anular resize del textarea */
-  textarea {
-    resize: none;
-  }
-  
   /* Color de letra textarea */
-  .article__form--textarea{
+  &__textArea--color{
     color: grey;
   }
-  
-  /* Logos de redes sociales */
-  .section__article--fotoRedS{
-    max-width: 8%;
-    font-size: $fuente-tama;
-  }
+}
   
   /* Borde del formulario */
   .article__form--border{
@@ -34,6 +33,45 @@ body{
   }
   
 
+  @media (max-width:992px){
+    .main__tituloContacto--tamaño{
+      font-size: $fuente-tama*3.5;
+    }
+  }
+  
+  @media (max-width:768px){
+    .main__tituloContacto--tamaño{
+      font-size: $fuente-tama*2.5;
+    }
+  }
+  
+  @media (max-width:480px){
+    .main__tituloContacto--tamaño{
+      font-size: $fuente-tama*2.1;
+    }
+  }
+  
+  @media (max-width:380px){
+    .mainSection__info--estilo{
+      font-size: $fuente-tama*1;
+    }
+  }
+  
+  @media (max-width:320px){
+    .mainSection__info--estilo{
+      font-size: $fuente-tama*1;
+    }
+  }
+
+  @media (max-width:280px){
+    .main__tituloContacto--tamaño{
+      font-size: $fuente-tama*1;
+    }
+    .mainSection__info--estilo{
+      font-size: $fuente-tama*0.8;
+    }
+  }
+    
   /* Animacion para el cuadro de publicidad (es a modo de prueba para el entregable) */
 // .publicidadMolesta{
 //   animation-name: animaPublicidad;
