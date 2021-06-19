@@ -188,13 +188,13 @@ footer {
   margin-bottom: 3rem; }
 
 /* Estilo para imagenes del index*/
-.indexImagen, .servicios__imagen--estilo, .galeriaImagen {
+.indexImagen, .QuieneSomosImagen, .servicios__imagen--estilo, .galeriaImagen {
   border-radius: 5px;
   max-width: 100%;
   border: 2px solid #f25287;
   transition: transform 0.5s; }
 
-.indexImagen:hover, .servicios__imagen--estilo:hover, .galeriaImagen:hover {
+.indexImagen:hover, .QuieneSomosImagen:hover, .servicios__imagen--estilo:hover, .galeriaImagen:hover {
   transform: scale(1.01, 1.01); }
 
 /* Transformacion de escala*/
@@ -218,30 +218,6 @@ footer {
   .main__tituloIndex--tamaño {
     font-size: 1.7rem; } }
 
-.slide-in-left {
-  -webkit-animation: slide-in-left 1s both;
-  animation: slide-in-left 1s both; }
-
-@-webkit-keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-500px);
-    transform: translateX(-500px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1; } }
-
-@keyframes slide-in-left {
-  0% {
-    -webkit-transform: translateX(-500px);
-    transform: translateX(-500px);
-    opacity: 0; }
-  100% {
-    -webkit-transform: translateX(0);
-    transform: translateX(0);
-    opacity: 1; } }
-
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Estilo de las fotos del aside */
 .aside--img__cara {
@@ -261,6 +237,9 @@ footer {
 
 .article__imagenLugar--tamaño {
   max-width: 70%; }
+
+.QuieneSomosImagen {
+  border: 1px solid #f25287; }
 
 @media (max-width: 768px) {
   .mainAside__div--redes {

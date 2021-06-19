@@ -21,6 +21,11 @@
   max-width: 70%;
 }
 
+.QuieneSomosImagen{
+  @extend .indexImagen;
+  border: 1px solid $color-letras;
+
+}
 
 // Media para dispositivos chicos
 @media (max-width:768px){
