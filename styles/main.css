@@ -275,22 +275,22 @@ footer {
   border: 1px solid #f25287; }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-.mainSection__info {
-  /* Logos de redes sociales */ }
-  .mainSection__info--estilo {
-    font-weight: bold;
-    list-style-type: circle; }
-  .mainSection__info--logo {
-    max-width: 7%; }
+.mainSection__info--estilo {
+  font-weight: bold;
+  list-style-type: circle; }
 
-.form {
-  /* Tamaño de letra en los text input */
-  /* Color de letra textarea */ }
-  .form__textInput--size {
-    max-width: 100%;
-    height: 50px; }
-  .form__textArea--color {
-    color: grey; }
+/* Logos de redes sociales */
+.mainSection__info--logo {
+  max-width: 7%; }
+
+/* Tamaño de letra en los text input */
+.form__textInput--size {
+  max-width: 100%;
+  height: 50px; }
+
+/* Color de letra textarea */
+.form__textArea--color {
+  color: grey; }
 
 /* Borde del formulario */
 .article__form--border {

@@ -1,31 +1,27 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
   
 
-.mainSection__info{
   // Estilo en la lista de informacion de contacto
-  &--estilo{
+  .mainSection__info--estilo{
     font-weight: bold;
     list-style-type: circle;
   }
 
    /* Logos de redes sociales */
-   &--logo{
+   .mainSection__info--logo{
     max-width: 7%;
   }
-}
 
-.form{
   /* Tamaño de letra en los text input */
-  &__textInput--size{
+  .form__textInput--size{
     max-width: 100%;
     height: 50px;
   }
     
   /* Color de letra textarea */
-  &__textArea--color{
+  .form__textArea--color{
     color: grey;
   }
-}
   
   /* Borde del formulario */
   .article__form--border{
