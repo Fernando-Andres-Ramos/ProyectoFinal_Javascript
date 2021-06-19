@@ -21,9 +21,27 @@
   max-width: 70%;
 }
 
+
 // Media para dispositivos chicos
+@media (max-width:768px){
+  // Tamaño de logo en lista de info de la persona
+.mainAside__div--redes{max-width:15%;}
+
+}
+
 @media (max-width:480px){
   // Tamaño de logo en lista de info de la persona
 .mainAside__div--redes{max-width:15%;}
 
 }
+
+@media (max-width:280px){
+  /* Espaciado entre items de lista */
+.mainAside__persona--lista li{ font-size: $fuente-tama*1;}
+
+// Imagen del establecimiento
+.article__imagenLugar--tamaño{
+  max-width: 100%;
+}
+}
+

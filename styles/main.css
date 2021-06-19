@@ -238,9 +238,20 @@ footer {
 .article__imagenLugar--tamaño {
   max-width: 70%; }
 
+@media (max-width: 768px) {
+  .mainAside__div--redes {
+    max-width: 15%; } }
+
 @media (max-width: 480px) {
   .mainAside__div--redes {
     max-width: 15%; } }
+
+@media (max-width: 280px) {
+  /* Espaciado entre items de lista */
+  .mainAside__persona--lista li {
+    font-size: 1rem; }
+  .article__imagenLugar--tamaño {
+    max-width: 100%; } }
 
 /* Estilo para la lista en el submenu */
 .submenu__estilo {
