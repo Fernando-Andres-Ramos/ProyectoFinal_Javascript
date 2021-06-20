@@ -3,7 +3,7 @@
 
 // Estilo general del footer
 footer{
-  font-family: garamond;
+  font-family: $fuente-tipo;
   color: $color-letras;
   background-color: $color-fondo;
 }
@@ -30,35 +30,48 @@ footer{
 }
 
 
+
 @media (max-width:380px){
-  h5 {
+  .footer__redes--titulo {
     font-size: $fuente-tama*1.1 ;
   }
 
   .footer__lista--info{ 
     margin-bottom: $fuente-tama*3;
-    font-size: $fuente-tama*1.1 ;
+    font-size: $fuente-tama*1;
+  }
+  
+  .firma{
+    font-size: $fuente-tama*1 ;
   }
 }
 
 @media (max-width:320px){
   .footer__redes--titulo{
-    font-size: $fuente-tama*0.9 ;
+    font-size: $fuente-tama*1 ;
   }
 
   .footer__lista--info{ 
     margin-bottom: $fuente-tama*3;
+    font-size: $fuente-tama*0.9 ;
+  }
+
+  .firma{
     font-size: $fuente-tama*0.9 ;
   }
 }
 
 @media (max-width:280px){
   .footer__redes--titulo{
-    font-size: $fuente-tama*0.8 ;
+    font-size: $fuente-tama*0.9 ;
   }
 
   .footer__lista--info{ 
     margin-bottom: $fuente-tama*3;
+    font-size: $fuente-tama*0.8 ;
+  }
+
+  .firma{
     font-size: $fuente-tama*0.8 ;
   }
 }
