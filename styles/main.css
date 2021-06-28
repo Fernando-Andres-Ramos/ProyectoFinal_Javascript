@@ -236,10 +236,16 @@ footer {
   margin-bottom: 1rem; }
 
 .article__imagenLugar--tamaño {
-  max-width: 70%; }
+  max-width: 80%; }
 
 .QuieneSomosImagen {
   border: 1px solid #f25287; }
+
+@media (max-width: 1024px) {
+  .mainAside__div--redes {
+    max-width: 15%; }
+  .article__imagenLugar--tamaño {
+    max-width: 100%; } }
 
 @media (max-width: 768px) {
   .mainAside__div--redes {

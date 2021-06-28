@@ -18,7 +18,7 @@
 
 // Imagen del establecimiento
 .article__imagenLugar--tamaño{
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .QuieneSomosImagen{
@@ -28,10 +28,19 @@
 }
 
 // Media para dispositivos chicos
+
+@media (max-width:1024px){
+  // Tamaño de logo en lista de info de la persona
+  .mainAside__div--redes{max-width:15%;}
+  // Imagen del establecimiento
+  .article__imagenLugar--tamaño{
+    max-width: 100%;
+  }
+}
+
 @media (max-width:768px){
   // Tamaño de logo en lista de info de la persona
 .mainAside__div--redes{max-width:15%;}
-
 }
 
 @media (max-width:480px){
