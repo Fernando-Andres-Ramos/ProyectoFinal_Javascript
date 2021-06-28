@@ -188,13 +188,13 @@ footer {
   margin-bottom: 3rem; }
 
 /* Estilo para imagenes del index*/
-.indexImagen, .QuieneSomosImagen, .servicios__imagen--estilo, .galeriaImagen {
+.indexImagen, .servicios__imagen--estilo, .galeriaImagen {
   border-radius: 5px;
   max-width: 100%;
   border: 2px solid #f25287;
   transition: transform 0.5s; }
 
-.indexImagen:hover, .QuieneSomosImagen:hover, .servicios__imagen--estilo:hover, .galeriaImagen:hover {
+.indexImagen:hover, .servicios__imagen--estilo:hover, .galeriaImagen:hover {
   transform: scale(1.01, 1.01); }
 
 /* Transformacion de escala*/
@@ -258,9 +258,7 @@ footer {
 @media (max-width: 280px) {
   /* Espaciado entre items de lista */
   .mainAside__persona--lista li {
-    font-size: 1rem; }
-  .article__imagenLugar--tamaño {
-    max-width: 100%; } }
+    font-size: 1rem; } }
 
 /* Estilo para la lista en el submenu */
 .submenu__estilo {

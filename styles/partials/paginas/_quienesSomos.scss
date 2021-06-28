@@ -22,7 +22,6 @@
 }
 
 .QuieneSomosImagen{
-  @extend .indexImagen;
   border: 1px solid $color-letras;
 
 }
@@ -52,10 +51,5 @@
 @media (max-width:280px){
   /* Espaciado entre items de lista */
 .mainAside__persona--lista li{ font-size: $fuente-tama*1;}
-
-// Imagen del establecimiento
-.article__imagenLugar--tamaño{
-  max-width: 100%;
-}
 }
 
