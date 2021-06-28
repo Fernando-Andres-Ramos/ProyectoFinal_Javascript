@@ -21,10 +21,24 @@
 .header__navbar--estilo{
   border: 2px solid  $color-letras;
   background-color: $color-nav;
-  color: $color-letras;
 }
   
 .nav-link:hover{
+  background-color:$color-fondo;
+}
+
+.dropdown-menu{
+ background-color: $color-nav;
+ border: 1px solid $color-letras;
+ border-top:none;
+
+}
+
+.nav-link:hover{
+  background-color:$color-fondo;
+}
+
+.dropdown-item:hover{
   background-color:$color-fondo;
 }
   
