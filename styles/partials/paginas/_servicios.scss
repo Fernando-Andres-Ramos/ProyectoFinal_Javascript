@@ -1,5 +1,8 @@
 /* Estilo para la lista en el submenu */
-.submenu__estilo{ 
+.submenu__estilo{
+    position: fixed;
+    top: 20rem;
+    left: 95rem;
     list-style: none; 
     text-align: center;
     background-color: $color-nav;
@@ -9,6 +12,7 @@
     {
       text-decoration: none;
       color: $color-letras;
+      font-size: $fuente-tama*1.5;
       transition: 0.3s background-color;
 
       &:hover
