@@ -4,7 +4,7 @@
 main {
   margin-bottom: 2rem;
   color: #f25287;
-  font-family: garamond; }
+  font-family: "EB Garamond", serif; }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Titulo del sitio web */
@@ -17,7 +17,7 @@ header {
   background-color: white; }
 
 .titulo {
-  font-family: garamond;
+  font-family: "EB Garamond", serif;
   color: #f25287;
   font-style: italic;
   font-size: 6.5rem; }
@@ -51,7 +51,7 @@ header {
 
 @media (max-width: 1200px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 4.5rem; }
@@ -65,7 +65,7 @@ header {
 
 @media (max-width: 768px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 4.5rem; }
@@ -79,7 +79,7 @@ header {
 
 @media (max-width: 768px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 4.5rem; }
@@ -93,7 +93,7 @@ header {
 
 @media (max-width: 600px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 3.5rem; }
@@ -107,7 +107,7 @@ header {
 
 @media (max-width: 480px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 3.5rem;
@@ -122,7 +122,7 @@ header {
 
 @media (max-width: 380px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 2.9rem;
@@ -137,7 +137,7 @@ header {
 
 @media (max-width: 300px) {
   .titulo {
-    font-family: garamond;
+    font-family: "EB Garamond", serif;
     color: #f25287;
     font-style: italic;
     font-size: 2.5rem;
@@ -153,7 +153,7 @@ header {
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Se utilizan @media para realizar el responsive en tamaños de celular mas chicos */
 footer {
-  font-family: garamond;
+  font-family: "EB Garamond", serif;
   color: #f25287;
   background-color: #f9f3f3; }
 
@@ -177,24 +177,30 @@ footer {
     width: 10%; } }
 
 @media (max-width: 380px) {
-  h5 {
+  .footer__redes--titulo {
     font-size: 1.1rem; }
   .footer__lista--info {
     margin-bottom: 3rem;
-    font-size: 1.1rem; } }
+    font-size: 1rem; }
+  .firma {
+    font-size: 1rem; } }
 
 @media (max-width: 320px) {
   .footer__redes--titulo {
-    font-size: 0.9rem; }
+    font-size: 1rem; }
   .footer__lista--info {
     margin-bottom: 3rem;
+    font-size: 0.9rem; }
+  .firma {
     font-size: 0.9rem; } }
 
 @media (max-width: 280px) {
   .footer__redes--titulo {
-    font-size: 0.8rem; }
+    font-size: 0.9rem; }
   .footer__lista--info {
     margin-bottom: 3rem;
+    font-size: 0.8rem; }
+  .firma {
     font-size: 0.8rem; } }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */

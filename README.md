@@ -11,9 +11,13 @@ Este proyecto consiste en un sitio web en desarrollo:
     * Esmaltado
     * Perfilado 
     * Masajes
-  * Los htmls anteriores contienen un correspondiente archivo css. Todos estan en la carpeta Styles-Adaptation-CSS
+
+
+  * Los htmls anteriores tienen sus estilos del archivo main.css
+  * El archivo main.css se genera aprovechando la herramienta scss, los estilos correspondientes a cada seccion del sitio web se pueden encontrar en la carpeta partials.
   * La carpeta galeria tiene imagenes que se usaran en el sitio.
+  * Se utilizan dependencias de bootstrap y AOS para el responsive y las animaciones.
   
-  **Cambios para la entrega: Se aplican conceptos de BOOTSTRAP para toda el sitio web. En el header se utilizan "botons" y "dropdowns" para la navegacion. En galeria.html se utilizo un MODAL que se activa cuando se selecciona alguna de las imagenes. Se redujo la cantidad de archivos CSS en el area de servicios, aplicando 1 solo archivo css para 4 htmls similares.**
+  **Cambios para la cuarta entrega del proyecto final: Todos los archivos css que correspondian a sus htmls equivalentes fueron borrados. En cambio se utilizan varios archivos scss dentrocarpeta partiales, todos compilados en un solo archivo: main.scss, el cual a su vez sirve para generar el archivo main.css general. Se hicieron algunos arreglos de responsive, aprovechando el framework de bootstrap en todo el siwio. Tambien se utilizan algunas animaciones utilizando la herramienta AOS (animate on scroll) para darle dinamismo a algunos elemntos del sitio web**
   
-_Actualizado 12/06/2021_
+_Actualizado 19/06/2021_
