@@ -8,11 +8,6 @@ main {
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Titulo del sitio web */
-header {
-  position: sticky;
-  top: 0;
-  z-index: 2; }
-
 .header__logo--area {
   background-color: white; }
 
