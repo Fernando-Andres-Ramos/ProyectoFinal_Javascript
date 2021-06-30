@@ -1,6 +1,17 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
 /* Titulo del sitio web */
+
+header{
+  position: sticky;
+  top:0;
+  z-index: 2;
+}
+
+.header__logo--area{
+  background-color: $color-blanco;
+}
+
 .titulo{
     font-family: $fuente-tipo;
     color: $color-letras;
@@ -91,7 +102,7 @@
 
 /* Estilos para la imagen de fondo en el titulo */
   .cuboTitulo{
-    height: $fuente-tama*12;
+    height: $fuente-tama*11;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
@@ -110,7 +121,7 @@
 
 /* Estilos para la imagen de fondo en el titulo */
   .cuboTitulo{
-    height: $fuente-tama*9.5;
+    height: $fuente-tama*9;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
@@ -125,6 +136,7 @@
     color: $color-letras;
     font-style:italic;
     font-size: $fuente-tama*3.5;
+    align-self:flex-end;
   }
 
 /* Estilos para la imagen de fondo en el titulo */
@@ -149,7 +161,7 @@
 
 /* Estilos para la imagen de fondo en el titulo */
   .cuboTitulo{
-    height: $fuente-tama*8;
+    height: $fuente-tama*7.5;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
@@ -169,7 +181,7 @@
 
 /* Estilos para la imagen de fondo en el titulo */
   .cuboTitulo{
-    height: $fuente-tama*7.2;
+    height: $fuente-tama*7;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
