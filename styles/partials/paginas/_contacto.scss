@@ -21,11 +21,21 @@
   /* Color de letra textarea */
   .form__textArea--color{
     color: grey;
+    
+  }
+
+  .form__textArea--resize{
+    resize: none;
   }
   
   /* Borde del formulario */
   .article__form--border{
     border: 1px solid grey;
+  }
+
+  .form__button--estilo{
+    font-size: $fuente-tama*1.2;
+    background-color: $color-gris;
   }
   
 
