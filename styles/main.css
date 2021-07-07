@@ -6,63 +6,6 @@ main, .offcanvas__body--estilo {
   color: #f25287;
   font-family: "EB Garamond", serif; }
 
-.flecha--arriba {
-  max-width: 100%;
-  transform: rotate(90deg);
-  margin-bottom: 3px;
-  filter: invert(44%) sepia(58%) saturate(2141%) hue-rotate(312deg) brightness(100%) contrast(91%); }
-
-#buttonUp {
-  display: none;
-  /* Hidden by default */
-  justify-content: center;
-  align-items: center;
-  position: fixed;
-  /* Fixed/sticky position */
-  top: calc(100vh - 100px);
-  left: calc(100vw - 150px);
-  z-index: 99;
-  /* Make sure it does not overlap */
-  border: none;
-  /* Remove borders */
-  outline: none;
-  /* Remove outline */
-  height: 70px;
-  width: 70px;
-  background-color: #f7d9d9;
-  /* Set a background color */
-  color: white;
-  /* Text color */
-  cursor: pointer;
-  /* Add a mouse pointer on hover */
-  border-radius: 100px;
-  /* Rounded corners */
-  opacity: 0.5;
-  transition: 0.3s opacity;
-  z-index: 2; }
-
-#buttonUp:hover {
-  opacity: 1; }
-
-@media (max-width: 1440px) {
-  #buttonUp {
-    top: calc(100vh - 100px);
-    left: calc(100vw - 100px); } }
-
-@media (max-width: 768px) {
-  #buttonUp {
-    height: 60px;
-    width: 60px;
-    top: calc(100vh - 80px);
-    left: calc(100vw - 80px); } }
-
-@media (max-width: 380px) {
-  #buttonUp {
-    height: 55px;
-    width: 55px;
-    top: calc(100vh - 70px);
-    left: calc(100vw - 70px); } }
-
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Titulo del sitio web */
 .header__logo--area {
@@ -255,6 +198,68 @@ footer {
   .firma {
     font-size: 0.8rem; } }
 
+.flecha--arriba, .flecha--abajo {
+  max-width: 100%;
+  transform: rotate(90deg);
+  margin-bottom: 3px;
+  filter: invert(44%) sepia(58%) saturate(2141%) hue-rotate(312deg) brightness(100%) contrast(91%); }
+
+#buttonUp {
+  display: none;
+  /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  /* Fixed/sticky position */
+  top: calc(100vh - 100px);
+  left: calc(100vw - 150px);
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  height: 70px;
+  width: 70px;
+  background-color: #f7d9d9;
+  /* Set a background color */
+  color: white;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  border-radius: 100px;
+  /* Rounded corners */
+  opacity: 0.5;
+  transition: 0.3s opacity;
+  z-index: 2; }
+
+#buttonUp:hover {
+  opacity: 1; }
+
+@media (max-width: 1440px) {
+  #buttonUp {
+    top: calc(100vh - 100px);
+    left: calc(100vw - 100px); } }
+
+@media (max-width: 768px) {
+  #buttonUp {
+    height: 60px;
+    width: 60px;
+    top: calc(100vh - 80px);
+    left: calc(100vw - 80px); } }
+
+@media (max-width: 380px) {
+  #buttonUp {
+    height: 55px;
+    width: 55px;
+    top: calc(100vh - 70px);
+    left: calc(100vw - 70px); } }
+
+.flecha--abajo {
+  transform: rotate(180deg);
+  position: relative;
+  left: 30px; }
+
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 .index__main--bienvenida {
   margin-bottom: 5rem; }
@@ -396,14 +401,14 @@ footer {
 
 @media (max-width: 600px) {
   .offcanvas__body--estilo {
-    height: 50vh;
+    height: 70vh;
     width: 65vw; }
   .submenu__estilo--indices {
     font-size: 1.5rem; } }
 
 @media (max-width: 375px) {
   .offcanvas__body--estilo {
-    height: 50vh;
+    height: 70vh;
     width: 100vw; }
   .submenu__estilo--indices {
     font-size: 1.5rem; } }
