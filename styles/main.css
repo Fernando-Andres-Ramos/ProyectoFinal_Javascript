@@ -36,6 +36,7 @@ main, .offcanvas__body--estilo {
 .dropdown-menu {
   background-color: #f7d9d9;
   border: 1px solid #f25287;
+  border-radius: 0px;
   border-top: none; }
 
 .nav-link:hover {
@@ -58,19 +59,10 @@ main, .offcanvas__body--estilo {
     background-position: right;
     background-size: 80rem; } }
 
-@media (max-width: 768px) {
-  .titulo {
-    font-family: "EB Garamond", serif;
-    color: #f25287;
-    font-style: italic;
-    font-size: 4.5rem; }
-  /* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo {
-    height: 12rem;
-    background-image: url(../Galeria/Cabecera.jpg);
-    background-repeat: no-repeat;
-    background-position: right;
-    background-size: 75rem; } }
+@media (max-width: 992px) {
+  .dropdown-menu {
+    background-color: #f7d9d9;
+    border-radius: 0px; } }
 
 @media (max-width: 768px) {
   .titulo {
