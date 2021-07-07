@@ -1,9 +1,12 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
+
+// Estilo para el texto principal
 .index__main--bienvenida{
   margin-bottom: $fuente-tama*5;
 }
 
+// Estilo del titulo de index
 .main__tituloIndex--tamaño{
   font-size: $fuente-tama*3;
   text-align: center;
@@ -15,26 +18,8 @@
   
   .indexImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/
 
-  .boton__flecha--estilo{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    top:calc(100vh - 100px);
-    left: calc(100vw - 100px);
-    height: 60px;
-    width: 60px;
-    background-color: $color-nav;
-    position: sticky;
-    border-radius: 100px;
-    opacity: 0.5;
-    transition: 0.3s opacity;
-    z-index: 2;
-  }
 
-  .boton__flecha--estilo:hover{
-    opacity:1;
-  }
-
+  // Estilo de la imagen de flecha para el boton de atajo hacia arriba
   .flecha--arriba{
     max-width: 100%;
     transform: rotate(90deg);
@@ -42,18 +27,41 @@
     filter: invert(44%) sepia(58%) saturate(2141%) hue-rotate(312deg) brightness(100%) contrast(91%);
   }
   
- 
+  // Boton de atajo hacia arriba
+  #buttonUp {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fixed/sticky position */
+    top:calc(100vh - 100px);
+    left:calc(100vw - 150px);
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* Remove borders */
+    outline: none; /* Remove outline */
+    height: 70px;
+    width: 70px;
+    background-color: $color-nav; /* Set a background color */
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 100px; /* Rounded corners */  
+    opacity: 0.5;
+    transition: 0.3s opacity;
+    z-index: 2;}
   
-  @media (max-width: 1024px){
-    .cuadro{
-      top:calc(100vh - 100px);
-      left:calc(100vw - 100px);
-    }
-  
-    .cuadro:active{
-      opacity:1;
-    }
+  #buttonUp:hover {
+    opacity:1;
+    // background-color: #555; /* Add a dark-grey background on hover */
   }
+ 
+
+// Media Queries para adaptar el titulo en el encabezado y el tamaño del boton de subida
+@media (max-width:1440px){
+
+  #buttonUp{
+    top:calc(100vh - 100px);
+    left:calc(100vw - 100px);
+  }
+}
 
 @media (max-width:992px){
   .main__tituloIndex--tamaño{
@@ -64,6 +72,13 @@
 @media (max-width:768px){
   .main__tituloIndex--tamaño{
     font-size: $fuente-tama*2.5;
+  }
+
+  #buttonUp{
+    height: 60px;
+    width: 60px;
+    top:calc(100vh - 80px);
+    left:calc(100vw - 80px);
   }
 }
 
@@ -76,6 +91,13 @@
 @media (max-width:380px){
   .main__tituloIndex--tamaño{
     font-size: $fuente-tama*1.9;
+  }
+
+  #buttonUp{
+    height: 55px;
+    width: 55px;
+    top:calc(100vh - 70px);
+    left:calc(100vw - 70px);
   }
 }
 
