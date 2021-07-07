@@ -401,9 +401,9 @@ footer {
   .submenu__estilo--indices {
     font-size: 1.5rem; } }
 
-@media (max-width: 300px) {
+@media (max-width: 375px) {
   .offcanvas__body--estilo {
-    height: 60vh;
+    height: 50vh;
     width: 100vw; }
   .submenu__estilo--indices {
     font-size: 1.5rem; } }
