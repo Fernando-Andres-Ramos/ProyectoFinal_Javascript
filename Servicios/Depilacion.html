@@ -67,13 +67,16 @@
       </nav>
     </header>
 
+    <!-- Boton de atajo para subir rapido y evitar scroll de subida -->
+    <div onclick="topFunction()" id="buttonUp"><a><img class="flecha--arriba" src="../Galeria/flecha.svg" alt="flecha"></a></div>
+
     <main>
       <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
 
       <section class="container justify-content-end colorFuente fs-3">
         <div class="row gx-5">
-          <article class="col-lg-10 mb-5">
-            <h2 class="fw-bold fs-1 mb-5">Depilación</h2>
+          <article class="col-lg-12 mb-5">
+            <h2 class="fw-bold fs-1 mb-5 text-center">Depilación</h2>
             <p>Esta es la explicacion del servicio que realiza la empresa.<br>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum labore nobis, doloremque incidunt ipsa odit excepturi iure deserunt quod assumenda eligendi accusamus laudantium, consequatur blanditiis asperiores tenetur ex, repellendus sunt necessitatibus quas! Repellat laborum totam repellendus, aliquid debitis nesciunt. A, autem! Eligendi animi molestias iste temporibus voluptatem, molestiae dicta assumenda? </p>
           </article>
@@ -92,12 +95,12 @@
           <!-- Se detallan las subcategorias del servicio, varia en cantidad entre estos ultimos-->
         <div class="row mb-5 gx-5 d-flex align-items-center" id="depilacionCera">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
           <h4 class="fw-bold fs-2 mb-5">Depilacion con cera / metodo español</h4>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
             Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <img class="servicios__imagen--estilo" src="../Galeria/depilaciónCera.jpg" alt="imagenNoDecidida">
           </div>
         </div>
@@ -106,12 +109,12 @@
 
         <div class="row mb-5 gx-5 d-flex align-items-center" id="depilacionDefi">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
           <h4 class="fw-bold fs-2 mb-5">Depilacion Definitiva (o laser)</h4>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
             Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <img class="servicios__imagen--estilo" src="../Galeria/depilaciónDefi.jpg" alt="imagenNoDecidida">
           </div>
           
@@ -121,12 +124,12 @@
            
         <div class="row mb-5 gx-5 d-flex align-items-center" id="otros">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
           <h4 class="fw-bold fs-2 mb-5">Otros</h4>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
             Obcaecati veniam placeat quo eligendi et temporibus commodi porro sapiente at iure ea totam cum culpa quis alias facilis itaque voluptatem eius, minus pariatur deserunt assumenda ullam voluptatum! Sequi, mollitia.</p>
           </div>
-          <div class="col-lg-5">
+          <div class="col-lg-6">
             <img class="servicios__imagen--estilo" src="../Galeria/Depilacion.png" alt="imagenNoDecidida">
           </div>
       </section>
@@ -157,5 +160,28 @@
         <div class="col-lg-3 col-12"><p><em class="firma">Autor de pagina: Fernando Ramos</em></p></div>
       </div>    
     </footer>
+
+      <!-- Script para el funcionamiento del boton de subida -->
+    <script>
+      //Seleccionar el boton
+      var mybutton = document.getElementById("buttonUp");
+    
+    // Cuando el usuario hace scroll en la pantalla, alcanzando 250px hacia abajo, el boton aparece.
+      window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+        if (document.body.scrollTop > 250 || document.documentElement.scrollTop > 250) {
+          mybutton.style.display = "flex";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+    
+      // Cuando el usuario hace click en el boton, la pagina sube hasta la parte mas alta.
+    function topFunction() {
+        document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+      }
+    </script>
   </body>
 </html>
