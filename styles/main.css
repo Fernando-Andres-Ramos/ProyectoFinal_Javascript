@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ESTILOS GENERALES PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Fuente de la pagina */
-main {
+main, .offcanvas__body--estilo {
   margin-bottom: 2rem;
   color: #f25287;
   font-family: "EB Garamond", serif; }
@@ -356,12 +356,50 @@ footer {
     font-size: 1.75rem;
     transition: 0.3s background-color; }
     .submenu__estilo--indices:hover {
-      text-decoration: none;
+      text-decoration: underline;
       background-color: #f9f3f3;
       color: #f25287; }
 
 .servicios__imagen--estilo {
   border: 1px solid #f25287; }
+
+.button__Servicios {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  border: 2px solid #f25287;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  background-color: #f7d9d9;
+  /* Set a background color */
+  color: #f25287;
+  /* Text color */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  transition: 0.3s opacity; }
+  .button__Servicios:hover {
+    color: #f25287;
+    border: 2px solid #f25287; }
+  .button__Servicios:enabled {
+    color: #f25287;
+    border: 2px solid #f25287; }
+
+.container__categorias--estilo {
+  position: sticky;
+  top: 0px;
+  z-index: 99; }
+
+.offcanvas__body--estilo {
+  background-color: #f9f3f3; }
+
+@media (max-width: 600px) {
+  .offcanvas__body--estilo {
+    height: 50vh;
+    width: 80vw; }
+  .submenu__estilo--indices {
+    font-size: 1.5rem; } }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Centralizar el MODAL en galeria.html */

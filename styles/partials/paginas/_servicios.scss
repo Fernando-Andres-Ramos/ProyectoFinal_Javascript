@@ -11,9 +11,10 @@
 
       &:hover
       {
-        text-decoration: none;
+        text-decoration: underline;
         background-color:$color-fondo;
         color: $color-letras;
+
       }
     }
   }
@@ -24,5 +25,50 @@
   border: 1px solid $color-letras;
 }
   
-  
-  
+.button__Servicios{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $fuente-tama*1.5;
+  border: 2px solid $color-letras;
+  outline: none;
+  height: 40px;
+  width: 100%;
+  background-color: $color-nav; /* Set a background color */
+  color: $color-letras; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  transition: 0.3s opacity;
+
+  &:hover{
+    color: $color-letras;
+    border: 2px solid $color-letras;
+  }
+
+  &:enabled{
+    color: $color-letras;
+    border: 2px solid $color-letras;
+  }
+}
+
+
+.container__categorias--estilo{
+  position: sticky;
+  top: 0px;
+  z-index: 99;
+}
+
+.offcanvas__body--estilo{
+  background-color: $color-fondo;
+  @extend main ;
+}
+
+@media (max-width:600px){
+  .offcanvas__body--estilo{
+    height: 50vh;
+    width: 80vw;
+  }
+
+  .submenu__estilo--indices{
+    font-size: $fuente-tama*1.5;
+  }
+}

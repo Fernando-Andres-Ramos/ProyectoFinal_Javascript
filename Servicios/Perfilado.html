@@ -30,7 +30,7 @@
       </div>
 
     <!-- Barra de navegación -->
-      <nav class="navbar navbar-expand-lg navbar-light mb-5 header__navbar--estilo">
+      <nav class="navbar navbar-expand-lg navbar-light mb-2 header__navbar--estilo">
         <div class="container-fluid">
           <a class="navbar-brand" href="../index.html">Principal</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -68,27 +68,19 @@
       </nav>
     </header>
     
-
-    <!-- Boton de atajo para subir rapido y evitar scroll de subida -->
-    <div onclick="topFunction()" id="buttonUp"><a><img class="flecha--arriba" src="../Galeria/flecha.svg" alt="flecha"></a></div>
-
-
-    <main>
-
-      <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
-
-      <!-- Boton para abrir un Offcanvas, desplegara un submenu para navegar dentro de la pagina actual -->
+    <!-- Boton para abrir un Offcanvas, desplegara un submenu para navegar dentro de la pagina actual -->
       <!-- the Offcanvas button //-->
-      <button class="nav-link btn btn-outline-primary" id="OpenMenu">open</button>
-      <!-- the Offcanvas element //-->
-      <div class="offcanvas offcanvas-start" data-bs-backdrop="true" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+      <div class="container-md mb-5 container__categorias--estilo">
+        <button class="nav-link btn btn-outline-primary button__Servicios" id="OpenMenu">Categorias</button>
+      </div>      <!-- the Offcanvas element //-->      <!-- the Offcanvas element //-->      <!-- the Offcanvas element //-->
+      <div class="offcanvas offcanvas-start offcanvas__body--estilo" data-bs-backdrop="true" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel"></h5>
           <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-          <div class="submenu__estilo">
-            <h3 class="fw-bold fs-1 mb-5 text-center">Categorias</h3>
+          <div class="submenu__estilo text-center">
+            <h3 class="fw-bold fs-1 mb-5 ">Categorias</h3>
             <ul class="list-unstyled fs-2">
               <li class="mb-4"><a class="submenu__estilo--indices" href="#perfila">Perfilaldo de cejas</a></li>
               <li class="mb-4"><a class="submenu__estilo--indices" href="#bellezaPest">Belleza de pestañas</a></li>
@@ -97,6 +89,14 @@
           </div>
         </div>
       </div>
+
+    <!-- Boton de atajo para subir rapido y evitar scroll de subida -->
+    <div onclick="topFunction()" id="buttonUp"><a><img class="flecha--arriba" src="../Galeria/flecha.svg" alt="flecha"></a></div>
+
+
+    <main>
+
+      <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
 
      <section class="container colorFuente fs-3">
       <div class="row mb-5 mb-5">
@@ -113,7 +113,7 @@
         <!-- Se detallan las subcategorias del servicio, varia en cantidad entre estos ultimos-->
           
         <div class="row mb-5 d-flex align-items-center" id="perfila">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
-          <h4 class="fw-bold fs-2 mb-5">Perfilado de cejas</h4>
+          <h4 class="fw-bold fs-2 mb-5 mt-5 text-center">Perfilado de cejas</h4>
           <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
@@ -127,7 +127,7 @@
         <br><br><hr><br><br>
 
         <div class="row mb-5 d-flex align-items-center" id="bellezaPest">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
-          <h4 class="fw-bold fs-2 mb-5">Belleza de pestañas</h4>
+          <h4 class="fw-bold fs-2 mb-5 mt-5 text-center">Belleza de pestañas</h4>
           <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
@@ -141,7 +141,7 @@
         <br><br><hr><br><br>
 
         <div class="row mb-5 d-flex align-items-center" id="otrosPerfi">  <!--Cada subcategoria tendra su id para que la tabla de links pueda ubicarla-->
-          <h4 class="fw-bold fs-2 mb-5">Otros</h4>
+          <h4 class="fw-bold fs-2 mb-5 mt-5 text-center">Otros</h4>
           <div class="col-lg-6">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex perspiciatis alias, fuga blanditiis laborum distinctio possimus reprehenderit voluptas quis placeat repellat minima id animi, omnis architecto perferendis quod qui! Officia.
             Ratione, omnis enim. Saepe animi repellat soluta illo magnam consequuntur. Nobis ipsum cupiditate officia exercitationem ea sequi laudantium quibusdam minima mollitia id odio, dignissimos expedita amet? Minus enim excepturi ea?
