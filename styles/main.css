@@ -349,17 +349,11 @@ footer {
 
 /* Estilo para la lista en el submenu */
 .submenu__estilo {
-  position: fixed;
-  top: 20rem;
-  left: 95rem;
-  list-style: none;
-  text-align: center;
-  background-color: #f7d9d9;
-  border: 1px solid; }
+  list-style: none; }
   .submenu__estilo--indices {
     text-decoration: none;
     color: #f25287;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     transition: 0.3s background-color; }
     .submenu__estilo--indices:hover {
       text-decoration: none;

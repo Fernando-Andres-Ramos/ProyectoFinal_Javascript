@@ -73,6 +73,29 @@
     <main>
       <!-- Descripción general del servicio. Se usara un esquema similar en todos los servicios -->
 
+
+      <!-- Boton para abrir un Offcanvas, desplegara un submenu para navegar dentro de la pagina actual -->
+      <!-- the Offcanvas button //-->
+      <button class="nav-link btn btn-outline-primary" id="OpenMenu">open</button>
+      <!-- the Offcanvas element //-->
+      <div class="offcanvas offcanvas-start" data-bs-backdrop="true" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-primary" id="offcanvasExampleLabel"></h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div class="submenu__estilo">
+            <h3 class="fw-bold fs-1 mb-5 text-center">Categorias</h3>
+            <ul class="list-unstyled fs-2">
+              <li class="mb-5"><a class="submenu__estilo--indices" href="#depilacionCera">Depilacion con Cera</a></li>
+              <li class="mb-5"><a class="submenu__estilo--indices" href="#depilacionDefi">Depilacion Definitiva</a></li>
+              <li class="mb-5"><a class="submenu__estilo--indices" href="#otros">Mas servicios</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Descripccion de este servicio -->
       <section class="container justify-content-end colorFuente fs-3">
         <div class="row gx-5">
           <article class="col-lg-12 mb-5">
@@ -80,15 +103,6 @@
             <p>Esta es la explicacion del servicio que realiza la empresa.<br>
             Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorum labore nobis, doloremque incidunt ipsa odit excepturi iure deserunt quod assumenda eligendi accusamus laudantium, consequatur blanditiis asperiores tenetur ex, repellendus sunt necessitatibus quas! Repellat laborum totam repellendus, aliquid debitis nesciunt. A, autem! Eligendi animi molestias iste temporibus voluptatem, molestiae dicta assumenda? </p>
           </article>
-
-          <div class="col-lg-2 submenu__estilo align-self-start">
-            <h3 class="fw-bold fs-1 mb-5">Categorias</h3>
-            <ul class="list-unstyled fs-2">
-              <li class="mb-4"><a class="submenu__estilo--indices" href="#depilacionCera">Depilacion con Cera</a></li>
-              <li class="mb-4"><a class="submenu__estilo--indices" href="#depilacionDefi">Depilacion Definitiva</a></li>
-              <li class="mb-4"><a class="submenu__estilo--indices" href="#otros">Mas servicios</a></li>
-            </ul>
-          </div>
         </div>
           
         <br><br><hr><br><br>
@@ -182,6 +196,18 @@
         document.body.scrollTop = 0;
       document.documentElement.scrollTop = 0;
       }
+    </script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function(){
+        var myOffcanvas = document.getElementById('offcanvasExample');
+        var bsOffcanvas = new bootstrap.Offcanvas(myOffcanvas);
+        document.getElementById("OpenMenu").addEventListener('click',function (e){
+          e.preventDefault();
+          e.stopPropagation();
+          bsOffcanvas.toggle();
+        });
+      });
     </script>
   </body>
 </html>
