@@ -397,7 +397,14 @@ footer {
 @media (max-width: 600px) {
   .offcanvas__body--estilo {
     height: 50vh;
-    width: 80vw; }
+    width: 65vw; }
+  .submenu__estilo--indices {
+    font-size: 1.5rem; } }
+
+@media (max-width: 300px) {
+  .offcanvas__body--estilo {
+    height: 60vh;
+    width: 100vw; }
   .submenu__estilo--indices {
     font-size: 1.5rem; } }
 
