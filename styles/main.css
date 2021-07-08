@@ -62,7 +62,8 @@ main, .offcanvas__body--estilo {
 @media (max-width: 992px) {
   .dropdown-menu {
     background-color: #f7d9d9;
-    border-radius: 0px; } }
+    border-radius: 0px;
+    border-bottom: none; } }
 
 @media (max-width: 768px) {
   .titulo {
