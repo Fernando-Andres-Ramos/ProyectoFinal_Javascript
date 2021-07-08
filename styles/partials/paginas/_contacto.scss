@@ -40,6 +40,7 @@
   background-color: $color-gris;
 }
 
+// Media Queries para el responsive
 @media (max-width: 992px) {
   .main__tituloContacto--tamaño {
     font-size: $fuente-tama * 3.5;

@@ -9,21 +9,21 @@
 
 // Boton de atajo hacia arriba
 #buttonUp {
-  display: none; /* Hidden by default */
+  display: none; 
   justify-content: center;
   align-items: center;
-  position: fixed; /* Fixed/sticky position */
+  position: fixed; 
   top: calc(100vh - 100px);
   left: calc(100vw - 150px);
-  z-index: 99; /* Make sure it does not overlap */
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
+  z-index: 99; 
+  border: none; 
+  outline: none; 
   height: 70px;
   width: 70px;
-  background-color: $color-nav; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  border-radius: 100px; /* Rounded corners */
+  background-color: $color-nav; 
+  color: white; 
+  cursor: pointer;
+  border-radius: 100px; 
   opacity: 0.5;
   transition: 0.3s opacity;
   z-index: 2;
@@ -31,9 +31,9 @@
 
 #buttonUp:hover {
   opacity: 1;
-  // background-color: #555; /* Add a dark-grey background on hover */
 }
 
+// Media Queries para el responsive del boton de atajo
 @media (max-width: 1440px) {
   #buttonUp {
     top: calc(100vh - 100px);

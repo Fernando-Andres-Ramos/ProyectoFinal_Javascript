@@ -15,11 +15,13 @@
   }
 }
 
+// Estilo de imagenes
 .servicios__imagen--estilo {
   @extend .indexImagen;
   border: 1px solid $color-letras;
 }
 
+// Estilos para la barra que se despliega automaticamente para las categorias
 .button__Servicios {
   display: flex;
   justify-content: center;
@@ -48,17 +50,20 @@
   }
 }
 
+// Estilo para el contedor del menu que se despliega, permite que se mantenga visible
 .container__categorias--estilo {
   position: sticky;
   top: 0px;
   z-index: 99;
 }
 
+// Estilo para el submenu que se abre con el offcanvas
 .offcanvas__body--estilo {
   background-color: $color-fondo;
   @extend main;
 }
 
+// Media Queries para el responsive
 @media (max-width: 600px) {
   .offcanvas__body--estilo {
     height: 70vh;
@@ -96,6 +101,7 @@
   }
 }
 
+// Animacion para el boton del offcanvas
 @keyframes aparecer {
   0% {
     transform: translate(0px, -50px);
