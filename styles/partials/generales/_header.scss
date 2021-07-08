@@ -1,175 +1,166 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
 /* Titulo del sitio web */
-.header__logo--area{
+.header__logo--area {
   background-color: $color-blanco;
 }
 
-.titulo{
-    font-family: $fuente-tipo;
-    color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*6.5;
-  }
-  
+.titulo {
+  font-family: $fuente-tipo;
+  color: $color-letras;
+  font-style: italic;
+  font-size: $fuente-tama * 6.5;
+}
+
 /* Estilos para la imagen de fondo en el titulo */
- .cuboTitulo{
-  height: $fuente-tama*15;
+.cuboTitulo {
+  height: $fuente-tama * 15;
   background-image: url(../Galeria/Cabecera.jpg);
   background-repeat: no-repeat;
   background-position: right;
-  background-size: $fuente-tama*100;
+  background-size: $fuente-tama * 100;
 }
-  
+
 /* Estilos para el nav hecho con BOOSTRAP */
-.header__navbar--estilo{
-  border: 2px solid  $color-letras;
+.header__navbar--estilo {
+  border: 2px solid $color-letras;
   background-color: $color-nav;
 }
-  
-.nav-link:hover{
-  background-color:$color-fondo;
+
+.nav-link:hover {
+  background-color: $color-fondo;
 }
 
-.dropdown-menu{
- background-color: $color-nav;
- border: 1px solid $color-letras;
- border-radius:0px ;
- border-top:none;
+.dropdown-menu {
+  background-color: $color-nav;
+  border: 1px solid $color-letras;
+  border-radius: 0px;
+  border-top: none;
 }
 
-.nav-link:hover{
-  background-color:$color-fondo;
+.nav-link:hover {
+  background-color: $color-fondo;
 }
 
-.dropdown-item:hover{
-  background-color:$color-fondo;
+.dropdown-item:hover {
+  background-color: $color-fondo;
 }
-  
 
-@media (max-width:1200px){
-  .titulo{
+@media (max-width: 1200px) {
+  .titulo {
     font-family: $fuente-tipo;
     color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*4.5;
+    font-style: italic;
+    font-size: $fuente-tama * 4.5;
   }
 
-/* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo{
-    height: $fuente-tama*12;
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: $fuente-tama * 12;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*80;
+    background-size: $fuente-tama * 80;
   }
-
 }
 
-@media (max-width:992px){
-  .dropdown-menu{
+@media (max-width: 992px) {
+  .dropdown-menu {
     background-color: $color-nav;
-    border-radius:0px ;
-    border-bottom:none;
-   }
+    border-radius: 0px;
+    border-bottom: none;
+  }
 }
 
-@media (max-width:768px){
-  .titulo{
+@media (max-width: 768px) {
+  .titulo {
     font-family: $fuente-tipo;
     color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*4.5;
+    font-style: italic;
+    font-size: $fuente-tama * 4.5;
   }
 
-/* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo{
-    height: $fuente-tama*11;
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: $fuente-tama * 11;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*75;
+    background-size: $fuente-tama * 75;
   }
-
 }
 
-@media (max-width:600px){
-  .titulo{
+@media (max-width: 600px) {
+  .titulo {
     font-family: $fuente-tipo;
     color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*3.5;
+    font-style: italic;
+    font-size: $fuente-tama * 3.5;
   }
 
-/* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo{
-    height: $fuente-tama*9;
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: $fuente-tama * 9;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*60;
+    background-size: $fuente-tama * 60;
   }
-
 }
 
-@media (max-width:480px){
-  .titulo{
+@media (max-width: 480px) {
+  .titulo {
     font-family: $fuente-tipo;
     color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*3.5;
-    align-self:flex-end;
+    font-style: italic;
+    font-size: $fuente-tama * 3.5;
+    align-self: flex-end;
   }
 
-/* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo{
-    height: $fuente-tama*8;
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: $fuente-tama * 8;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*55;
+    background-size: $fuente-tama * 55;
   }
-
 }
 
-@media (max-width:380px){
-  .titulo{
+@media (max-width: 380px) {
+  .titulo {
     font-family: $fuente-tipo;
     color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*2.9;
-    align-self:flex-end;
+    font-style: italic;
+    font-size: $fuente-tama * 2.9;
+    align-self: flex-end;
   }
 
-/* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo{
-    height: $fuente-tama*7.5;
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: $fuente-tama * 7.5;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*50;
+    background-size: $fuente-tama * 50;
   }
-
 }
 
-@media (max-width:300px){
-  .titulo{
+@media (max-width: 300px) {
+  .titulo {
     font-family: $fuente-tipo;
     color: $color-letras;
-    font-style:italic;
-    font-size: $fuente-tama*2.5;
-    align-self:flex-end;
+    font-style: italic;
+    font-size: $fuente-tama * 2.5;
+    align-self: flex-end;
   }
 
-/* Estilos para la imagen de fondo en el titulo */
-  .cuboTitulo{
-    height: $fuente-tama*7;
+  /* Estilos para la imagen de fondo en el titulo */
+  .cuboTitulo {
+    height: $fuente-tama * 7;
     background-image: url(../Galeria/Cabecera.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-size: $fuente-tama*45;
+    background-size: $fuente-tama * 45;
   }
-
 }
-  
-  

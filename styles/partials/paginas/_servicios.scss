@@ -1,33 +1,30 @@
 /* Estilo para la lista en el submenu */
-.submenu{
-    list-style: none; 
+.submenu {
+  list-style: none;
 
-    &__indices--estilo
-    {
-      text-decoration: none;
+  &__indices--estilo {
+    text-decoration: none;
+    color: $color-letras;
+    font-size: $fuente-tama * 1.75;
+    transition: 0.3s background-color;
+    &:hover {
+      text-decoration: underline;
+      background-color: $color-fondo;
       color: $color-letras;
-      font-size: $fuente-tama*1.75;
-      transition: 0.3s background-color;
-      &:hover
-      {
-        text-decoration: underline;
-        background-color:$color-fondo;
-        color: $color-letras;
-      }
     }
   }
-  
-  
-.servicios__imagen--estilo{
+}
+
+.servicios__imagen--estilo {
   @extend .indexImagen;
   border: 1px solid $color-letras;
 }
-  
-.button__Servicios{
+
+.button__Servicios {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: $fuente-tama*1.5;
+  font-size: $fuente-tama * 1.5;
   border: 2px solid $color-letras;
   outline: none;
   height: 40px;
@@ -40,74 +37,71 @@
   animation-timing-function: ease-in;
   animation-duration: 0.5s;
 
-
-  &:hover{
+  &:hover {
     color: $color-letras;
     border: 2px solid $color-letras;
   }
 
-  &:enabled{
+  &:enabled {
     color: $color-letras;
     border: 2px solid $color-letras;
   }
 }
 
-
-.container__categorias--estilo{
+.container__categorias--estilo {
   position: sticky;
   top: 0px;
   z-index: 99;
 }
 
-.offcanvas__body--estilo{
+.offcanvas__body--estilo {
   background-color: $color-fondo;
-  @extend main ;
+  @extend main;
 }
 
-@media (max-width:600px){
-  .offcanvas__body--estilo{
+@media (max-width: 600px) {
+  .offcanvas__body--estilo {
     height: 70vh;
     width: 65vw;
   }
 
-  .submenu__indices--estilo{
-    font-size: $fuente-tama*1.5;
+  .submenu__indices--estilo {
+    font-size: $fuente-tama * 1.5;
   }
 }
 
-@media (max-width:375px){
-  .offcanvas__body--estilo{
+@media (max-width: 375px) {
+  .offcanvas__body--estilo {
     height: 60vh;
     width: 100vw;
   }
 
-  .submenu__indices--estilo{
-    font-size: $fuente-tama*1.3;
+  .submenu__indices--estilo {
+    font-size: $fuente-tama * 1.3;
   }
 }
 
- @media (max-height:375px){
-  .offcanvas__body--estilo{
+@media (max-height: 375px) {
+  .offcanvas__body--estilo {
     height: 100vh;
     width: 50vw;
   }
-  .submenu{
-    &__indices--estilo{
-     font-size: $fuente-tama*1.5;
+  .submenu {
+    &__indices--estilo {
+      font-size: $fuente-tama * 1.5;
     }
-    &__lista--estilo{
-    margin-bottom: 30px;
+    &__lista--estilo {
+      margin-bottom: 30px;
     }
-  } 
+  }
 }
 
-
-
-
 @keyframes aparecer {
-  0%{ 
+  0% {
     transform: translate(0px, -50px);
     opacity: 0;
   }
-  100%{ height: 40px;}
+  100% {
+    height: 40px;
+  }
 }

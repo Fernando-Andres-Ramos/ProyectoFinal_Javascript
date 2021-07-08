@@ -2,20 +2,18 @@
 
 /* Centralizar el MODAL en galeria.html */
 .modal-dialog {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
 
-  /* Estilo para imagenes del index*/
-  .galeriaImagen{
-    @extend .indexImagen;
-    border: 1px solid $color-letras;
-  }
+/* Estilo para imagenes del index*/
+.galeriaImagen {
+  @extend .indexImagen;
+  border: 1px solid $color-letras;
+}
 
-  .galeriaImagen:hover{
-    @extend .indexImagen:hover;
-  }
-  
-  
+.galeriaImagen:hover {
+  @extend .indexImagen:hover;
+}

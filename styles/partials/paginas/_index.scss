@@ -1,68 +1,71 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
-
 // Estilo para el texto principal
-.index__main--bienvenida{
-  margin-bottom: $fuente-tama*5;
+.index__main--bienvenida {
+  margin-bottom: $fuente-tama * 5;
 }
 
 // Estilo del titulo de index
-.main__tituloIndex--tamaño{
-  font-size: $fuente-tama*3;
+.main__tituloIndex--tamaño {
+  font-size: $fuente-tama * 3;
   text-align: center;
-  margin-bottom: $fuente-tama*3;
+  margin-bottom: $fuente-tama * 3;
 }
 
-  /* Estilo para imagenes del index*/
-  .indexImagen{border-radius: 5px; max-width: 100%; border: 2px solid $color-letras;transition: transform 0.5s;}
-  
-  .indexImagen:hover{transform: scale(1.01,1.01);}  /* Transformacion de escala*/
+/* Estilo para imagenes del index*/
+.indexImagen {
+  border-radius: 5px;
+  max-width: 100%;
+  border: 2px solid $color-letras;
+  transition: transform 0.5s;
+}
 
-
- 
+.indexImagen:hover {
+  transform: scale(1.01, 1.01);
+} /* Transformacion de escala*/
 
 // Media Queries para adaptar el titulo en el encabezado y el tamaño del boton de subida
 
-@media (max-width:992px){
-  .main__tituloIndex--tamaño{
-    font-size: $fuente-tama*3.5;
+@media (max-width: 992px) {
+  .main__tituloIndex--tamaño {
+    font-size: $fuente-tama * 3.5;
   }
 }
 
-@media (max-width:768px){
-  .main__tituloIndex--tamaño{
-    font-size: $fuente-tama*2.5;
+@media (max-width: 768px) {
+  .main__tituloIndex--tamaño {
+    font-size: $fuente-tama * 2.5;
   }
 
-  #buttonUp{
+  #buttonUp {
     height: 60px;
     width: 60px;
-    top:calc(100vh - 80px);
-    left:calc(100vw - 80px);
+    top: calc(100vh - 80px);
+    left: calc(100vw - 80px);
   }
 }
 
-@media (max-width:480px){
-  .main__tituloIndex--tamaño{
-    font-size: $fuente-tama*2.1;
+@media (max-width: 480px) {
+  .main__tituloIndex--tamaño {
+    font-size: $fuente-tama * 2.1;
   }
 }
 
-@media (max-width:380px){
-  .main__tituloIndex--tamaño{
-    font-size: $fuente-tama*1.9;
+@media (max-width: 380px) {
+  .main__tituloIndex--tamaño {
+    font-size: $fuente-tama * 1.9;
   }
 
-  #buttonUp{
+  #buttonUp {
     height: 55px;
     width: 55px;
-    top:calc(100vh - 70px);
-    left:calc(100vw - 70px);
+    top: calc(100vh - 70px);
+    left: calc(100vw - 70px);
   }
 }
 
-@media (max-width:300px){
-  .main__tituloIndex--tamaño{
-    font-size: $fuente-tama*1.7;
+@media (max-width: 300px) {
+  .main__tituloIndex--tamaño {
+    font-size: $fuente-tama * 1.7;
   }
 }

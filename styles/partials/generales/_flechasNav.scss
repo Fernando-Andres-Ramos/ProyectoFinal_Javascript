@@ -1,66 +1,67 @@
-   // Estilo de la imagen de flecha para el boton de atajo hacia arriba
-   .flecha--arriba{
-    max-width: 100%;
-    transform: rotate(90deg);
-    margin-bottom: 3px;
-    filter: invert(44%) sepia(58%) saturate(2141%) hue-rotate(312deg) brightness(100%) contrast(91%);
-  }
-  
-  // Boton de atajo hacia arriba
+// Estilo de la imagen de flecha para el boton de atajo hacia arriba
+.flecha--arriba {
+  max-width: 100%;
+  transform: rotate(90deg);
+  margin-bottom: 3px;
+  filter: invert(44%) sepia(58%) saturate(2141%) hue-rotate(312deg)
+    brightness(100%) contrast(91%);
+}
+
+// Boton de atajo hacia arriba
+#buttonUp {
+  display: none; /* Hidden by default */
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Fixed/sticky position */
+  top: calc(100vh - 100px);
+  left: calc(100vw - 150px);
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  height: 70px;
+  width: 70px;
+  background-color: $color-nav; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  border-radius: 100px; /* Rounded corners */
+  opacity: 0.5;
+  transition: 0.3s opacity;
+  z-index: 2;
+}
+
+#buttonUp:hover {
+  opacity: 1;
+  // background-color: #555; /* Add a dark-grey background on hover */
+}
+
+@media (max-width: 1440px) {
   #buttonUp {
-    display: none; /* Hidden by default */
-    justify-content: center;
-    align-items: center;
-    position: fixed; /* Fixed/sticky position */
-    top:calc(100vh - 100px);
-    left:calc(100vw - 150px);
-    z-index: 99; /* Make sure it does not overlap */
-    border: none; /* Remove borders */
-    outline: none; /* Remove outline */
-    height: 70px;
-    width: 70px;
-    background-color: $color-nav; /* Set a background color */
-    color: white; /* Text color */
-    cursor: pointer; /* Add a mouse pointer on hover */
-    border-radius: 100px; /* Rounded corners */  
-    opacity: 0.5;
-    transition: 0.3s opacity;
-    z-index: 2;}
-  
-  #buttonUp:hover {
-    opacity:1;
-    // background-color: #555; /* Add a dark-grey background on hover */
+    top: calc(100vh - 100px);
+    left: calc(100vw - 100px);
   }
+}
 
-  @media (max-width:1440px){
-
-    #buttonUp{
-      top:calc(100vh - 100px);
-      left:calc(100vw - 100px);
-    }
+@media (max-width: 768px) {
+  #buttonUp {
+    height: 60px;
+    width: 60px;
+    top: calc(100vh - 80px);
+    left: calc(100vw - 80px);
   }
+}
 
-  @media (max-width:768px){
-    #buttonUp{
-      height: 60px;
-      width: 60px;
-      top:calc(100vh - 80px);
-      left:calc(100vw - 80px);
-    }
+@media (max-width: 380px) {
+  #buttonUp {
+    height: 55px;
+    width: 55px;
+    top: calc(100vh - 70px);
+    left: calc(100vw - 70px);
   }
+}
 
-  @media (max-width:380px){
-    #buttonUp{
-      height: 55px;
-      width: 55px;
-      top:calc(100vh - 70px);
-      left:calc(100vw - 70px);
-    }
-  }
-
-  .flecha--abajo{
-    @extend .flecha--arriba ;
-    transform: rotate(180deg);
-    position: relative;
-    left: 30px;
-  }
+.flecha--abajo {
+  @extend .flecha--arriba;
+  transform: rotate(180deg);
+  position: relative;
+  left: 30px;
+}
