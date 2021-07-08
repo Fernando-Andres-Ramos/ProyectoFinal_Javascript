@@ -146,26 +146,33 @@ footer {
   background-color: #f9f3f3; }
 
 .footer__lista--info {
+  padding: 0%;
   list-style-type: none;
-  margin-bottom: 5rem; }
+  margin-bottom: 5rem;
+  font-size: 1.5rem; }
 
 .footer__logo--size {
-  width: 10%; }
+  max-width: 3%; }
   .footer__logo--size:hover {
     transform: scale(1.05, 1.05);
     opacity: 0.8; }
 
 @media (max-width: 1400px) {
   .footer__logo--size {
-    width: 15%; } }
+    max-width: 5%; } }
 
 @media (max-width: 992px) {
   .footer__logo--size {
-    width: 7.5%; } }
+    max-width: 7%; } }
 
 @media (max-width: 576px) {
+  .footer__redes--titulo {
+    font-size: 1rem; }
+  .footer__lista--info {
+    margin-bottom: 3rem;
+    font-size: 1.2rem; }
   .footer__logo--size {
-    width: 10%; } }
+    max-width: 8.5%; } }
 
 @media (max-width: 380px) {
   .footer__redes--titulo {
@@ -173,26 +180,25 @@ footer {
   .footer__lista--info {
     margin-bottom: 3rem;
     font-size: 1rem; }
-  .firma {
-    font-size: 1rem; } }
+  .footer__logo--size {
+    max-width: 12%; } }
 
 @media (max-width: 320px) {
   .footer__redes--titulo {
     font-size: 1rem; }
   .footer__lista--info {
-    margin-bottom: 3rem;
-    font-size: 0.9rem; }
-  .firma {
-    font-size: 0.9rem; } }
+    margin-bottom: 3rem; }
+  .footer__logo--size {
+    max-width: 14%; } }
 
 @media (max-width: 280px) {
   .footer__redes--titulo {
     font-size: 0.9rem; }
   .footer__lista--info {
     margin-bottom: 3rem;
-    font-size: 0.8rem; }
-  .firma {
-    font-size: 0.8rem; } }
+    font-size: 1rem; }
+  .footer__logo--size {
+    max-width: 14%; } }
 
 .flecha--arriba, .flecha--abajo {
   max-width: 100%;
@@ -202,29 +208,20 @@ footer {
 
 #buttonUp {
   display: none;
-  /* Hidden by default */
   justify-content: center;
   align-items: center;
   position: fixed;
-  /* Fixed/sticky position */
   top: calc(100vh - 100px);
   left: calc(100vw - 150px);
   z-index: 99;
-  /* Make sure it does not overlap */
   border: none;
-  /* Remove borders */
   outline: none;
-  /* Remove outline */
   height: 70px;
   width: 70px;
   background-color: #f7d9d9;
-  /* Set a background color */
   color: white;
-  /* Text color */
   cursor: pointer;
-  /* Add a mouse pointer on hover */
   border-radius: 100px;
-  /* Rounded corners */
   opacity: 0.5;
   transition: 0.3s opacity;
   z-index: 2; }

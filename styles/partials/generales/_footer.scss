@@ -10,13 +10,15 @@ footer {
 
 // Estilo de la lista de info en el footer
 .footer__lista--info {
+  padding: 0%;
   list-style-type: none;
   margin-bottom: $fuente-tama * 5;
+  font-size: $fuente-tama * 1.5;
 }
 
 // Tamaño de los logos de red social
 .footer__logo--size {
-  width: 10%;
+  max-width: 3%;
   &:hover{
     transform: scale(1.05, 1.05);
     opacity: 0.8;
@@ -26,63 +28,79 @@ footer {
 // Responsive para diferentes tipos de tamaño de dispositivos
 @media (max-width: 1400px) {
   .footer__logo--size {
-    width: 15%;
+    max-width:5%;
   }
 }
 
 @media (max-width: 992px) {
   .footer__logo--size {
-    width: 7.5%;
+    max-width: 7%;
   }
 }
 
 @media (max-width: 576px) {
-  .footer__logo--size {
-    width: 10%;
+  .footer{
+    &__redes--titulo {
+      font-size: $fuente-tama * 1;
+    }
+
+    &__lista--info {
+      margin-bottom: $fuente-tama * 3;
+      font-size: $fuente-tama * 1.2;
+    }
+
+    &__logo--size {
+      max-width: 8.5%;
+    }
   }
 }
 
 @media (max-width: 380px) {
-  .footer__redes--titulo {
-    font-size: $fuente-tama * 1.1;
-  }
+  .footer{
+    &__redes--titulo {
+      font-size: $fuente-tama * 1.1;
+    }
 
-  .footer__lista--info {
-    margin-bottom: $fuente-tama * 3;
-    font-size: $fuente-tama * 1;
-  }
+    &__lista--info {
+      margin-bottom: $fuente-tama * 3;
+      font-size: $fuente-tama * 1;
+    }
 
-  .firma {
-    font-size: $fuente-tama * 1;
+    &__logo--size {
+      max-width: 12%;
+    }
   }
 }
 
 @media (max-width: 320px) {
-  .footer__redes--titulo {
-    font-size: $fuente-tama * 1;
-  }
+  .footer{
+    &__redes--titulo {
+      font-size: $fuente-tama * 1;
+    }
 
-  .footer__lista--info {
-    margin-bottom: $fuente-tama * 3;
-    font-size: $fuente-tama * 0.9;
-  }
+    &__lista--info {
+      margin-bottom: $fuente-tama * 3;
+    }
 
-  .firma {
-    font-size: $fuente-tama * 0.9;
+    &__logo--size {
+      max-width: 14%;
+    }
   }
 }
 
 @media (max-width: 280px) {
-  .footer__redes--titulo {
-    font-size: $fuente-tama * 0.9;
-  }
+  .footer{
+    &__redes--titulo {
+      font-size: $fuente-tama * 0.9;
+    }
 
-  .footer__lista--info {
-    margin-bottom: $fuente-tama * 3;
-    font-size: $fuente-tama * 0.8;
-  }
+    &__lista--info {
+      margin-bottom: $fuente-tama * 3;
+      font-size: $fuente-tama * 1;
+    }
 
-  .firma {
-    font-size: $fuente-tama * 0.8;
+    &__logo--size {
+      max-width: 14%;
+    }
   }
 }
