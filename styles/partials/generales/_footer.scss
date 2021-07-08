@@ -17,6 +17,10 @@ footer {
 // Tamaño de los logos de red social
 .footer__logo--size {
   width: 10%;
+  &:hover{
+    transform: scale(1.05, 1.05);
+    opacity: 0.8;
+  }
 }
 
 // Responsive para diferentes tipos de tamaño de dispositivos

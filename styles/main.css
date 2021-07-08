@@ -151,6 +151,9 @@ footer {
 
 .footer__logo--size {
   width: 10%; }
+  .footer__logo--size:hover {
+    transform: scale(1.05, 1.05);
+    opacity: 0.8; }
 
 @media (max-width: 1400px) {
   .footer__logo--size {
@@ -311,6 +314,9 @@ footer {
 
 .mainAside__div--redes {
   max-width: 30%; }
+  .mainAside__div--redes:hover {
+    transform: scale(1.05, 1.05);
+    opacity: 0.8; }
 
 /* Quitar puntos de las listas */
 .mainAside__persona--lista {
@@ -445,6 +451,9 @@ footer {
 /* Logos de redes sociales */
 .mainSection__info--logo {
   max-width: 7%; }
+  .mainSection__info--logo:hover {
+    transform: scale(1.05, 1.05);
+    opacity: 0.8; }
 
 /* Tamaño de letra en los text input */
 .form__textInput--size {

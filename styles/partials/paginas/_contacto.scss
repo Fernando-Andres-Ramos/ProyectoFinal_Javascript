@@ -9,6 +9,10 @@
 /* Logos de redes sociales */
 .mainSection__info--logo {
   max-width: 7%;
+  &:hover{
+    transform: scale(1.05, 1.05);
+    opacity: 0.8;
+  }
 }
 
 /* Tamaño de letra en los text input */

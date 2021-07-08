@@ -9,6 +9,11 @@
 // Tamaño de logo en lista de info de la persona
 .mainAside__div--redes {
   max-width: 30%;
+
+  &:hover{
+    transform: scale(1.05, 1.05);
+    opacity: 0.8;
+  }
 }
 
 /* Quitar puntos de las listas */
