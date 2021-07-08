@@ -142,6 +142,16 @@
       </nav>
     </header>
 
+    <!-- Boton de atajo para subir y evitar scroll de subida -->
+    <div onclick="topFunction()" id="buttonUp">
+      <a
+        ><img
+          class="flecha--arriba"
+          src="../Galeria/Logos/flecha.svg"
+          alt="flecha"
+      /></a>
+    </div>
+
     <!--Sección de imagenes con carpetas de las distintas areas y del lugar en general -->
     <!-- Aun no decidí si crear links a otros htmls o hacer imagenes desplegables u otra opcion -->
     <main>
@@ -246,5 +256,34 @@
         </div>
       </div>
     </footer>
+
+    <!-- Script para el funcionamiento del boton de subida -->
+    <script>
+      //Seleccionar el boton
+      var mybutton = document.getElementById("buttonUp");
+
+      // Cuando el usuario hace scroll en la pantalla, alcanzando 250px hacia abajo, el boton aparece.
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 250 ||
+          document.documentElement.scrollTop > 250
+        ) {
+          mybutton.style.display = "flex";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // Cuando el usuario hace click en el boton, la pagina sube hasta la parte mas alta.
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
   </body>
 </html>

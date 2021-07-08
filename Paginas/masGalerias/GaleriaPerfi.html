@@ -83,7 +83,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto mb-5 mb-lg-0">
               <li class="nav-item">
                 <a class="nav-link" href="../Quienes_Somos.html"
                   >Quienes Somos</a
@@ -143,6 +143,16 @@
         </div>
       </nav>
     </header>
+
+    <!-- Boton de atajo para subir y evitar scroll de subida -->
+    <div onclick="topFunction()" id="buttonUp">
+      <a
+        ><img
+          class="flecha--arriba"
+          src="/Galeria/Logos/flecha.svg"
+          alt="flecha"
+      /></a>
+    </div>
 
     <main>
       <section>
@@ -233,5 +243,34 @@
         </div>
       </div>
     </footer>
+
+    <!-- Script para el funcionamiento del boton de subida -->
+    <script>
+      //Seleccionar el boton
+      var mybutton = document.getElementById("buttonUp");
+
+      // Cuando el usuario hace scroll en la pantalla, alcanzando 250px hacia abajo, el boton aparece.
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 250 ||
+          document.documentElement.scrollTop > 250
+        ) {
+          mybutton.style.display = "flex";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // Cuando el usuario hace click en el boton, la pagina sube hasta la parte mas alta.
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
   </body>
 </html>
