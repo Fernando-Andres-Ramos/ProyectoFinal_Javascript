@@ -1,20 +1,18 @@
 /* Estilo para la lista en el submenu */
-.submenu__estilo{
+.submenu{
     list-style: none; 
 
-    &--indices
+    &__indices--estilo
     {
       text-decoration: none;
       color: $color-letras;
       font-size: $fuente-tama*1.75;
       transition: 0.3s background-color;
-
       &:hover
       {
         text-decoration: underline;
         background-color:$color-fondo;
         color: $color-letras;
-
       }
     }
   }
@@ -72,21 +70,39 @@
     width: 65vw;
   }
 
-  .submenu__estilo--indices{
+  .submenu__indices--estilo{
     font-size: $fuente-tama*1.5;
   }
 }
 
 @media (max-width:375px){
   .offcanvas__body--estilo{
-    height: 70vh;
+    height: 60vh;
     width: 100vw;
   }
 
-  .submenu__estilo--indices{
-    font-size: $fuente-tama*1.5;
+  .submenu__indices--estilo{
+    font-size: $fuente-tama*1.3;
   }
 }
+
+ @media (max-height:375px){
+  .offcanvas__body--estilo{
+    height: 100vh;
+    width: 50vw;
+  }
+  .submenu{
+    &__indices--estilo{
+     font-size: $fuente-tama*1.5;
+    }
+    &__lista--estilo{
+    margin-bottom: 30px;
+    }
+  } 
+}
+
+
+
 
 @keyframes aparecer {
   0%{ 

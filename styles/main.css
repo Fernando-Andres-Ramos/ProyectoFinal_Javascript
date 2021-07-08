@@ -345,14 +345,14 @@ footer {
     font-size: 1rem; } }
 
 /* Estilo para la lista en el submenu */
-.submenu__estilo {
+.submenu {
   list-style: none; }
-  .submenu__estilo--indices {
+  .submenu__indices--estilo {
     text-decoration: none;
     color: #f25287;
     font-size: 1.75rem;
     transition: 0.3s background-color; }
-    .submenu__estilo--indices:hover {
+    .submenu__indices--estilo:hover {
       text-decoration: underline;
       background-color: #f9f3f3;
       color: #f25287; }
@@ -398,15 +398,24 @@ footer {
   .offcanvas__body--estilo {
     height: 70vh;
     width: 65vw; }
-  .submenu__estilo--indices {
+  .submenu__indices--estilo {
     font-size: 1.5rem; } }
 
 @media (max-width: 375px) {
   .offcanvas__body--estilo {
-    height: 70vh;
+    height: 60vh;
     width: 100vw; }
-  .submenu__estilo--indices {
-    font-size: 1.5rem; } }
+  .submenu__indices--estilo {
+    font-size: 1.3rem; } }
+
+@media (max-height: 375px) {
+  .offcanvas__body--estilo {
+    height: 100vh;
+    width: 50vw; }
+  .submenu__indices--estilo {
+    font-size: 1.5rem; }
+  .submenu__lista--estilo {
+    margin-bottom: 30px; } }
 
 @keyframes aparecer {
   0% {
