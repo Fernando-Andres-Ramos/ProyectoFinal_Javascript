@@ -149,7 +149,7 @@ footer {
   padding: 0%;
   list-style-type: none;
   margin-bottom: 5rem;
-  font-size: 1.6rem; }
+  font-size: 1.5rem; }
 
 .footer__logo--size {
   max-width: 3%; }
@@ -170,7 +170,7 @@ footer {
     font-size: 1rem; }
   .footer__lista--info {
     margin-bottom: 3rem;
-    font-size: 1.4rem; }
+    font-size: 1.2rem; }
   .footer__logo--size {
     max-width: 8.5%; } }
 
@@ -179,13 +179,15 @@ footer {
     font-size: 1.1rem; }
   .footer__lista--info {
     margin-bottom: 3rem;
-    font-size: 1.3rem; }
+    font-size: 1rem; }
   .footer__logo--size {
     max-width: 12%; } }
 
 @media (max-width: 320px) {
   .footer__redes--titulo {
     font-size: 1rem; }
+  .footer__lista--info {
+    margin-bottom: 3rem; }
   .footer__logo--size {
     max-width: 14%; } }
 
@@ -193,7 +195,10 @@ footer {
   .footer__redes--titulo {
     font-size: 0.9rem; }
   .footer__lista--info {
-    font-size: 1.15rem; } }
+    margin-bottom: 3rem;
+    font-size: 1rem; }
+  .footer__logo--size {
+    max-width: 14%; } }
 
 .flecha--arriba, .flecha--abajo {
   max-width: 100%;
