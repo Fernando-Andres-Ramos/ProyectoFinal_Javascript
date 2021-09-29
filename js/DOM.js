@@ -3,6 +3,7 @@
 /* Botones de registrar o ingresar en el nav*/
 const showRegistro = document.getElementById("registrar");
 const showIngreso = document.getElementById("login");
+const showCloseSesion=document.getElementById("cerrarSesion");
 
 
 /* Forms de ingreso y registro */

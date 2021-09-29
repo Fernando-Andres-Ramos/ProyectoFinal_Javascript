@@ -2,6 +2,7 @@
 
 formIngreso.style.display = "none";
 formCrearUsuario.style.display="none";
+showCloseSesion.style.display="none";
 /*divFormsProductos.style.display = "none"
 btnRegistro.style.display = "none"
 tienda.style.display = "none"
@@ -11,9 +12,9 @@ cerrarSesion.style.visibility = "hidden"/*
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
-const showFormCreate=()=>{formCrearUsuario.style.display="block";}
+const showFormCreate=()=>{formIngreso.style.display = "none";formCrearUsuario.style.display="block";}
 /*Mostrar form de ingresar usuario */
-const showFormLogin=()=>{formCrearUsuario.style.display="block";}
+const showFormLogin=()=>{formCrearUsuario.style.display="none";formIngreso.style.display="block";}
 
 
 
@@ -67,27 +68,59 @@ const crearUsuario= (e)=>{
 }
 
 /*Logear usuario */
-const chequeoUsuario= ()=>{
-if(usuarios){
-  let ingresarUsuario = inputNombreIng.value;
-  let clave = inputClaveIng.value;
-  const chequeo = usuarios.find(e => e.nombre === ingresarUsuario)
-  if(chequeo){
-    if(clave === chequeo.clave){
-      alert("Bienvenidx "+chequeo.nombre)
-      if(chequeo.tipo=="1"){
-        modificarNoticias();
-      }
-      else
-        mostrarNoticias();
-    }
-    else{
-      alert("clave incorrecta");
-    }
-  }
-  else
-  alert("El usuario no existe en el registro");
+const login = () => {
+  nombreUsuario=inputNombreIng;
+  claveUsuario=inputClaveIng;
+  console.log(nombreUsuario);
+  console.log(claveUsuario);
+  if(localStorage.getItem("usuarioLogueado")){
+  nombreUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).nombre
+  claveUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).clave
 }
+  
+const chequeoUsuario = usuarios.find(usuario=>usuario.nombre===nombreUsuario);
+console.log(chequeoUsuario);
+
+if (chequeoUsuario) {
+
+  validaciones.innerHTML = "";
+
+  if (claveUsuario === chequeoUsuario.clave) {
+    
+    localStorage.setItem("usuarioLogueado",JSON.stringify(chequeoUsuario))
+    tiempoUsuario = new Date().getTime()
+
+    if (chequeoUsuario.tipoUsuario === "SI") {
+      formIngreso.style.display = "none";
+      formCrearUsuario.style.display="none";
+      showCloseSesion.style.display="block";
+      /*completarSelect()
+      formLogin.style.display = "none"
+      divFormsProductos.style.display = "flex"
+      cerrarSesion.style.visibility = "visible"
+      */
+    } 
+    
+    else {
+      /*document.getElementById("titulo").innerHTML = `<h1>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()} </h1>`
+      renderizarTienda()
+      cerrarSesion.style.visibility = "visible"*/
+    }
+
+  } 
+  
+  else {
+    validaciones.innerHTML = "La clave ingresada es incorrecta"
+    validaciones.style.color = "red"
+  }
+
+} 
+else {
+  validaciones.innerHTML = "El usuario no esta registrado"
+  validaciones.style.color = "red"
+}
+
+
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
@@ -141,4 +174,4 @@ botonReg.addEventListener("click",crearUsuario);
 
 
 showIngreso.addEventListener("click",showFormLogin);
-botonIng.addEventListener("click",chequeoUsuario);
+botonIng.addEventListener("click",login);
