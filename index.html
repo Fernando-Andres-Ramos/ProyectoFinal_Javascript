@@ -9,15 +9,6 @@
       href="https://fonts.googleapis.com/css2?family=Benne&family=EB+Garamond&display=swap"
       rel="stylesheet"
     />
-    <meta
-      name="description"
-      content="Nos dedicamos a realizar tratamientos de estética, relajación y salud corporal. ¡Bienvenido a nuestro sitio web!”"
-    />
-    <meta
-      name="keywords"
-      content="estética, masajes, esmaltado, perfilado, cutis, depilación, definitiva, uñas, belleza, dolores"
-    />
-    
 
     <title>Estetica y Masajes</title>
 
@@ -49,7 +40,11 @@
     
     <!-- Archivos js personalizado -->
     <script defer src="/js/AOS.js"></script>
-    <script defer src="/js/botonSubida.js"></script>
+    <script defer src="/js/buttonUp.js"></script>
+    <script defer src="/js/DOM.js"></script>
+    <script defer src="/js/objects.js"></script>
+    <script defer src="/js/logic.js"></script>
+
 
   </head>
 
@@ -94,8 +89,8 @@
             <span class="navbar-toggler-icon"></span>
           </button>
             <div>
-              <button id=registrar><p>REGISTRAR</p></button>
-              <button id=login><p>INGRESAR</p></button>
+              <button id="registrar"><p>REGISTRARSE</p></button>
+              <button id="login"><p>INGRESAR</p></button>
             </div>
         </div>
       </nav>
@@ -113,10 +108,62 @@
 
     <!-- Parte principal -->
     <main>
+      <!-- Form para ingresar -->
+      <form class="container-xl fs-4 p-5" id="loginForm">
+        <h2 class="mb-5 fs-2">Complete sus datos</h2>
+        <div class="row mb-5">
+          <div class="col-7 mb-3">
+            <label for="nombreIng" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombreIng" >
+          </div>
       
+          <div class="col-7 mb-3">
+            <label for="claveIng" class="form-label">Clave</label>
+            <input type="password" class="form-control" id="claveIng">
+          </div>
+        </div>
+        <div class="row">
+          <button id="btnIngresar" type="submit" class="btn btn-primary col-3">INGRESAR</button> 
+        </div>
+      </form>
+
+      <!-- Form para registrarse -->
+      <form class="container-xl fs-4 p-5" id="newUserForm">
+        <h2 class="mb-5 fs-2">Complete sus datos</h2>
+        <div class="row mb-5">
+          <div class="col-7 mb-3">
+            <label for="nombreRegistro" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="nombreRegistro" >
+          </div>
+      
+          <div class="col-7 mb-3">
+            <label for="claveRegistro" class="form-label">Clave</label>
+            <input type="password" class="form-control" id="claveRegistro">
+          </div>
+
+          <div class="col-7 mb-3">
+            <label for="tipoRegistro" class="form-label ">¿Es administrador?</label>
+            <input type="text" class="form-control" id="tipoRegistro">
+          </div>
+
+          <div class="col-7 mb-3">
+            <label for="claveAdmin" class="form-label">Escriba la clave para de administradores (Si su respuesta es si)</label>
+            <input type="password" class="form-control" id="claveAdmin">
+          </div>
+
+        </div>
+        <div class="row">
+          <button id="btnRegistrar" type="submit" class="btn btn-primary col-3">REGISTRARSE</button> 
+        </div>
+      </form>
+
+      <div class="container text-center">
+        <p id="validaciones"></p>
+      </div>
+    
     </main>
 
-    <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
+    <!-- Pie de pagina con redes sociales, info de contacto-->
 
     <footer class="container-fluid p-5">
       <div class="row">
