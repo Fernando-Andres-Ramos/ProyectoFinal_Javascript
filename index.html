@@ -77,20 +77,10 @@
       >
         <div class="container-fluid navbar-brand-custom">
           <a class="navbar-brand" href="./index.html">Principal</a>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
             <div>
               <button id="registrar"><p>REGISTRARSE</p></button>
               <button id="login"><p>INGRESAR</p></button>
+              <button id="cerrarSesion"><a>Cerrar Sesión</a></button>
             </div>
         </div>
       </nav>
@@ -108,6 +98,7 @@
 
     <!-- Parte principal -->
     <main>
+      <div class="container text-center"id="titulo"></div>
       <!-- Form para ingresar -->
       <form class="container-xl fs-4 p-5" id="loginForm">
         <h2 class="mb-5 fs-2">Complete sus datos</h2>
@@ -128,6 +119,7 @@
       </form>
 
       <!-- Form para registrarse -->
+
       <form class="container-xl fs-4 p-5" id="newUserForm">
         <h2 class="mb-5 fs-2">Complete sus datos</h2>
         <div class="row mb-5">
@@ -161,6 +153,15 @@
         <p id="validaciones"></p>
       </div>
     
+
+      <div class="card" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
     </main>
 
     <!-- Pie de pagina con redes sociales, info de contacto-->

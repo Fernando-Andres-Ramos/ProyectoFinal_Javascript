@@ -2,6 +2,7 @@
 
 formIngreso.style.display = "none";
 formCrearUsuario.style.display="none";
+buttonNavCloseSesion.style.display="none";
 /*divFormsProductos.style.display = "none"
 btnRegistro.style.display = "none"
 tienda.style.display = "none"
@@ -11,9 +12,9 @@ cerrarSesion.style.visibility = "hidden"/*
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
-const showFormCreate=()=>{formCrearUsuario.style.display="block";}
+const showFormCreate=()=>{formIngreso.style.display = "none";formCrearUsuario.style.display="block";}
 /*Mostrar form de ingresar usuario */
-const showFormLogin=()=>{formCrearUsuario.style.display="block";}
+const showFormLogin=()=>{formCrearUsuario.style.display="none";formIngreso.style.display="block";}
 
 
 
@@ -67,27 +68,60 @@ const crearUsuario= (e)=>{
 }
 
 /*Logear usuario */
-const chequeoUsuario= ()=>{
-if(usuarios){
-  let ingresarUsuario = inputNombreIng.value;
-  let clave = inputClaveIng.value;
-  const chequeo = usuarios.find(e => e.nombre === ingresarUsuario)
-  if(chequeo){
-    if(clave === chequeo.clave){
-      alert("Bienvenidx "+chequeo.nombre)
-      if(chequeo.tipo=="1"){
-        modificarNoticias();
-      }
-      else
-        mostrarNoticias();
-    }
-    else{
-      alert("clave incorrecta");
-    }
+const login = (e) => {
+  e.preventDefault();
+  let nombreUsuario=inputNombreIng.value;
+  let claveUsuario=inputClaveIng.value;
+  console.log(nombreUsuario);
+  console.log(claveUsuario);
+  if(localStorage.getItem("usuarioLogueado")){
+  nombreUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).nombre
+  claveUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).clave
   }
-  else
-  alert("El usuario no existe en el registro");
-}
+  
+  const chequeoUsuario = usuarios.find(usuario=>usuario.nombre===nombreUsuario);
+  console.log(chequeoUsuario);
+
+  if (chequeoUsuario) {
+
+    validaciones.innerHTML = "";
+
+    if (claveUsuario === chequeoUsuario.clave) {
+    
+      localStorage.setItem("usuarioLogueado",JSON.stringify(chequeoUsuario))
+      tiempoUsuario = new Date().getTime()
+
+      if (chequeoUsuario.tipoUsuario === "SI") {
+        buttonNavIngreso.style.display = "none";
+        buttonNavRegistro.style.display="none";
+        formIngreso.style.display = "none";
+        buttonNavCloseSesion.style.display="block";
+        
+        // completarSelect()
+      } 
+    
+      else {
+      document.getElementById("titulo").innerHTML = `<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+                                                    Estas son las noticias actuales</h2>`;
+      // renderizarTienda();
+      buttonNavIngreso.style.display = "none";
+      buttonNavRegistro.style.display="none";
+      formIngreso.style.display = "none";
+      buttonNavCloseSesion.style.display="block";
+      }
+
+    } 
+  
+    else {
+    validaciones.innerHTML = "La clave ingresada es incorrecta"
+    validaciones.style.color = "red"
+    }
+
+  } 
+  else {
+  validaciones.innerHTML = "El usuario no esta registrado"
+  validaciones.style.color = "red"
+  }
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
@@ -134,11 +168,24 @@ const mostrarNoticias=()=>{
   }
 }
 
+const cerrarSesionFunc = ()=>{
+  formIngreso.style.display = "none";
+  formCrearUsuario.style.display="none";
+  buttonNavCloseSesion.style.display="none";
+  buttonNavIngreso.style.display = "inline-block";
+  buttonNavRegistro.style.display="inline-block";
+  document.getElementById("titulo").innerHTML = "";
+	localStorage.removeItem("usuarioLogueado");
+}
 
 
-showRegistro.addEventListener("click",showFormCreate);
+
+buttonNavRegistro.addEventListener("click",showFormCreate);
 botonReg.addEventListener("click",crearUsuario);
 
 
-showIngreso.addEventListener("click",showFormLogin);
-botonIng.addEventListener("click",chequeoUsuario);
+buttonNavIngreso.addEventListener("click",showFormLogin);
+botonIng.addEventListener("click",login);
+
+
+buttonNavCloseSesion.addEventListener("click",cerrarSesionFunc);

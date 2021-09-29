@@ -1,8 +1,9 @@
 /*CONSTANTES PARA GUARDAR DATOS DEL DOM*/
 
 /* Botones de registrar o ingresar en el nav*/
-const showRegistro = document.getElementById("registrar");
-const showIngreso = document.getElementById("login");
+const buttonNavRegistro = document.getElementById("registrar");
+const buttonNavIngreso = document.getElementById("login");
+const buttonNavCloseSesion=document.getElementById("cerrarSesion");
 
 
 /* Forms de ingreso y registro */
