@@ -17,6 +17,7 @@
       name="keywords"
       content="estética, masajes, esmaltado, perfilado, cutis, depilación, definitiva, uñas, belleza, dolores"
     />
+    
 
     <title>Estetica y Masajes</title>
 
@@ -37,12 +38,19 @@
 
     <!-- Aplicando AOS para animaciones -->
     <!-- CSS only -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
     <!-- JavaScript-->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
 
     <!-- Archivo css personalizado -->
     <link rel="stylesheet" href="./styles/main.css" />
+    
+    <!-- Archivos js personalizado -->
+    <script defer src="/js/AOS.js"></script>
+    <script defer src="/js/botonSubida.js"></script>
+
   </head>
 
   <body>
@@ -85,72 +93,16 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link" href="./Paginas/Quienes_Somos.html"
-                  >Quienes Somos</a
-                >
-              </li>
-              <li class="nav-item dropdown">
-                <a
-                  class="nav-link dropdown-toggle"
-                  href="#"
-                  id="navbarDropdown"
-                  role="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Nuestros servicios
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li>
-                    <a class="dropdown-item" href="./Paginas/Depilacion.html"
-                      >Depilacion</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./Paginas/Esmaltado.html"
-                      >Esmaltado</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./Paginas/Perfilado.html"
-                      >Perfilado de cejas</a
-                    >
-                  </li>
-                  <li>
-                    <a class="dropdown-item" href="./Paginas/Masajes.html"
-                      >Masajes</a
-                    >
-                  </li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./Paginas/Galeria.html">Galeria</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="./Paginas/Contacto.html">Contacto</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input
-                class="form-control me-2"
-                type="search"
-                placeholder="¿Qué estas buscando?"
-                aria-label="Search"
-              />
-              <button class="btn btn-outline-success" type="submit">
-                Buscar
-              </button>
-            </form>
-          </div>
+            <div>
+              <button id=registrar><p>REGISTRAR</p></button>
+              <button id=login><p>INGRESAR</p></button>
+            </div>
         </div>
       </nav>
     </header>
 
     <!-- Boton de atajo para subir y evitar scroll de subida -->
-    <div onclick="topFunction()" id="buttonUp">
+    <div id="buttonUp">
       <a
         ><img
           class="flecha--arriba"
@@ -161,132 +113,7 @@
 
     <!-- Parte principal -->
     <main>
-      <section class="container index__main--bienvenida">
-        <div class="row">
-          <h2 class="col-12 fw-bold main__tituloIndex--tamaño">
-            ¡Bienvenidos!
-          </h2>
-        </div>
-        <div>
-          <p class="col-12 fs-3">
-            ¡Les presentamos nuestro nuevo sitio web, en el podrán encontrar
-            fácilmente los servicios que ofrecemos en Estética Ramos! En este
-            lugarcito del internet podrás conocer los integrantes de nuestro
-            equipo, nuestras ofertas de tratamientos y contactarte con nosotros
-            para realizar todas las consultas que tengas. Te esperamos para
-            brindarte toda la atención que desees en tu belleza estética y tu
-            salud corporal con nuestro mejor esfuerzo y una sonrisa.
-          </p>
-        </div>
-      </section>
-
-      <!-- Seccion informativa con imagenes/links de los servicios-->
-      <section class="container">
-        <article class="row mb-5" data-aos="fade-right">
-          <div class="col-lg-7 col-md-7 col-sm-12 col-12">
-            <a href="./Paginas/Esmaltado.html"
-              ><img
-                class="indexImagen"
-                src="./Galeria/Esmaltado/Esmaltado.png"
-                alt="Esmaltado_imagen"
-            /></a>
-          </div>
-          <div
-            class="
-              col-lg-5 col-md-5
-              com-sm-12
-              col-12
-              align-self-center
-              text-start
-            "
-          >
-            <h3 class="fs-1 fw-bold">Esmaltado</h3>
-            <p class="fs-3">
-              Servicio completo para lucir la belleza de tus manos y pies.
-            </p>
-          </div>
-        </article>
-
-        <article class="row mb-5 d-flex flex-wrap-reverse" data-aos="fade-up">
-          <div
-            class="
-              col-lg-5 col-md-5
-              com-sm-12
-              col-12
-              align-self-center
-              text-end
-            "
-          >
-            <h3 class="fs-1 fw-bold">Perfilado</h3>
-            <p class="fs-3">
-              Contamos con un servicio completo de perfilado de cejas y belleza
-              de pestañas, con el que puedes resaltar tus atractivos naturales.
-            </p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-12 col-12">
-            <a href="./Paginas/Perfilado.html"
-              ><img
-                class="indexImagen"
-                src="./Galeria/Perfilado/PerfiladoC.jpg"
-                alt="Periflado_imagen"
-            /></a>
-          </div>
-        </article>
-
-        <article class="row mb-5" data-aos="fade-right">
-          <div class="col-lg-7 col-md-7 col-sm-12 col-12">
-            <a href="./Paginas/Depilacion.html"
-              ><img
-                class="indexImagen"
-                src="./Galeria/Depilacion/Depilacion.png"
-                alt="Depilación_imagen"
-            /></a>
-          </div>
-          <div
-            class="
-              col-lg-5 col-md-5
-              com-sm-12
-              col-12
-              align-self-center
-              text-start
-            "
-          >
-            <h3 class="fs-1 fw-bold">Depilación</h3>
-            <p class="fs-3">
-              Realizamos depilación corporal general utilizando técnicas
-              española y definitiva, según prefieras.
-            </p>
-          </div>
-        </article>
-
-        <article class="row d-flex flex-wrap-reverse" data-aos="fade-up">
-          <div
-            class="
-              col-lg-5 col-md-5
-              com-sm-12
-              col-12
-              align-self-center
-              text-end
-            "
-          >
-            <h3 class="fs-1 fw-bold">Masajes</h3>
-            <p class="fs-3">
-              Nos especializamos en distintos tipos de masajes: Relajantes,
-              descontracturantes y deportivos, cubriendo las necesidades de
-              nuestros clientes.
-            </p>
-          </div>
-          <div class="col-lg-7 col-md-7 col-sm-12 col-12">
-            <a href="./Paginas/Masajes.html"
-              ><img
-                class="indexImagen"
-                src="./Galeria/Masajes/Masajes.jpg"
-                alt="Masaje_imagen"
-            /></a>
-          </div>
-        </article>
-      </section>
-      <br /><br /><br />
+      
     </main>
 
     <!-- Pie de pagina con redes sociales, info de contacto y firma del DesarrolladorWeb -->
@@ -325,39 +152,5 @@
       </div>
 
     </footer>
-
-    <!-- SCRIPTS  -->
-
-    <!-- script para usar AOS -->
-    <script>
-      AOS.init();
-    </script>
-
-    <!-- Script para el funcionamiento del boton de subida -->
-    <script>
-      //Seleccionar el boton
-      var mybutton = document.getElementById("buttonUp");
-
-      // Cuando el usuario hace scroll en la pantalla, alcanzando 250px hacia abajo, el boton aparece.
-      window.onscroll = function () {
-        scrollFunction();
-      };
-
-      function scrollFunction() {
-        if (
-          document.body.scrollTop > 250 ||
-          document.documentElement.scrollTop > 250
-        ) {
-          mybutton.style.display = "flex";
-        } else {
-          mybutton.style.display = "none";
-        }
-      }
-      // Cuando el usuario hace click en el boton, la pagina sube hasta la parte mas alta.
-      function topFunction() {
-        document.body.scrollTop = 0;
-        document.documentElement.scrollTop = 0;
-      }
-    </script>
   </body>
 </html>
