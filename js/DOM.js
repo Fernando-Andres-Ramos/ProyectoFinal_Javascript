@@ -25,4 +25,7 @@ const inputClaveIng = document.getElementById("claveIng");
 const botonIng = document.getElementById("btnIngresar");
 
 
+const seccionPublicaciones = document.getElementById("publicaciones");
+
+
 

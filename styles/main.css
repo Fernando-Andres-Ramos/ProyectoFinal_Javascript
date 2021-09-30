@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* ESTILOS GENERALES PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 /* Fuente de la pagina */
-main, .offcanvas__body--estilo {
+main {
   margin-bottom: 2rem;
   color: #f25287;
   font-family: "EB Garamond", serif; }
@@ -263,13 +263,13 @@ footer {
   margin-bottom: 3rem; }
 
 /* Estilo para imagenes del index*/
-.indexImagen, .servicios__imagen--estilo, .galeriaImagen {
+.indexImagen {
   border-radius: 5px;
   max-width: 100%;
   border: 2px solid #f25287;
   transition: transform 0.5s; }
 
-.indexImagen:hover, .servicios__imagen--estilo:hover, .galeriaImagen:hover {
+.indexImagen:hover {
   transform: scale(1.01, 1.01); }
 
 /* Transformacion de escala*/
@@ -302,198 +302,3 @@ footer {
 @media (max-width: 300px) {
   .main__tituloIndex--tamaño {
     font-size: 1.7rem; } }
-
-/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-/* Estilo de las fotos del aside */
-.aside--img__cara {
-  border: 1px solid #dddddd;
-  border-radius: 200px; }
-
-.mainAside__div--redes {
-  max-width: 30%; }
-  .mainAside__div--redes:hover {
-    transform: scale(1.05, 1.05);
-    opacity: 0.8; }
-
-/* Quitar puntos de las listas */
-.mainAside__persona--lista {
-  list-style-type: none; }
-
-/* Espaciado entre items de lista */
-.mainAside__persona--lista li {
-  margin-bottom: 1rem; }
-
-.article__imagenLugar--tamaño {
-  max-width: 80%; }
-
-.QuieneSomosImagen {
-  border: 1px solid #f25287; }
-
-@media (max-width: 1024px) {
-  .mainAside__div--redes {
-    max-width: 15%; }
-  .article__imagenLugar--tamaño {
-    max-width: 100%; } }
-
-@media (max-width: 768px) {
-  .mainAside__div--redes {
-    max-width: 15%; } }
-
-@media (max-width: 480px) {
-  .mainAside__div--redes {
-    max-width: 15%; } }
-
-@media (max-width: 280px) {
-  /* Espaciado entre items de lista */
-  .mainAside__persona--lista li {
-    font-size: 1rem; } }
-
-/* Estilo para la lista en el submenu */
-.submenu {
-  list-style: none; }
-  .submenu__indices--estilo {
-    text-decoration: none;
-    color: #f25287;
-    font-size: 1.75rem;
-    transition: 0.3s background-color; }
-    .submenu__indices--estilo:hover {
-      text-decoration: underline;
-      background-color: #f9f3f3;
-      color: #f25287; }
-
-.servicios__imagen--estilo {
-  border: 1px solid #f25287; }
-
-.button__Servicios {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  border: 2px solid #f25287;
-  outline: none;
-  height: 40px;
-  width: 100%;
-  background-color: #f7d9d9;
-  /* Set a background color */
-  color: #f25287;
-  /* Text color */
-  cursor: pointer;
-  /* Add a mouse pointer on hover */
-  animation-name: aparecer;
-  animation-iteration-count: initial;
-  animation-timing-function: ease-in;
-  animation-duration: 0.5s; }
-  .button__Servicios:hover {
-    color: #f25287;
-    border: 2px solid #f25287; }
-  .button__Servicios:enabled {
-    color: #f25287;
-    border: 2px solid #f25287; }
-
-.container__categorias--estilo {
-  position: sticky;
-  top: 0px;
-  z-index: 99; }
-
-.offcanvas__body--estilo {
-  background-color: #f9f3f3; }
-
-@media (max-width: 600px) {
-  .offcanvas__body--estilo {
-    height: 70vh;
-    width: 65vw; }
-  .submenu__indices--estilo {
-    font-size: 1.5rem; } }
-
-@media (max-width: 375px) {
-  .offcanvas__body--estilo {
-    height: 60vh;
-    width: 100vw; }
-  .submenu__indices--estilo {
-    font-size: 1.3rem; } }
-
-@media (max-height: 375px) {
-  .offcanvas__body--estilo {
-    height: 100vh;
-    width: 50vw; }
-  .submenu__indices--estilo {
-    font-size: 1.5rem; }
-  .submenu__lista--estilo {
-    margin-bottom: 30px; } }
-
-@keyframes aparecer {
-  0% {
-    transform: translate(0px, -50px);
-    opacity: 0; }
-  100% {
-    height: 40px; } }
-
-/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-/* Centralizar el MODAL en galeria.html */
-.modal-dialog {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100%; }
-
-/* Estilo para imagenes del index*/
-.galeriaImagen {
-  border: 1px solid #f25287; }
-
-/* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
-.mainSection__info--estilo {
-  font-weight: bold;
-  list-style-type: circle; }
-
-/* Logos de redes sociales */
-.mainSection__info--logo {
-  max-width: 7%; }
-  .mainSection__info--logo:hover {
-    transform: scale(1.05, 1.05);
-    opacity: 0.8; }
-
-/* Tamaño de letra en los text input */
-.form__textInput--size {
-  max-width: 100%;
-  height: 50px; }
-
-/* Color de letra textarea */
-.form__textArea--color {
-  color: grey; }
-
-.form__textArea--resize {
-  resize: none; }
-
-/* Borde del formulario */
-.article__form--border {
-  border: 1px solid grey; }
-
-.form__button--estilo {
-  font-size: 1.2rem;
-  background-color: #dddddd; }
-
-@media (max-width: 992px) {
-  .main__tituloContacto--tamaño {
-    font-size: 3.5rem; } }
-
-@media (max-width: 768px) {
-  .main__tituloContacto--tamaño {
-    font-size: 2.5rem; } }
-
-@media (max-width: 480px) {
-  .main__tituloContacto--tamaño {
-    font-size: 2.1rem; } }
-
-@media (max-width: 380px) {
-  .mainSection__info--estilo {
-    font-size: 1rem; } }
-
-@media (max-width: 320px) {
-  .mainSection__info--estilo {
-    font-size: 1rem; } }
-
-@media (max-width: 280px) {
-  .main__tituloContacto--tamaño {
-    font-size: 1rem; }
-  .mainSection__info--estilo {
-    font-size: 0.8rem; } }

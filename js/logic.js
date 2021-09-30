@@ -72,15 +72,12 @@ const login = (e) => {
   e.preventDefault();
   let nombreUsuario=inputNombreIng.value;
   let claveUsuario=inputClaveIng.value;
-  console.log(nombreUsuario);
-  console.log(claveUsuario);
   if(localStorage.getItem("usuarioLogueado")){
   nombreUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).nombre
   claveUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).clave
   }
   
   const chequeoUsuario = usuarios.find(usuario=>usuario.nombre===nombreUsuario);
-  console.log(chequeoUsuario);
 
   if (chequeoUsuario) {
 
@@ -103,11 +100,13 @@ const login = (e) => {
       else {
       document.getElementById("titulo").innerHTML = `<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
                                                     Estas son las noticias actuales</h2>`;
-      // renderizarTienda();
       buttonNavIngreso.style.display = "none";
       buttonNavRegistro.style.display="none";
       formIngreso.style.display = "none";
+      formCrearUsuario.style.display="none";
       buttonNavCloseSesion.style.display="block";
+      console.log(chequeoUsuario.nombre);
+      mostrarNoticias();
       }
 
     } 
@@ -154,18 +153,37 @@ localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
 
 
 /*Mostrar articulos (noticias) */
-const mostrarNoticias=()=>{
-  if(noticias != []){
+const mostrarNoticias = () => {
+
+  buttonNavIngreso.style.display = "none";
+  buttonNavRegistro.style.display="none";
+  formIngreso.style.display = "none";
+  formCrearUsuario.style.display="none";
+  buttonNavCloseSesion.style.display="block";
+  seccionPublicaciones.style.display="block";
+  if(noticias.length==0){
+    seccionPublicaciones.innerHTML = `<br><br><br><p>Sin publicaciones, disculpe las molestias</p>`;
+  }
+  else if(noticias.length==1){
+    seccionPublicaciones.innerHTML = `<h3 class="tituloNoticia">Titulo:${noticias[0].titulo}</h3>
+                              <br>
+                              <p class="fechaNoticia">Fecha:${noticias[0].fecha}</p>
+                              <br>
+                              <p class="textoNoticia">${noticias[0].texto}</p>
+                              <br><br>`;
+  }
+  else{
     for(const noticia of noticias){
-      const contenedor = document.getElementById("publicaciones")
-      contenedor.innerHTML += `<h3>Titulo:${noticia.titulo}</h3>
+      seccionPublicaciones.innerHTML += `<h3 class="tituloNoticia">Titulo:${noticia.titulo}</h3>
                               <br>
-                              <p>Fecha:${noticia.fecha}</p>
+                              <p class="fechaNoticia">Fecha:${noticia.fecha}</p>
                               <br>
-                              <p>${noticia.texto}</p>
+                              <p class="textoNoticia">${noticia.texto}</p>
                               <br><br>`;  
     }
+
   }
+
 }
 
 const cerrarSesionFunc = ()=>{
@@ -175,6 +193,7 @@ const cerrarSesionFunc = ()=>{
   buttonNavIngreso.style.display = "inline-block";
   buttonNavRegistro.style.display="inline-block";
   document.getElementById("titulo").innerHTML = "";
+  document.getElementById("publicaciones").innerHTML="";
 	localStorage.removeItem("usuarioLogueado");
 }
 
