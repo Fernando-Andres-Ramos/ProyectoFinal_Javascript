@@ -1,8 +1,8 @@
 /*INICIALIZACION DE DOM */
 
-formIngreso.style.display = "none";
-formCrearUsuario.style.display="none";
-buttonNavCloseSesion.style.display="none";
+formIngreso.css("display","none");
+formCrearUsuario.css("display","none");
+buttonNavCloseSesion.css("display","none");
 /*divFormsProductos.style.display = "none"
 btnRegistro.style.display = "none"
 tienda.style.display = "none"
@@ -12,19 +12,19 @@ cerrarSesion.style.visibility = "hidden"/*
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
-const showFormCreate=()=>{formIngreso.style.display = "none";formCrearUsuario.style.display="block";}
+const showFormCreate=()=>{formIngreso.css("display","none");formCrearUsuario.css("display","block");}
 /*Mostrar form de ingresar usuario */
-const showFormLogin=()=>{formCrearUsuario.style.display="none";formIngreso.style.display="block";}
+const showFormLogin=()=>{formCrearUsuario.css("display","none");formIngreso.css("display","block");}
 
 
 
 /*Crear usuarios nuevos */
 const crearUsuario= (e)=>{
   e.preventDefault();
-  let nombre = inputNombreReg.value;
-  let clave = inputClaveReg.value;
-  let tipo = inputTipoReg.value.toUpperCase();
-  let passAdmin = inputClaveAdmin.value.toUpperCase();
+  let nombre = inputNombreReg.val();
+  let clave = inputClaveReg.val();
+  let tipo = inputTipoReg.val().toUpperCase();
+  let passAdmin = inputClaveAdmin.val().toUpperCase();
 
   switch (tipo){
     case "SI":
@@ -32,12 +32,12 @@ const crearUsuario= (e)=>{
         const usuario = new Usuario(nombre,clave,tipo);
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        validaciones.innerHTML = "Usuario registrado con éxito";
-        validaciones.style.color="darkgreen";
+        $("#validaciones").prepend("Usuario registrado con éxito");
+        $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
       }
       else{
-        validaciones.innerHTML = "Usted no es un administrador";
-        validaciones.style.color="red";
+        $("#validaciones").prepend("Usted no es un administrador");
+        $("#validaciones").css({"color":"red","font-size":"30px"});
       }
       break;
     
@@ -45,24 +45,24 @@ const crearUsuario= (e)=>{
       const usuario = new Usuario(nombre,clave,tipo);
       usuarios.push(usuario);
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
-      validaciones.innerHTML = "Usuario registrado con éxito";
-      validaciones.style.color="darkgreen";
+      $("#validaciones").prepend("Usuario registrado con éxito");
+      $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
       break;
 
     default:
-      validaciones.innerHTML = "Escriba SI o NO en la opcion de administrador";
-      validaciones.style.color="red";
+      $("#validaciones").prepend("Escriba SI o NO en la opcion de administrador");
+      $("#validaciones").css({"color":"red","font-size":"30px"});
       break;
   }
 
-  inputNombreReg.value = '';
-  inputClaveReg.value = '';
-  inputTipoReg.value='';
-  inputClaveAdmin.value='';
-  formCrearUsuario.style.display="none";
+  inputNombreReg.val('');
+  inputClaveReg.val('');
+  inputTipoReg.val('');
+  inputClaveAdmin.val('');
+  formCrearUsuario.css("display","none");
 
   setTimeout(() => {
-    validaciones.innerHTML = ""
+    $("#validaciones").empty();
   }, 3000
   )
 }
@@ -70,57 +70,67 @@ const crearUsuario= (e)=>{
 /*Logear usuario */
 const login = (e) => {
   e.preventDefault();
-  let nombreUsuario=inputNombreIng.value;
-  let claveUsuario=inputClaveIng.value;
+  let nombreUsuario=inputNombreIng.val();
+  let claveUsuario=inputClaveIng.val();
   if(localStorage.getItem("usuarioLogueado")){
   nombreUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).nombre
   claveUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).clave
   }
   
   const chequeoUsuario = usuarios.find(usuario=>usuario.nombre===nombreUsuario);
-
+  
   if (chequeoUsuario) {
+    console.log(nombreUsuario);
+    console.log(claveUsuario);
 
-    validaciones.innerHTML = "";
-
-    if (claveUsuario === chequeoUsuario.clave) {
+    if (claveUsuario == chequeoUsuario.clave) {
     
-      localStorage.setItem("usuarioLogueado",JSON.stringify(chequeoUsuario))
-      tiempoUsuario = new Date().getTime()
+      localStorage.setItem("usuarioLogueado",JSON.stringify(chequeoUsuario));
+      tiempoUsuario = new Date().getTime();
 
       if (chequeoUsuario.tipoUsuario === "SI") {
-        buttonNavIngreso.style.display = "none";
-        buttonNavRegistro.style.display="none";
-        formIngreso.style.display = "none";
-        buttonNavCloseSesion.style.display="block";
+        buttonNavIngreso.css("display","none");
+        buttonNavRegistro.css("display","none");
+        formIngreso.css("display","none");
+        buttonNavCloseSesion.css("display","block");
         
         // completarSelect()
       } 
     
       else {
-      document.getElementById("titulo").innerHTML = `<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
-                                                    Estas son las noticias actuales</h2>`;
-      buttonNavIngreso.style.display = "none";
-      buttonNavRegistro.style.display="none";
-      formIngreso.style.display = "none";
-      formCrearUsuario.style.display="none";
-      buttonNavCloseSesion.style.display="block";
-      console.log(chequeoUsuario.nombre);
+      $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+                                      Estas son las noticias actuales</h2>`);
+
+      buttonNavIngreso.css("display","none");
+      buttonNavRegistro.css("display","none");
+      formIngreso.css("display","none");
+      formCrearUsuario.css("display","none");
+      buttonNavCloseSesion.css("display","block");
       mostrarNoticias();
       }
 
     } 
   
     else {
-    validaciones.innerHTML = "La clave ingresada es incorrecta"
-    validaciones.style.color = "red"
+      $("#validaciones").prepend("La clave ingresada es incorrecta");
+      $("#validaciones").css({"color":"red","font-size":"30px"});
     }
 
   } 
   else {
-  validaciones.innerHTML = "El usuario no esta registrado"
-  validaciones.style.color = "red"
+    $("#validaciones").prepend("El usuario no esta registrado");
+    $("#validaciones").css({"color":"red","font-size":"30px"});
   }
+
+  inputNombreReg.val('');
+  inputClaveReg.val('');
+  inputTipoReg.val('');
+  inputClaveAdmin.val('');
+
+  setTimeout(() => {
+    $("#validaciones").empty();
+  }, 3000
+  )
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
@@ -155,14 +165,16 @@ localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
 /*Mostrar articulos (noticias) */
 const mostrarNoticias = () => {
 
-  buttonNavIngreso.style.display = "none";
-  buttonNavRegistro.style.display="none";
-  formIngreso.style.display = "none";
-  formCrearUsuario.style.display="none";
-  buttonNavCloseSesion.style.display="block";
-  seccionPublicaciones.style.display="block";
+  buttonNavIngreso.css("display","none");
+  buttonNavRegistro.css("display","none");
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","none");
+  buttonNavCloseSesion.css("display","block");
+  seccionPublicaciones.css("display","block");
   if(noticias.length==0){
-    seccionPublicaciones.innerHTML = `<br><br><br><p>Sin publicaciones, disculpe las molestias</p>`;
+    seccionPublicaciones.prepend(`<br><br><br><p>Sin publicaciones, disculpe las molestias</p>`);
+    seccionPublicaciones.css("font-size","26px");
+
   }
   else if(noticias.length==1){
     seccionPublicaciones.innerHTML = `<h3 class="tituloNoticia">Titulo:${noticias[0].titulo}</h3>
@@ -187,24 +199,24 @@ const mostrarNoticias = () => {
 }
 
 const cerrarSesionFunc = ()=>{
-  formIngreso.style.display = "none";
-  formCrearUsuario.style.display="none";
-  buttonNavCloseSesion.style.display="none";
-  buttonNavIngreso.style.display = "inline-block";
-  buttonNavRegistro.style.display="inline-block";
-  document.getElementById("titulo").innerHTML = "";
-  document.getElementById("publicaciones").innerHTML="";
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","none");
+  buttonNavCloseSesion.css("display","none");
+  buttonNavIngreso.css("display","inline-block");
+  buttonNavRegistro.css("display","inline-block");
+  $("#tituloBienvenida").empty();
+  $("#publicaciones").empty();
 	localStorage.removeItem("usuarioLogueado");
 }
 
 
 
-buttonNavRegistro.addEventListener("click",showFormCreate);
-botonReg.addEventListener("click",crearUsuario);
+buttonNavRegistro.click(showFormCreate);
+botonReg.click(crearUsuario);
 
 
-buttonNavIngreso.addEventListener("click",showFormLogin);
-botonIng.addEventListener("click",login);
+buttonNavIngreso.click(showFormLogin);
+botonIng.click(login);
 
 
-buttonNavCloseSesion.addEventListener("click",cerrarSesionFunc);
+buttonNavCloseSesion.click(cerrarSesionFunc);
