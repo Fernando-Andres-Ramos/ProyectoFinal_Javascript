@@ -5,7 +5,9 @@ Sitio web de un emprendimiento de estetica general y masajes:
   * Proyecto final para presentar en el curso de Javascript de CoderHouse. 
   * Se utilizan conceptos de DOM y eventos para modificar el html del sitio web.
   * Se utiliza localStorage para almacenar datos ingresados en el formulario de registrar.
+
+  * Se agregan metodos y funcionalidades de Jquerys para la entrega del desafio de la clase 12 del curso de Javascript.
   
 
   
-_Actualizado 29/09/2021_
+_Actualizado 06/10/2021_
