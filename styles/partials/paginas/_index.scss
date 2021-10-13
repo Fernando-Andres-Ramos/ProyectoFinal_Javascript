@@ -24,6 +24,18 @@
   transform: scale(1.01, 1.01);
 } /* Transformacion de escala*/
 
+
+.animate__animated.animate__fadeOutLeft {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 1s;
+}
+
+
+
+
 // Media Queries para adaptar el titulo en el encabezado y el tamaño del boton de subida
 
 

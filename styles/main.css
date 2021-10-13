@@ -273,6 +273,12 @@ footer {
   transform: scale(1.01, 1.01); }
 
 /* Transformacion de escala*/
+.animate__animated.animate__fadeOutLeft {
+  --animate-duration: 1s; }
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 1s; }
+
 @media (max-width: 992px) {
   .main__tituloIndex--tamaño {
     font-size: 3.5rem; } }

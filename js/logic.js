@@ -12,9 +12,23 @@ cerrarSesion.style.visibility = "hidden"/*
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
-const showFormCreate=()=>{formIngreso.css("display","none");formCrearUsuario.css("display","block");}
+const showFormCreate=()=>{
+formIngreso.css("display","none");
+formCrearUsuario.css("display","block");
+formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
+setTimeout(()=>{
+  circuloRojo.removeClass("animate__animated animate__fadeInLeft")
+ },1500)
+}
+
+
 /*Mostrar form de ingresar usuario */
-const showFormLogin=()=>{formCrearUsuario.css("display","none");formIngreso.css("display","block");}
+const showFormLogin=()=>{
+  formCrearUsuario.css("display","none");
+  formIngreso.css("display","block");
+  formIngreso.addClass("animate__animated animate__fadeInLeft");
+
+}
 
 
 
@@ -34,6 +48,7 @@ const crearUsuario= (e)=>{
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         $("#validaciones").prepend("Usuario registrado con éxito");
         $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
+
       }
       else{
         $("#validaciones").prepend("Usted no es un administrador");
@@ -62,7 +77,7 @@ const crearUsuario= (e)=>{
   formCrearUsuario.css("display","none");
 
   setTimeout(() => {
-    $("#validaciones").empty();
+    $("#validaciones").slideUp(1000);
   }, 3000
   )
 }
