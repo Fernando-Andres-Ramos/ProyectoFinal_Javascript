@@ -1,5 +1,10 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
+
+main{
+  min-height: 10rem;
+}
+
 // Estilo para el texto principal
 .index__main--bienvenida {
   margin-bottom: $fuente-tama * 5;

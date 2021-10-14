@@ -56,4 +56,7 @@ const inputClaveIng = $("#claveIng");
 const botonIng = $("#btnIngresar");
 
 
+/* Sección donde se guardaran las noticias que se publiquen */
 const seccionPublicaciones = $("#publicaciones");
+
+

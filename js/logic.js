@@ -3,6 +3,7 @@
 formIngreso.css("display","none");
 formCrearUsuario.css("display","none");
 buttonNavCloseSesion.css("display","none");
+$("#validaciones").css("display","none");
 /*divFormsProductos.style.display = "none"
 btnRegistro.style.display = "none"
 tienda.style.display = "none"
@@ -16,20 +17,21 @@ const showFormCreate=()=>{
 formIngreso.css("display","none");
 formCrearUsuario.css("display","block");
 formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
-setTimeout(()=>{
-  circuloRojo.removeClass("animate__animated animate__fadeInLeft")
- },1500)
+setTimeout(() => {
+  formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
+},1000
+)
+
 }
-
-
 /*Mostrar form de ingresar usuario */
 const showFormLogin=()=>{
   formCrearUsuario.css("display","none");
   formIngreso.css("display","block");
   formIngreso.addClass("animate__animated animate__fadeInLeft");
-
+  setTimeout(() => {
+    formIngreso.removeClass("animate__animated animate__fadeInLeft");
+  },1000)
 }
-
 
 
 /*Crear usuarios nuevos */
@@ -39,20 +41,22 @@ const crearUsuario= (e)=>{
   let clave = inputClaveReg.val();
   let tipo = inputTipoReg.val().toUpperCase();
   let passAdmin = inputClaveAdmin.val().toUpperCase();
+  let cartel;
 
   switch (tipo){
     case "SI":
-      if (passAdmin==="JAVASCRIPT"){
+      if (passAdmin==="ADMIN"){
         const usuario = new Usuario(nombre,clave,tipo);
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        $("#validaciones").prepend("Usuario registrado con éxito");
+        cartel="Usuario registrado con éxito";
         $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
-
+        animacion(cartel,formCrearUsuario);
       }
       else{
-        $("#validaciones").prepend("Usted no es un administrador");
         $("#validaciones").css({"color":"red","font-size":"30px"});
+        cartel="Usted no es un administrador";
+        animacion(cartel,formCrearUsuario);
       }
       break;
     
@@ -60,8 +64,9 @@ const crearUsuario= (e)=>{
       const usuario = new Usuario(nombre,clave,tipo);
       usuarios.push(usuario);
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
-      $("#validaciones").prepend("Usuario registrado con éxito");
+      cartel="Usuario registrado con éxito";
       $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
+      animacion(cartel,formCrearUsuario);
       break;
 
     default:
@@ -74,12 +79,20 @@ const crearUsuario= (e)=>{
   inputClaveReg.val('');
   inputTipoReg.val('');
   inputClaveAdmin.val('');
-  formCrearUsuario.css("display","none");
+}
 
+const animacion = (texto,tipoFormulario)=>{
+  $("#validaciones").empty();
+  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
   setTimeout(() => {
-    $("#validaciones").slideUp(1000);
-  }, 3000
-  )
+    tipoFormulario.hide(1000);
+  },500)
+  $("#validaciones").prepend(texto);
+  $("#validaciones").delay(1500);
+  $("#validaciones").fadeIn(1000);
+  $("#validaciones").delay(1000);
+  $("#validaciones").fadeOut(1000);
+  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
 }
 
 /*Logear usuario */
@@ -127,25 +140,22 @@ const login = (e) => {
     } 
   
     else {
-      $("#validaciones").prepend("La clave ingresada es incorrecta");
       $("#validaciones").css({"color":"red","font-size":"30px"});
+      cartel="La clave ingresada es incorrecta";
+      animacion(cartel,formIngreso);
     }
 
   } 
   else {
-    $("#validaciones").prepend("El usuario no esta registrado");
     $("#validaciones").css({"color":"red","font-size":"30px"});
+    cartel="El usuario no esta registrado";
+    animacion(cartel,formIngreso);
   }
 
   inputNombreReg.val('');
   inputClaveReg.val('');
   inputTipoReg.val('');
   inputClaveAdmin.val('');
-
-  setTimeout(() => {
-    $("#validaciones").empty();
-  }, 3000
-  )
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
