@@ -4,6 +4,7 @@ formIngreso.css("display","none");
 formCrearUsuario.css("display","none");
 buttonNavCloseSesion.css("display","none");
 $("#validaciones").css("display","none");
+administrador.css("display","none");
 /*divFormsProductos.style.display = "none"
 btnRegistro.style.display = "none"
 tienda.style.display = "none"
@@ -81,6 +82,7 @@ const crearUsuario= (e)=>{
   inputClaveAdmin.val('');
 }
 
+/*Animaciones */
 const animacion = (texto,tipoFormulario)=>{
   $("#validaciones").empty();
   tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
@@ -121,8 +123,9 @@ const login = (e) => {
         buttonNavRegistro.css("display","none");
         formIngreso.css("display","none");
         buttonNavCloseSesion.css("display","block");
-        
-        // completarSelect()
+        $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+                                        Este es el panel de noticias</h2>`);
+        modificarNoticias();
       } 
     
       else {
@@ -160,13 +163,14 @@ const login = (e) => {
 
 /*Elegir si se desea agregar o eliminar una noticia */
 const modificarNoticias=()=>{
-let accion = prompt("¿Desea agregar o eliminar noticias?: Agregar(1)-Eliminar(2)")
-if (accion=="1"){
-  ingresarNoticia();
-}
-else{
-  eliminarNoticia();
-}
+  administrador.css({"display":"block","font-size":"26px","text-align":"center"});
+  administrador.prepend(`<p>¿Desea agregar o eliminar noticias?</p>`);
+// if (accion=="1"){
+//   ingresarNoticia();
+// }
+// else{
+//   eliminarNoticia();
+// }
 }
 
 /*Agregar articulos (noticias) */
@@ -202,21 +206,25 @@ const mostrarNoticias = () => {
 
   }
   else if(noticias.length==1){
-    seccionPublicaciones.innerHTML = `<h3 class="tituloNoticia">Titulo:${noticias[0].titulo}</h3>
-                              <br>
-                              <p class="fechaNoticia">Fecha:${noticias[0].fecha}</p>
-                              <br>
-                              <p class="textoNoticia">${noticias[0].texto}</p>
-                              <br><br>`;
+    seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+                                    <div class="card-body">
+                                    <h2 class="card-title">${noticia[0].titulo}</h2>
+                                    <h5 class="card-fecha">${noticia[0].fecha}</h5>
+                                    <br>
+                                    <p class="card-text">${noticia[0].texto}</p>
+                                    </div>
+                                  </div>`);
   }
   else{
     for(const noticia of noticias){
-      seccionPublicaciones.innerHTML += `<h3 class="tituloNoticia">Titulo:${noticia.titulo}</h3>
-                              <br>
-                              <p class="fechaNoticia">Fecha:${noticia.fecha}</p>
-                              <br>
-                              <p class="textoNoticia">${noticia.texto}</p>
-                              <br><br>`;  
+      seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+                                      <div class="card-body">
+                                      <h2 class="card-title">${noticia.titulo}</h2>
+                                      <h5 class="card-fecha">${noticia.fecha}</h5>
+                                      <br>
+                                      <p class="card-text">${noticia.texto}</p>
+                                      </div>
+                                    </div>`);
     }
 
   }
@@ -229,6 +237,7 @@ const cerrarSesionFunc = ()=>{
   buttonNavCloseSesion.css("display","none");
   buttonNavIngreso.css("display","inline-block");
   buttonNavRegistro.css("display","inline-block");
+  administrador.css("display","none");
   $("#tituloBienvenida").empty();
   $("#publicaciones").empty();
 	localStorage.removeItem("usuarioLogueado");
