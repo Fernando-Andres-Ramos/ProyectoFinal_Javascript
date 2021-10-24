@@ -254,6 +254,9 @@ footer {
   left: 30px; }
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
+main {
+  min-height: 10rem; }
+
 .index__main--bienvenida {
   margin-bottom: 5rem; }
 
@@ -273,6 +276,18 @@ footer {
   transform: scale(1.01, 1.01); }
 
 /* Transformacion de escala*/
+.animate__animated.animate__fadeOutLeft {
+  --animate-duration: 1s; }
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 1s; }
+
+.contenedorNoticia {
+  width: 100%;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-bottom: 15px; }
+
 @media (max-width: 992px) {
   .main__tituloIndex--tamaño {
     font-size: 3.5rem; } }

@@ -1,8 +1,10 @@
 /*INICIALIZACION DE DOM */
 
-formIngreso.style.display = "none";
-formCrearUsuario.style.display="none";
-buttonNavCloseSesion.style.display="none";
+formIngreso.css("display","none");
+formCrearUsuario.css("display","none");
+buttonNavCloseSesion.css("display","none");
+$("#validaciones").css("display","none");
+administrador.css("display","none");
 /*divFormsProductos.style.display = "none"
 btnRegistro.style.display = "none"
 tienda.style.display = "none"
@@ -12,32 +14,50 @@ cerrarSesion.style.visibility = "hidden"/*
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
-const showFormCreate=()=>{formIngreso.style.display = "none";formCrearUsuario.style.display="block";}
-/*Mostrar form de ingresar usuario */
-const showFormLogin=()=>{formCrearUsuario.style.display="none";formIngreso.style.display="block";}
+const showFormCreate=()=>{
+formIngreso.css("display","none");
+formCrearUsuario.css("display","block");
+formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
+setTimeout(() => {
+  formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
+},1000
+)
 
+}
+/*Mostrar form de ingresar usuario */
+const showFormLogin=()=>{
+  formCrearUsuario.css("display","none");
+  formIngreso.css("display","block");
+  formIngreso.addClass("animate__animated animate__fadeInLeft");
+  setTimeout(() => {
+    formIngreso.removeClass("animate__animated animate__fadeInLeft");
+  },1000)
+}
 
 
 /*Crear usuarios nuevos */
 const crearUsuario= (e)=>{
   e.preventDefault();
-  let nombre = inputNombreReg.value;
-  let clave = inputClaveReg.value;
-  let tipo = inputTipoReg.value.toUpperCase();
-  let passAdmin = inputClaveAdmin.value.toUpperCase();
+  let nombre = inputNombreReg.val();
+  let clave = inputClaveReg.val();
+  let tipo = inputTipoReg.val().toUpperCase();
+  let passAdmin = inputClaveAdmin.val().toUpperCase();
+  let cartel;
 
   switch (tipo){
     case "SI":
-      if (passAdmin==="JAVASCRIPT"){
+      if (passAdmin==="ADMIN"){
         const usuario = new Usuario(nombre,clave,tipo);
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
-        validaciones.innerHTML = "Usuario registrado con éxito";
-        validaciones.style.color="darkgreen";
+        cartel="Usuario registrado con éxito";
+        $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
+        animacion(cartel,formCrearUsuario);
       }
       else{
-        validaciones.innerHTML = "Usted no es un administrador";
-        validaciones.style.color="red";
+        $("#validaciones").css({"color":"red","font-size":"30px"});
+        cartel="Usted no es un administrador";
+        animacion(cartel,formCrearUsuario);
       }
       break;
     
@@ -45,93 +65,112 @@ const crearUsuario= (e)=>{
       const usuario = new Usuario(nombre,clave,tipo);
       usuarios.push(usuario);
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
-      validaciones.innerHTML = "Usuario registrado con éxito";
-      validaciones.style.color="darkgreen";
+      cartel="Usuario registrado con éxito";
+      $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
+      animacion(cartel,formCrearUsuario);
       break;
 
     default:
-      validaciones.innerHTML = "Escriba SI o NO en la opcion de administrador";
-      validaciones.style.color="red";
+      $("#validaciones").prepend("Escriba SI o NO en la opcion de administrador");
+      $("#validaciones").css({"color":"red","font-size":"30px"});
       break;
   }
 
-  inputNombreReg.value = '';
-  inputClaveReg.value = '';
-  inputTipoReg.value='';
-  inputClaveAdmin.value='';
-  formCrearUsuario.style.display="none";
+  inputNombreReg.val('');
+  inputClaveReg.val('');
+  inputTipoReg.val('');
+  inputClaveAdmin.val('');
+}
 
+/*Animaciones */
+const animacion = (texto,tipoFormulario)=>{
+  $("#validaciones").empty();
+  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
   setTimeout(() => {
-    validaciones.innerHTML = ""
-  }, 3000
-  )
+    tipoFormulario.hide(1000);
+  },500)
+  $("#validaciones").prepend(texto);
+  $("#validaciones").delay(1500);
+  $("#validaciones").fadeIn(1000);
+  $("#validaciones").delay(1000);
+  $("#validaciones").fadeOut(1000);
+  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
 }
 
 /*Logear usuario */
 const login = (e) => {
   e.preventDefault();
-  let nombreUsuario=inputNombreIng.value;
-  let claveUsuario=inputClaveIng.value;
+  let nombreUsuario=inputNombreIng.val();
+  let claveUsuario=inputClaveIng.val();
   if(localStorage.getItem("usuarioLogueado")){
   nombreUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).nombre
   claveUsuario = JSON.parse(localStorage.getItem("usuarioLogueado")).clave
   }
   
   const chequeoUsuario = usuarios.find(usuario=>usuario.nombre===nombreUsuario);
-
+  
   if (chequeoUsuario) {
+    console.log(nombreUsuario);
+    console.log(claveUsuario);
 
-    validaciones.innerHTML = "";
-
-    if (claveUsuario === chequeoUsuario.clave) {
+    if (claveUsuario == chequeoUsuario.clave) {
     
-      localStorage.setItem("usuarioLogueado",JSON.stringify(chequeoUsuario))
-      tiempoUsuario = new Date().getTime()
+      localStorage.setItem("usuarioLogueado",JSON.stringify(chequeoUsuario));
+      tiempoUsuario = new Date().getTime();
 
       if (chequeoUsuario.tipoUsuario === "SI") {
-        buttonNavIngreso.style.display = "none";
-        buttonNavRegistro.style.display="none";
-        formIngreso.style.display = "none";
-        buttonNavCloseSesion.style.display="block";
-        
-        // completarSelect()
+        buttonNavIngreso.css("display","none");
+        buttonNavRegistro.css("display","none");
+        formIngreso.css("display","none");
+        buttonNavCloseSesion.css("display","block");
+        $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+                                        Este es el panel de noticias</h2>`);
+        modificarNoticias();
       } 
     
       else {
-      document.getElementById("titulo").innerHTML = `<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
-                                                    Estas son las noticias actuales</h2>`;
-      buttonNavIngreso.style.display = "none";
-      buttonNavRegistro.style.display="none";
-      formIngreso.style.display = "none";
-      formCrearUsuario.style.display="none";
-      buttonNavCloseSesion.style.display="block";
-      console.log(chequeoUsuario.nombre);
+      $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+                                      Estas son las noticias actuales</h2>`);
+
+      buttonNavIngreso.css("display","none");
+      buttonNavRegistro.css("display","none");
+      formIngreso.css("display","none");
+      formCrearUsuario.css("display","none");
+      buttonNavCloseSesion.css("display","block");
       mostrarNoticias();
       }
 
     } 
   
     else {
-    validaciones.innerHTML = "La clave ingresada es incorrecta"
-    validaciones.style.color = "red"
+      $("#validaciones").css({"color":"red","font-size":"30px"});
+      cartel="La clave ingresada es incorrecta";
+      animacion(cartel,formIngreso);
     }
 
   } 
   else {
-  validaciones.innerHTML = "El usuario no esta registrado"
-  validaciones.style.color = "red"
+    $("#validaciones").css({"color":"red","font-size":"30px"});
+    cartel="El usuario no esta registrado";
+    animacion(cartel,formIngreso);
   }
+
+  inputNombreReg.val('');
+  inputClaveReg.val('');
+  inputTipoReg.val('');
+  inputClaveAdmin.val('');
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
 const modificarNoticias=()=>{
-let accion = prompt("¿Desea agregar o eliminar noticias?: Agregar(1)-Eliminar(2)")
-if (accion=="1"){
-  ingresarNoticia();
-}
-else{
-  eliminarNoticia();
-}
+  administrador.css({"display":"block","font-size":"26px","text-align":"center"});
+  administrador.prepend(`<p>¿Desea agregar o eliminar noticias?</p>`);
+// if (accion=="1"){
+//   ingresarNoticia();
+// }
+// else{
+//   eliminarNoticia();
+// }
 }
 
 /*Agregar articulos (noticias) */
@@ -155,31 +194,37 @@ localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
 /*Mostrar articulos (noticias) */
 const mostrarNoticias = () => {
 
-  buttonNavIngreso.style.display = "none";
-  buttonNavRegistro.style.display="none";
-  formIngreso.style.display = "none";
-  formCrearUsuario.style.display="none";
-  buttonNavCloseSesion.style.display="block";
-  seccionPublicaciones.style.display="block";
+  buttonNavIngreso.css("display","none");
+  buttonNavRegistro.css("display","none");
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","none");
+  buttonNavCloseSesion.css("display","block");
+  seccionPublicaciones.css("display","block");
   if(noticias.length==0){
-    seccionPublicaciones.innerHTML = `<br><br><br><p>Sin publicaciones, disculpe las molestias</p>`;
+    seccionPublicaciones.prepend(`<br><br><br><p>Sin publicaciones, disculpe las molestias</p>`);
+    seccionPublicaciones.css("font-size","26px");
+
   }
   else if(noticias.length==1){
-    seccionPublicaciones.innerHTML = `<h3 class="tituloNoticia">Titulo:${noticias[0].titulo}</h3>
-                              <br>
-                              <p class="fechaNoticia">Fecha:${noticias[0].fecha}</p>
-                              <br>
-                              <p class="textoNoticia">${noticias[0].texto}</p>
-                              <br><br>`;
+    seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+                                    <div class="card-body">
+                                    <h2 class="card-title">${noticia[0].titulo}</h2>
+                                    <h5 class="card-fecha">${noticia[0].fecha}</h5>
+                                    <br>
+                                    <p class="card-text">${noticia[0].texto}</p>
+                                    </div>
+                                  </div>`);
   }
   else{
     for(const noticia of noticias){
-      seccionPublicaciones.innerHTML += `<h3 class="tituloNoticia">Titulo:${noticia.titulo}</h3>
-                              <br>
-                              <p class="fechaNoticia">Fecha:${noticia.fecha}</p>
-                              <br>
-                              <p class="textoNoticia">${noticia.texto}</p>
-                              <br><br>`;  
+      seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+                                      <div class="card-body">
+                                      <h2 class="card-title">${noticia.titulo}</h2>
+                                      <h5 class="card-fecha">${noticia.fecha}</h5>
+                                      <br>
+                                      <p class="card-text">${noticia.texto}</p>
+                                      </div>
+                                    </div>`);
     }
 
   }
@@ -187,24 +232,25 @@ const mostrarNoticias = () => {
 }
 
 const cerrarSesionFunc = ()=>{
-  formIngreso.style.display = "none";
-  formCrearUsuario.style.display="none";
-  buttonNavCloseSesion.style.display="none";
-  buttonNavIngreso.style.display = "inline-block";
-  buttonNavRegistro.style.display="inline-block";
-  document.getElementById("titulo").innerHTML = "";
-  document.getElementById("publicaciones").innerHTML="";
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","none");
+  buttonNavCloseSesion.css("display","none");
+  buttonNavIngreso.css("display","inline-block");
+  buttonNavRegistro.css("display","inline-block");
+  administrador.css("display","none");
+  $("#tituloBienvenida").empty();
+  $("#publicaciones").empty();
 	localStorage.removeItem("usuarioLogueado");
 }
 
 
 
-buttonNavRegistro.addEventListener("click",showFormCreate);
-botonReg.addEventListener("click",crearUsuario);
+buttonNavRegistro.click(showFormCreate);
+botonReg.click(crearUsuario);
 
 
-buttonNavIngreso.addEventListener("click",showFormLogin);
-botonIng.addEventListener("click",login);
+buttonNavIngreso.click(showFormLogin);
+botonIng.click(login);
 
 
-buttonNavCloseSesion.addEventListener("click",cerrarSesionFunc);
+buttonNavCloseSesion.click(cerrarSesionFunc);

@@ -1,5 +1,10 @@
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 
+
+main{
+  min-height: 10rem;
+}
+
 // Estilo para el texto principal
 .index__main--bienvenida {
   margin-bottom: $fuente-tama * 5;
@@ -23,6 +28,25 @@
 .indexImagen:hover {
   transform: scale(1.01, 1.01);
 } /* Transformacion de escala*/
+
+
+.animate__animated.animate__fadeOutLeft {
+  --animate-duration: 1s;
+}
+
+.animate__animated.animate__fadeInLeft {
+  --animate-duration: 1s;
+}
+
+.contenedorNoticia{
+  width: 100%;
+  border:1px solid;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+
+
+
 
 // Media Queries para adaptar el titulo en el encabezado y el tamaño del boton de subida
 
