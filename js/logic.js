@@ -3,27 +3,22 @@
 formIngreso.css("display","none");
 formCrearUsuario.css("display","none");
 buttonNavCloseSesion.css("display","none");
-$("#validaciones").css("display","none");
 administrador.css("display","none");
-/*divFormsProductos.style.display = "none"
-btnRegistro.style.display = "none"
-tienda.style.display = "none"
-cerrarSesion.style.visibility = "hidden"/*
+$("#validaciones").css("display","none");
 
 
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
 const showFormCreate=()=>{
-formIngreso.css("display","none");
-formCrearUsuario.css("display","block");
-formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
-setTimeout(() => {
-  formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
-},1000
-)
-
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","block");
+  formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
+  setTimeout(() => {
+    formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
+  },1000)
 }
+
 /*Mostrar form de ingresar usuario */
 const showFormLogin=()=>{
   formCrearUsuario.css("display","none");
@@ -80,21 +75,6 @@ const crearUsuario= (e)=>{
   inputClaveReg.val('');
   inputTipoReg.val('');
   inputClaveAdmin.val('');
-}
-
-/*Animaciones */
-const animacion = (texto,tipoFormulario)=>{
-  $("#validaciones").empty();
-  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
-  setTimeout(() => {
-    tipoFormulario.hide(1000);
-  },500)
-  $("#validaciones").prepend(texto);
-  $("#validaciones").delay(1500);
-  $("#validaciones").fadeIn(1000);
-  $("#validaciones").delay(1000);
-  $("#validaciones").fadeOut(1000);
-  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
 }
 
 /*Logear usuario */
@@ -155,22 +135,47 @@ const login = (e) => {
     animacion(cartel,formIngreso);
   }
 
-  inputNombreReg.val('');
-  inputClaveReg.val('');
-  inputTipoReg.val('');
-  inputClaveAdmin.val('');
+  inputNombreIng.val('');
+  inputClaveIng.val('');
+}
+
+/*Animaciones */
+const animacion = (texto,tipoFormulario)=>{
+  $("#validaciones").empty();
+  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
+  setTimeout(() => {
+    tipoFormulario.hide(1000);
+  },500)
+  $("#validaciones").prepend(texto);
+  $("#validaciones").delay(1500);
+  $("#validaciones").fadeIn(1000);
+  $("#validaciones").delay(1000);
+  $("#validaciones").fadeOut(1000);
+  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
 const modificarNoticias=()=>{
   administrador.css({"display":"block","font-size":"26px","text-align":"center"});
-  administrador.prepend(`<p>¿Desea agregar o eliminar noticias?</p>`);
-// if (accion=="1"){
-//   ingresarNoticia();
-// }
-// else{
-//   eliminarNoticia();
-// }
+  administrador.prepend(`<p>¿Desea agregar o Eliminar noticias?</p>`);
+  administrador.append(`<br><br><br>
+                        <form id=modificarNoticias>
+                        <input type="radio" name="opcionAdmin" value="agregar">
+                        <label for="Agregar">Agregar sección</label>
+                        <br>
+                        <input type="radio" name="opcionAdmin" value="eliminar">
+                        <label for="Eliminar">Eliminar sección</label>
+                        </form>`);
+
+  $(document).ready(()=>{
+    $("#modificarNoticias").change(()=>{
+      let selected_value = $("input[name=opcionAdmin]:checked").val();
+      if (selected_value=="agregar")
+        ingresarNoticia();
+      if(selected_value=="eliminar")
+        eliminarNoticia();
+    })
+  })
 }
 
 /*Agregar articulos (noticias) */
@@ -189,7 +194,6 @@ let titulo = prompt("Qué producto desea eliminar?");
 let deleteNoticias = noticias.filter(noticia => noticia.titulo != titulo);
 localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
 }
-
 
 /*Mostrar articulos (noticias) */
 const mostrarNoticias = () => {
