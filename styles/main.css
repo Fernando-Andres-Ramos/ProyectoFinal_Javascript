@@ -255,7 +255,7 @@ footer {
 
 /* ESTILOS PARA ADAPTAR EL FRAMEWORK DE BOOTSTRAP EN ESTA SECCION */
 main {
-  min-height: 10rem; }
+  min-height: 15rem; }
 
 .index__main--bienvenida {
   margin-bottom: 5rem; }

@@ -3,7 +3,7 @@
 formIngreso.css("display","none");
 formCrearUsuario.css("display","none");
 buttonNavCloseSesion.css("display","none");
-administrador.css("display","none");
+administrador.css("block","none");
 $("#validaciones").css("display","none");
 
 
@@ -180,13 +180,35 @@ const modificarNoticias=()=>{
 
 /*Agregar articulos (noticias) */
 const ingresarNoticia=()=>{
-let titulo = prompt("Escriba el titulo de la noticia");
-let fecha = new Date();
-let articulo= prompt("Escriba la noticia");
-let nuevaNoticia = new Publicacion(fecha,titulo,articulo);
-noticias.push(nuevaNoticia);
-localStorage.setItem("noticias",JSON.stringify(noticias));
+  administrador.empty();
+
+  administrador.append(`<form class="row col-6">
+                          <input type="text" style="margin-bottom: 10px" name="titulo" placeholder="Titulo" id="tituloNoticia">
+                          <input type="date" style="margin-bottom: 10px" name="fecha" placeholder="Fecha" id="fechaNoticia">
+                          <textarea name="Texto" style="resize:none" placeholder="Texto" cols="30" rows="10" id="textoNoticia" ></textarea>
+                          <input type="submit" style="margin-top: 20px" value="Agregar" id="inputNoticia">
+                        </form>`); 
+
+  $("#inputNoticia").click((e)=>{
+    e.preventDefault();
+    let titulo = $("#tituloNoticia").val();
+    let fecha = $("#fechaNoticia").val();
+    let articulo = $("#textoNoticia").val();
+    let nuevaNoticia = new Publicacion(fecha,titulo,articulo);
+    noticias.push(nuevaNoticia);
+    localStorage.setItem("noticias",JSON.stringify(noticias));
+    $("#tituloNoticia").val('');
+    $("#fechaNoticia").val('');
+    $("#textoNoticia").val('');
+    $("#validaciones").append("Noticia/sección agregada");
+    $("#validaciones").css({"color":"green","font-size":"30px","margin-top":"15px"});
+    $("#validaciones").fadeIn(1000);
+    $("#validaciones").delay(1000);
+    $("#validaciones").fadeOut(1000);
+  })
 }
+
+
 
 /*Eliminar articulos (noticias) */
 const eliminarNoticia =()=>{
