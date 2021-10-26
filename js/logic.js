@@ -157,14 +157,13 @@ const animacion = (texto,tipoFormulario)=>{
 /*Elegir si se desea agregar o eliminar una noticia */
 const modificarNoticias=()=>{
   administrador.css({"display":"block","font-size":"26px","text-align":"center"});
-  administrador.prepend(`<p>¿Desea agregar o Eliminar noticias?</p>`);
-  administrador.append(`<br><br><br>
-                        <form id=modificarNoticias>
-                        <input type="radio" name="opcionAdmin" value="agregar">
-                        <label for="Agregar">Agregar sección</label>
-                        <br>
-                        <input type="radio" name="opcionAdmin" value="eliminar">
-                        <label for="Eliminar">Eliminar sección</label>
+  administrador.prepend(`<div class="row"><p class="col-12">¿Desea agregar o Eliminar noticias?</p></div>`);
+  administrador.append(`<form class="row" id=modificarNoticias>
+                          <input type="radio" name="opcionAdmin" value="agregar">
+                          <label for="Agregar">Agregar sección</label>
+                          <br>
+                          <input type="radio" name="opcionAdmin" value="eliminar">
+                          <label for="Eliminar">Eliminar sección</label>
                         </form>`);
 
   $(document).ready(()=>{
@@ -186,7 +185,7 @@ const ingresarNoticia=()=>{
                           <input type="text" style="margin-bottom: 10px" name="titulo" placeholder="Titulo" id="tituloNoticia">
                           <input type="date" style="margin-bottom: 10px" name="fecha" placeholder="Fecha" id="fechaNoticia">
                           <textarea name="Texto" style="resize:none" placeholder="Texto" cols="30" rows="10" id="textoNoticia" ></textarea>
-                          <input type="submit" style="margin-top: 20px" value="Agregar" id="inputNoticia">
+                          <button type="submit" value="Agregar" id="inputNoticia"class="btn btn-primary fs-3">Agregar</button>
                         </form>`); 
 
   $("#inputNoticia").click((e)=>{
@@ -212,9 +211,34 @@ const ingresarNoticia=()=>{
 
 /*Eliminar articulos (noticias) */
 const eliminarNoticia =()=>{
-let titulo = prompt("Qué producto desea eliminar?");        
-let deleteNoticias = noticias.filter(noticia => noticia.titulo != titulo);
-localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
+  administrador.empty();
+  administrador.append(`<form class="row" id="eliminarForm">
+                          <h2 class="text-center mb-5">Eliminar Producto</h2>
+                          <div class="mb-5 col-12 d-flex justify-content-center">
+                            <label for="" class="form-label fs-3">Nombre</label>
+                            <select name="" id="eliminarProductos"></select>
+                          </div>
+                          <button id="btnEliminar" type="submit" class="btn btn-primary fs-4">Eliminar</button>
+                        </form>`); 
+
+
+  // let deleteNoticias = noticias.filter(noticia => noticia.titulo != titulo);
+  // localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
+
+  $("#eliminarProducto").val('');
+	
+  if(noticias != ""){
+
+   for (let noticia of noticias) {
+    let option = document.createElement("option");
+    option.value = noticia.nombre;
+    option.innerHTML = noticia.nombre;
+    selectEliminarP.appendChild(option);
+  }
+    formProductoEliminar.style.display = "block"
+ }
+ else
+  formProductoEliminar.style.display = "none"
 }
 
 /*Mostrar articulos (noticias) */
