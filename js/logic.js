@@ -3,8 +3,10 @@
 formIngreso.css("display","none");
 formCrearUsuario.css("display","none");
 buttonNavCloseSesion.css("display","none");
-administrador.css("block","none");
+administrador.css("display","none");
+seccionPublicaciones.css("display","none");
 $("#validaciones").css("display","none");
+
 
 
 /*FUNCIONES*/
@@ -288,8 +290,10 @@ const cerrarSesionFunc = ()=>{
   buttonNavIngreso.css("display","inline-block");
   buttonNavRegistro.css("display","inline-block");
   administrador.css("display","none");
+  administrador.empty();
+  seccionPublicaciones.css("display","none");
+  seccionPublicaciones.empty();
   $("#tituloBienvenida").empty();
-  $("#publicaciones").empty();
 	localStorage.removeItem("usuarioLogueado");
 }
 
