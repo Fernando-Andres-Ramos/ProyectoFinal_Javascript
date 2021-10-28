@@ -213,30 +213,45 @@ const eliminarNoticia =()=>{
   administrador.append(`<form class="row" id="eliminarForm">
                           <h2 class="text-center mb-5">Eliminar Producto</h2>
                           <div class="mb-5 col-12 d-flex justify-content-center">
-                            <label for="" class="form-label fs-3">Nombre</label>
-                            <select name="" id="eliminarProductos"></select>
+                            <label for="" class="form-label fs-3">Titulos</label>
+                            <select name="" id="eliminarNoticias"></select>
                           </div>
                           <button id="btnEliminar" type="submit" class="btn btn-primary fs-4">Eliminar</button>
                         </form>`); 
 
 
-  // let deleteNoticias = noticias.filter(noticia => noticia.titulo != titulo);
-  // localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
 
-  $("#eliminarProducto").val('');
+
+  $("#eliminarNoticias").val('');
 	
   if(noticias != ""){
 
-   for (let noticia of noticias) {
-    let option = document.createElement("option");
-    option.value = noticia.nombre;
-    option.innerHTML = noticia.nombre;
-    selectEliminarP.appendChild(option);
+    for (let noticia of noticias) {
+      $("#eliminarNoticias").append(`<option value="${noticia.titulo}">${noticia.titulo}</option>`);
+    }
+    $("#eliminarForm").css("display","block");
   }
-    formProductoEliminar.style.display = "block"
- }
- else
-  formProductoEliminar.style.display = "none"
+
+  else{
+    $("#eliminarForm").empty();
+    $("#eliminarForm").append(`<p>No hay noticias para eliminar</p>`); 
+  }
+
+  $(document).ready(()=>{
+    $("#btnEliminar").click(()=>{
+      let selected_value = $("input[name=opcionAdmin]:checked").val();
+      if (selected_value=="agregar")
+        ingresarNoticia();
+      if(selected_value=="eliminar")
+        eliminarNoticia();
+    })
+  })
+
+  $("#btnEliminar").click(()=>{
+    let deleteNoticias = noticias.filter( busqueda => busqueda.titulo != $("input[name=opcionAdmin]:checked").val());
+    localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
+  })
+
 }
 
 /*Mostrar articulos (noticias) */
