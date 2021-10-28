@@ -3,26 +3,22 @@
 formIngreso.css("display","none");
 formCrearUsuario.css("display","none");
 buttonNavCloseSesion.css("display","none");
+administrador.css("block","none");
 $("#validaciones").css("display","none");
-/*divFormsProductos.style.display = "none"
-btnRegistro.style.display = "none"
-tienda.style.display = "none"
-cerrarSesion.style.visibility = "hidden"/*
 
 
 /*FUNCIONES*/
 
 /*Mostrar form de crear usuario */
 const showFormCreate=()=>{
-formIngreso.css("display","none");
-formCrearUsuario.css("display","block");
-formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
-setTimeout(() => {
-  formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
-},1000
-)
-
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","block");
+  formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
+  setTimeout(() => {
+    formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
+  },1000)
 }
+
 /*Mostrar form de ingresar usuario */
 const showFormLogin=()=>{
   formCrearUsuario.css("display","none");
@@ -81,20 +77,6 @@ const crearUsuario= (e)=>{
   inputClaveAdmin.val('');
 }
 
-const animacion = (texto,tipoFormulario)=>{
-  $("#validaciones").empty();
-  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
-  setTimeout(() => {
-    tipoFormulario.hide(1000);
-  },500)
-  $("#validaciones").prepend(texto);
-  $("#validaciones").delay(1500);
-  $("#validaciones").fadeIn(1000);
-  $("#validaciones").delay(1000);
-  $("#validaciones").fadeOut(1000);
-  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
-}
-
 /*Logear usuario */
 const login = (e) => {
   e.preventDefault();
@@ -121,8 +103,9 @@ const login = (e) => {
         buttonNavRegistro.css("display","none");
         formIngreso.css("display","none");
         buttonNavCloseSesion.css("display","block");
-        
-        // completarSelect()
+        $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+                                        Este es el panel de noticias</h2>`);
+        modificarNoticias();
       } 
     
       else {
@@ -152,40 +135,111 @@ const login = (e) => {
     animacion(cartel,formIngreso);
   }
 
-  inputNombreReg.val('');
-  inputClaveReg.val('');
-  inputTipoReg.val('');
-  inputClaveAdmin.val('');
+  inputNombreIng.val('');
+  inputClaveIng.val('');
+}
+
+/*Animaciones */
+const animacion = (texto,tipoFormulario)=>{
+  $("#validaciones").empty();
+  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
+  setTimeout(() => {
+    tipoFormulario.hide(1000);
+  },500)
+  $("#validaciones").prepend(texto);
+  $("#validaciones").delay(1500);
+  $("#validaciones").fadeIn(1000);
+  $("#validaciones").delay(1000);
+  $("#validaciones").fadeOut(1000);
+  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
 const modificarNoticias=()=>{
-let accion = prompt("¿Desea agregar o eliminar noticias?: Agregar(1)-Eliminar(2)")
-if (accion=="1"){
-  ingresarNoticia();
-}
-else{
-  eliminarNoticia();
-}
+  administrador.css({"display":"block","font-size":"26px","text-align":"center"});
+  administrador.prepend(`<div class="row"><p class="col-12">¿Desea agregar o Eliminar noticias?</p></div>`);
+  administrador.append(`<form class="row" id=modificarNoticias>
+                          <input type="radio" name="opcionAdmin" value="agregar">
+                          <label for="Agregar">Agregar sección</label>
+                          <br>
+                          <input type="radio" name="opcionAdmin" value="eliminar">
+                          <label for="Eliminar">Eliminar sección</label>
+                        </form>`);
+
+  $(document).ready(()=>{
+    $("#modificarNoticias").change(()=>{
+      let selected_value = $("input[name=opcionAdmin]:checked").val();
+      if (selected_value=="agregar")
+        ingresarNoticia();
+      if(selected_value=="eliminar")
+        eliminarNoticia();
+    })
+  })
 }
 
 /*Agregar articulos (noticias) */
 const ingresarNoticia=()=>{
-let titulo = prompt("Escriba el titulo de la noticia");
-let fecha = new Date();
-let articulo= prompt("Escriba la noticia");
-let nuevaNoticia = new Publicacion(fecha,titulo,articulo);
-noticias.push(nuevaNoticia);
-localStorage.setItem("noticias",JSON.stringify(noticias));
+  administrador.empty();
+
+  administrador.append(`<form class="row col-6">
+                          <input type="text" style="margin-bottom: 10px" name="titulo" placeholder="Titulo" id="tituloNoticia">
+                          <input type="date" style="margin-bottom: 10px" name="fecha" placeholder="Fecha" id="fechaNoticia">
+                          <textarea name="Texto" style="resize:none" placeholder="Texto" cols="30" rows="10" id="textoNoticia" ></textarea>
+                          <button type="submit" value="Agregar" id="inputNoticia"class="btn btn-primary fs-3">Agregar</button>
+                        </form>`); 
+
+  $("#inputNoticia").click((e)=>{
+    e.preventDefault();
+    let titulo = $("#tituloNoticia").val();
+    let fecha = $("#fechaNoticia").val();
+    let articulo = $("#textoNoticia").val();
+    let nuevaNoticia = new Publicacion(fecha,titulo,articulo);
+    noticias.push(nuevaNoticia);
+    localStorage.setItem("noticias",JSON.stringify(noticias));
+    $("#tituloNoticia").val('');
+    $("#fechaNoticia").val('');
+    $("#textoNoticia").val('');
+    $("#validaciones").append("Noticia/sección agregada");
+    $("#validaciones").css({"color":"green","font-size":"30px","margin-top":"15px"});
+    $("#validaciones").fadeIn(1000);
+    $("#validaciones").delay(1000);
+    $("#validaciones").fadeOut(1000);
+  })
 }
+
+
 
 /*Eliminar articulos (noticias) */
 const eliminarNoticia =()=>{
-let titulo = prompt("Qué producto desea eliminar?");        
-let deleteNoticias = noticias.filter(noticia => noticia.titulo != titulo);
-localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
-}
+  administrador.empty();
+  administrador.append(`<form class="row" id="eliminarForm">
+                          <h2 class="text-center mb-5">Eliminar Producto</h2>
+                          <div class="mb-5 col-12 d-flex justify-content-center">
+                            <label for="" class="form-label fs-3">Nombre</label>
+                            <select name="" id="eliminarProductos"></select>
+                          </div>
+                          <button id="btnEliminar" type="submit" class="btn btn-primary fs-4">Eliminar</button>
+                        </form>`); 
 
+
+  // let deleteNoticias = noticias.filter(noticia => noticia.titulo != titulo);
+  // localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
+
+  $("#eliminarProducto").val('');
+	
+  if(noticias != ""){
+
+   for (let noticia of noticias) {
+    let option = document.createElement("option");
+    option.value = noticia.nombre;
+    option.innerHTML = noticia.nombre;
+    selectEliminarP.appendChild(option);
+  }
+    formProductoEliminar.style.display = "block"
+ }
+ else
+  formProductoEliminar.style.display = "none"
+}
 
 /*Mostrar articulos (noticias) */
 const mostrarNoticias = () => {
@@ -202,21 +256,25 @@ const mostrarNoticias = () => {
 
   }
   else if(noticias.length==1){
-    seccionPublicaciones.innerHTML = `<h3 class="tituloNoticia">Titulo:${noticias[0].titulo}</h3>
-                              <br>
-                              <p class="fechaNoticia">Fecha:${noticias[0].fecha}</p>
-                              <br>
-                              <p class="textoNoticia">${noticias[0].texto}</p>
-                              <br><br>`;
+    seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+                                    <div class="card-body">
+                                    <h2 class="card-title">${noticia[0].titulo}</h2>
+                                    <h5 class="card-fecha">${noticia[0].fecha}</h5>
+                                    <br>
+                                    <p class="card-text">${noticia[0].texto}</p>
+                                    </div>
+                                  </div>`);
   }
   else{
     for(const noticia of noticias){
-      seccionPublicaciones.innerHTML += `<h3 class="tituloNoticia">Titulo:${noticia.titulo}</h3>
-                              <br>
-                              <p class="fechaNoticia">Fecha:${noticia.fecha}</p>
-                              <br>
-                              <p class="textoNoticia">${noticia.texto}</p>
-                              <br><br>`;  
+      seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+                                      <div class="card-body">
+                                      <h2 class="card-title">${noticia.titulo}</h2>
+                                      <h5 class="card-fecha">${noticia.fecha}</h5>
+                                      <br>
+                                      <p class="card-text">${noticia.texto}</p>
+                                      </div>
+                                    </div>`);
     }
 
   }
@@ -229,6 +287,7 @@ const cerrarSesionFunc = ()=>{
   buttonNavCloseSesion.css("display","none");
   buttonNavIngreso.css("display","inline-block");
   buttonNavRegistro.css("display","inline-block");
+  administrador.css("display","none");
   $("#tituloBienvenida").empty();
   $("#publicaciones").empty();
 	localStorage.removeItem("usuarioLogueado");
