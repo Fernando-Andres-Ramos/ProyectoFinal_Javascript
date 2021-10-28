@@ -1,19 +1,17 @@
-/*INICIALIZACION DE DOM */
-
-formIngreso.css("display","none");
-formCrearUsuario.css("display","none");
-buttonNavCloseSesion.css("display","none");
-administrador.css("display","none");
-seccionPublicaciones.css("display","none");
-$("#validaciones").css("display","none");
-
-
-
 /*FUNCIONES*/
+const limpiarPantalla=()=>{
+  formIngreso.css("display","none");
+  formCrearUsuario.css("display","none");
+  administrador.css("display","none");
+  seccionPublicaciones.css("display","none");
+  validaciones.css("display","none");
+  bienvenida.css("display","none");
+}
+
 
 /*Mostrar form de crear usuario */
 const showFormCreate=()=>{
-  formIngreso.css("display","none");
+  limpiarPantalla();
   formCrearUsuario.css("display","block");
   formCrearUsuario.addClass("animate__animated animate__fadeInLeft");
   setTimeout(() => {
@@ -23,7 +21,7 @@ const showFormCreate=()=>{
 
 /*Mostrar form de ingresar usuario */
 const showFormLogin=()=>{
-  formCrearUsuario.css("display","none");
+  limpiarPantalla();
   formIngreso.css("display","block");
   formIngreso.addClass("animate__animated animate__fadeInLeft");
   setTimeout(() => {
@@ -48,11 +46,11 @@ const crearUsuario= (e)=>{
         usuarios.push(usuario);
         localStorage.setItem("usuarios", JSON.stringify(usuarios));
         cartel="Usuario registrado con éxito";
-        $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
+        validaciones.css({"color":"darkgreen","font-size":"30px"});
         animacion(cartel,formCrearUsuario);
       }
       else{
-        $("#validaciones").css({"color":"red","font-size":"30px"});
+        validaciones.css({"color":"red","font-size":"30px"});
         cartel="Usted no es un administrador";
         animacion(cartel,formCrearUsuario);
       }
@@ -63,13 +61,13 @@ const crearUsuario= (e)=>{
       usuarios.push(usuario);
       localStorage.setItem("usuarios", JSON.stringify(usuarios));
       cartel="Usuario registrado con éxito";
-      $("#validaciones").css({"color":"darkgreen","font-size":"30px"});
+      validaciones.css({"color":"darkgreen","font-size":"30px"});
       animacion(cartel,formCrearUsuario);
       break;
 
     default:
-      $("#validaciones").prepend("Escriba SI o NO en la opcion de administrador");
-      $("#validaciones").css({"color":"red","font-size":"30px"});
+      validaciones.prepend("Escriba SI o NO en la opcion de administrador");
+      validaciones.css({"color":"red","font-size":"30px"});
       break;
   }
 
@@ -105,19 +103,16 @@ const login = (e) => {
         buttonNavRegistro.css("display","none");
         formIngreso.css("display","none");
         buttonNavCloseSesion.css("display","block");
-        $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+        bienvenida.prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
                                         Este es el panel de noticias</h2>`);
         modificarNoticias();
       } 
     
       else {
-      $("#tituloBienvenida").prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+      bienvenida.prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
                                       Estas son las noticias actuales</h2>`);
 
-      buttonNavIngreso.css("display","none");
-      buttonNavRegistro.css("display","none");
-      formIngreso.css("display","none");
-      formCrearUsuario.css("display","none");
+      limpiarPantalla();
       buttonNavCloseSesion.css("display","block");
       mostrarNoticias();
       }
@@ -125,14 +120,14 @@ const login = (e) => {
     } 
   
     else {
-      $("#validaciones").css({"color":"red","font-size":"30px"});
+      validaciones.css({"color":"red","font-size":"30px"});
       cartel="La clave ingresada es incorrecta";
       animacion(cartel,formIngreso);
     }
 
   } 
   else {
-    $("#validaciones").css({"color":"red","font-size":"30px"});
+    validaciones.css({"color":"red","font-size":"30px"});
     cartel="El usuario no esta registrado";
     animacion(cartel,formIngreso);
   }
@@ -142,22 +137,23 @@ const login = (e) => {
 }
 
 /*Animaciones */
-const animacion = (texto,tipoFormulario)=>{
-  $("#validaciones").empty();
-  tipoFormulario.addClass("animate__animated animate__fadeOutLeft");
+const animacion = (texto,animarSeccion)=>{
+  validaciones.empty();
+  validaciones.prepend(texto);
+  animarSeccion.addClass("animate__animated animate__fadeOutLeft");
   setTimeout(() => {
-    tipoFormulario.hide(1000);
+    animarSeccion.hide(1000);
   },500)
-  $("#validaciones").prepend(texto);
-  $("#validaciones").delay(1500);
-  $("#validaciones").fadeIn(1000);
-  $("#validaciones").delay(1000);
-  $("#validaciones").fadeOut(1000);
-  tipoFormulario.removeClass("animate__animated animate__fadeOutLeft");
+  validaciones.delay(1500);
+  validaciones.fadeIn(1000);
+  validaciones.delay(1000);
+  validaciones.fadeOut(1000);
+  animarSeccion.removeClass("animate__animated animate__fadeOutLeft");
 }
 
 /*Elegir si se desea agregar o eliminar una noticia */
 const modificarNoticias=()=>{
+  limpiarPantalla();
   administrador.css({"display":"block","font-size":"26px","text-align":"center"});
   administrador.prepend(`<div class="row"><p class="col-12">¿Desea agregar o Eliminar noticias?</p></div>`);
   administrador.append(`<form class="row" id=modificarNoticias>
@@ -181,8 +177,8 @@ const modificarNoticias=()=>{
 
 /*Agregar articulos (noticias) */
 const ingresarNoticia=()=>{
+  limpiarPantalla();
   administrador.empty();
-
   administrador.append(`<form class="row col-6">
                           <input type="text" style="margin-bottom: 10px" name="titulo" placeholder="Titulo" id="tituloNoticia">
                           <input type="date" style="margin-bottom: 10px" name="fecha" placeholder="Fecha" id="fechaNoticia">
@@ -201,18 +197,18 @@ const ingresarNoticia=()=>{
     $("#tituloNoticia").val('');
     $("#fechaNoticia").val('');
     $("#textoNoticia").val('');
-    $("#validaciones").append("Noticia/sección agregada");
-    $("#validaciones").css({"color":"green","font-size":"30px","margin-top":"15px"});
-    $("#validaciones").fadeIn(1000);
-    $("#validaciones").delay(1000);
-    $("#validaciones").fadeOut(1000);
+    validaciones.append("Noticia/sección agregada");
+    validaciones.css({"color":"green","font-size":"30px","margin-top":"15px"});
+    validaciones.fadeIn(1000);
+    validaciones.delay(1000);
+    validaciones.fadeOut(1000);
   })
 }
 
 
-
 /*Eliminar articulos (noticias) */
 const eliminarNoticia =()=>{
+  limpiarPantalla();
   administrador.empty();
   administrador.append(`<form class="row" id="eliminarForm">
                           <h2 class="text-center mb-5">Eliminar Producto</h2>
@@ -246,10 +242,7 @@ const eliminarNoticia =()=>{
 /*Mostrar articulos (noticias) */
 const mostrarNoticias = () => {
 
-  buttonNavIngreso.css("display","none");
-  buttonNavRegistro.css("display","none");
-  formIngreso.css("display","none");
-  formCrearUsuario.css("display","none");
+  limpiarPantalla();
   buttonNavCloseSesion.css("display","block");
   seccionPublicaciones.css("display","block");
   if(noticias.length==0){
@@ -284,12 +277,10 @@ const mostrarNoticias = () => {
 }
 
 const cerrarSesionFunc = ()=>{
-  formIngreso.css("display","none");
-  formCrearUsuario.css("display","none");
-  buttonNavCloseSesion.css("display","none");
+  limpiarPantalla();
   buttonNavIngreso.css("display","inline-block");
   buttonNavRegistro.css("display","inline-block");
-  administrador.css("display","none");
+  buttonNavCloseSesion.css("display","none");
   administrador.empty();
   seccionPublicaciones.css("display","none");
   seccionPublicaciones.empty();
@@ -297,6 +288,11 @@ const cerrarSesionFunc = ()=>{
 	localStorage.removeItem("usuarioLogueado");
 }
 
+/*INICIALIZACION DE DOM */
+
+limpiarPantalla();
+buttonNavCloseSesion.css("display","none");
+bienvenida.show(300);
 
 
 buttonNavRegistro.click(showFormCreate);

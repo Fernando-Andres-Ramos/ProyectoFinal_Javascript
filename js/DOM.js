@@ -30,4 +30,8 @@ const seccionPublicaciones = $("#publicaciones");
 
 const administrador = $("#interfazAdmin");
 
+const bienvenida = $("#tituloBienvenida");
+
+const validaciones = $("#validaciones");
+
 
