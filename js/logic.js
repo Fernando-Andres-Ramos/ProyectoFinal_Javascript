@@ -8,6 +8,12 @@ const limpiarPantalla=()=>{
   bienvenida.css("display","none");
 }
 
+const cartelInicio=()=>{
+  bienvenida.append( `<h2 class="fs-1">¡Sección de noticias!</h2>
+                    <p class="fs-3">Cree un usuario en registrarse o inicie sesión en ingresar.</p></div>`);
+  
+  bienvenida.show(300);
+}
 
 /*Mostrar form de crear usuario */
 const showFormCreate=()=>{
@@ -182,15 +188,19 @@ const modificarNoticias=()=>{
 const ingresarNoticia=()=>{
   limpiarPantalla();
   administrador.empty();
-  administrador.append(`<form class="row col-6">
+  administrador.append(`<form class="row col-6 mb-5">
                           <input type="text" style="margin-bottom: 10px" name="titulo" placeholder="Titulo" id="tituloNoticia">
                           <input type="date" style="margin-bottom: 10px" name="fecha" placeholder="Fecha" id="fechaNoticia">
                           <textarea name="Texto" style="resize:none" placeholder="Texto" cols="30" rows="10" id="textoNoticia" ></textarea>
                           <button type="submit" value="Agregar" id="inputNoticia"class="btn btn-primary fs-3">Agregar</button>
-                        </form>`); 
+                        </form>
+                        <div class= "row col-6">
+                          <button type="submit" value="Volver" id="botonVolver" class="btn btn-secondary fs-3">Volver</button>
+                        </div>`);
 
   $("#inputNoticia").click((e)=>{
     e.preventDefault();
+    validaciones.empty();
     let titulo = $("#tituloNoticia").val();
     let fecha = $("#fechaNoticia").val();
     let articulo = $("#textoNoticia").val();
@@ -206,6 +216,12 @@ const ingresarNoticia=()=>{
     validaciones.delay(1000);
     validaciones.fadeOut(1000);
   })
+
+  $("#botonVolver").click((e)=>{
+    e.preventDefault();
+    administrador.empty();
+    modificarNoticias();
+  })
 }
 
 
@@ -213,14 +229,17 @@ const ingresarNoticia=()=>{
 const eliminarNoticia =()=>{
   limpiarPantalla();
   administrador.empty();
-  administrador.append(`<form class="row" id="eliminarForm">
+  administrador.append(`<form class="row mb-5" id="eliminarForm">
                           <h2 class="text-center mb-5">Eliminar Producto</h2>
                           <div class="mb-5 col-12 d-flex justify-content-center">
                             <label for="" class="form-label fs-3">Titulos</label>
                             <select name="" id="eliminarNoticias"></select>
                           </div>
                           <button id="btnEliminar" type="submit" class="btn btn-primary fs-4">Eliminar</button>
-                        </form>`); 
+                        </form>
+                        <div class= "row">
+                          <button type="submit" value="Volver" id="botonVolver" class="btn btn-secondary fs-3">Volver</button>
+                        </div>`); 
 
   $("#eliminarNoticias").val('');
 	
@@ -246,6 +265,11 @@ const eliminarNoticia =()=>{
     eliminarNoticia();
   })
 
+  $("#botonVolver").click((e)=>{
+    e.preventDefault();
+    administrador.empty();
+    modificarNoticias();
+  })
 }
 
 /*Mostrar articulos (noticias) */
@@ -290,10 +314,11 @@ const cerrarSesionFunc = ()=>{
   buttonNavIngreso.css("display","inline-block");
   buttonNavRegistro.css("display","inline-block");
   buttonNavCloseSesion.css("display","none");
-  administrador.empty();
   seccionPublicaciones.css("display","none");
   seccionPublicaciones.empty();
-  $("#tituloBienvenida").empty();
+  administrador.empty();
+  bienvenida.empty();
+  cartelInicio();
 	localStorage.removeItem("usuarioLogueado");
 }
 
@@ -301,7 +326,7 @@ const cerrarSesionFunc = ()=>{
 
 limpiarPantalla();
 buttonNavCloseSesion.css("display","none");
-bienvenida.show(300);
+cartelInicio();
 
 
 buttonNavRegistro.click(showFormCreate);
