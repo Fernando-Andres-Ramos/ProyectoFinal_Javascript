@@ -109,12 +109,15 @@ const login = (e) => {
       } 
     
       else {
-      bienvenida.prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
+        limpiarPantalla();
+        buttonNavIngreso.css("display","none");
+        buttonNavRegistro.css("display","none");
+        buttonNavCloseSesion.css("display","block");
+        bienvenida.prepend(`<h2>Bienvenidx ${chequeoUsuario.nombre.toUpperCase()},
                                       Estas son las noticias actuales</h2>`);
 
-      limpiarPantalla();
-      buttonNavCloseSesion.css("display","block");
-      mostrarNoticias();
+        buttonNavCloseSesion.css("display","block");
+        mostrarNoticias();
       }
 
     } 
@@ -219,13 +222,9 @@ const eliminarNoticia =()=>{
                           <button id="btnEliminar" type="submit" class="btn btn-primary fs-4">Eliminar</button>
                         </form>`); 
 
-
-
-
   $("#eliminarNoticias").val('');
 	
   if(noticias != ""){
-
     for (let noticia of noticias) {
       $("#eliminarNoticias").append(`<option value="${noticia.titulo}">${noticia.titulo}</option>`);
     }
@@ -237,19 +236,14 @@ const eliminarNoticia =()=>{
     $("#eliminarForm").append(`<p>No hay noticias para eliminar</p>`); 
   }
 
-  $(document).ready(()=>{
-    $("#btnEliminar").click(()=>{
-      let selected_value = $("input[name=opcionAdmin]:checked").val();
-      if (selected_value=="agregar")
-        ingresarNoticia();
-      if(selected_value=="eliminar")
-        eliminarNoticia();
-    })
-  })
-
-  $("#btnEliminar").click(()=>{
-    let deleteNoticias = noticias.filter( busqueda => busqueda.titulo != $("input[name=opcionAdmin]:checked").val());
-    localStorage.setItem("noticias",JSON.stringify(deleteNoticias));
+  $("#btnEliminar").click((e)=>{
+    e.preventDefault();
+    let eliminar = $("#eliminarNoticias").val();
+    administrador.empty();
+    let filtro = noticias.filter(busqueda => busqueda.titulo != eliminar);
+    noticias = filtro;
+    localStorage.setItem("noticias",JSON.stringify(noticias));
+    eliminarNoticia();
   })
 
 }
@@ -265,30 +259,30 @@ const mostrarNoticias = () => {
     seccionPublicaciones.css("font-size","26px");
 
   }
-  else if(noticias.length==1){
-    seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+  else{  
+    if(noticias.length==1){
+      seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
                                     <div class="card-body">
-                                    <h2 class="card-title">${noticia[0].titulo}</h2>
-                                    <h5 class="card-fecha">${noticia[0].fecha}</h5>
+                                    <h2 class="card-title">${noticias[0].titulo}</h2>
+                                    <h5 class="card-fecha">${noticias[0].fecha}</h5>
                                     <br>
-                                    <p class="card-text">${noticia[0].texto}</p>
+                                    <p class="card-text">${noticias[0].texto}</p>
                                     </div>
                                   </div>`);
-  }
-  else{
-    for(const noticia of noticias){
-      seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
+    }
+    else{
+      for(const noticia of noticias){
+        seccionPublicaciones.prepend(`<div class="card contenedorNoticia">
                                       <div class="card-body">
                                       <h2 class="card-title">${noticia.titulo}</h2>
                                       <h5 class="card-fecha">${noticia.fecha}</h5>
                                       <br>
                                       <p class="card-text">${noticia.texto}</p>
                                       </div>
-                                    </div>`);
-    }
-
+                                      </div>`);
+      }
+    }  
   }
-
 }
 
 const cerrarSesionFunc = ()=>{
