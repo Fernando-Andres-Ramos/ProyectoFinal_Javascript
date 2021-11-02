@@ -14,8 +14,6 @@ const formCrearUsuario = $("#newUserForm");
 /* Datos del form de registrar */
 const inputNombreReg = $("#nombreRegistro");
 const inputClaveReg = $("#claveRegistro");
-const inputTipoReg = $("#tipoRegistro");
-const inputClaveAdmin=$("#claveAdmin");
 const botonReg = $("#btnRegistrar");
 
 

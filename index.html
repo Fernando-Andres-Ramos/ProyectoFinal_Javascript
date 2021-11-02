@@ -138,19 +138,24 @@
             <input type="text" class="form-control" id="nombreRegistro" >
           </div>
       
-          <div class="col-7 mb-3">
+          <div class="col-7 mb-5">
             <label for="claveRegistro" class="form-label">Clave</label>
             <input type="password" class="form-control" id="claveRegistro">
           </div>
 
-          <div class="col-7 mb-3">
-            <label for="tipoRegistro" class="form-label ">¿Es administrador? (Escriba Si o No)</label>
-            <input type="text" class="form-control" id="tipoRegistro">
-          </div>
+          <fieldset class="mb-3">
+            <legend>¿Usted administra la pagina?</legend>
+              <div class="col-7 mb-3" id="tipoUsuario">
+                <input type="radio" name="esAdmin" value="si">
+                <label for="Si">Si</label>
+                <br>
+                <input type="radio" name="esAdmin" value="no">
+                <label for="No">No</label>
+              </div>
+          </fieldset>
 
-          <div class="col-7 mb-3">
-            <label for="claveAdmin" class="form-label">Escriba la clave para de administradores (Si su respuesta es si)</label>
-            <input type="password" class="form-control" id="claveAdmin">
+
+          <div class="col-7 mb-3" id="divClaveAdmin">
           </div>
 
         </div>

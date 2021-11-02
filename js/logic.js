@@ -23,6 +23,17 @@ const showFormCreate=()=>{
   setTimeout(() => {
     formCrearUsuario.removeClass("animate__animated animate__fadeInLeft");
   },1000)
+
+  $(document).ready(()=>{
+    $("#tipoUsuario").change(()=>{
+      let selected_value = $("input[name=esAdmin]:checked").val();
+      if (selected_value=="si")
+        $("#divClaveAdmin").append(`<label for="claveAdmin" class="form-label">Escriba la clave para de administradores (Si su respuesta es si)</label>
+                                    <input type="password" class="form-control" id="claveAdmin">`);        
+      if(selected_value=="no")
+        $("#divClaveAdmin").empty();
+    })
+  })
 }
 
 /*Mostrar form de ingresar usuario */
@@ -41,12 +52,12 @@ const crearUsuario= (e)=>{
   e.preventDefault();
   let nombre = inputNombreReg.val();
   let clave = inputClaveReg.val();
-  let tipo = inputTipoReg.val().toUpperCase();
-  let passAdmin = inputClaveAdmin.val().toUpperCase();
+  let tipo = $("input[name=esAdmin]:checked").val().toUpperCase();
   let cartel;
 
   switch (tipo){
     case "SI":
+      let passAdmin = $("#claveAdmin").val().toUpperCase();
       if (passAdmin==="ADMIN"){
         const usuario = new Usuario(nombre,clave,tipo);
         usuarios.push(usuario);
@@ -70,17 +81,12 @@ const crearUsuario= (e)=>{
       validaciones.css({"color":"darkgreen","font-size":"30px"});
       animacion(cartel,formCrearUsuario);
       break;
-
-    default:
-      validaciones.prepend("Escriba SI o NO en la opcion de administrador");
-      validaciones.css({"color":"red","font-size":"30px"});
-      break;
   }
 
   inputNombreReg.val('');
   inputClaveReg.val('');
-  inputTipoReg.val('');
-  inputClaveAdmin.val('');
+  $("input[name=esAdmin]:checked").attr('checked',false);
+  $("#claveAdmin").val('');
 }
 
 /*Logear usuario */
